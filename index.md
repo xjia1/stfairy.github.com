@@ -24,7 +24,7 @@ Recent conferences:
   1. [ACM Class homepage](http://acm.sjtu.edu.cn/)
   2. [ACM Class Online Judge](http://acm.sjtu.edu.cn/OnlineJudge/)
   3. [ACM Class Xiaoyou](http://acm.sjtu.edu.cn/xiaoyou/)
-* [My GitHub Page](http://stfairy.github.com/)
+* [My GitHub Page](https://github.com/stfairy)
 
 ## Miscellaneous
 
