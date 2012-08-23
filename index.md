@@ -13,10 +13,10 @@ Recent conferences:
 ## Teaching
 * [PPCA (Summer 2012)](http://acm.sjtu.edu.cn/ppca/)
 * [Compiler (Spring 2012)](http://acm.sjtu.edu.cn/compiler/)
-* [程序设计 (Fall 2011)](http://acm.sjtu.edu.cn/courses/cs110/fa11)
+* [C++ Programming (Fall 2011)](http://acm.sjtu.edu.cn/courses/cs110/fa11)
 * [PPCA (Summer 2011)](http://202.120.61.3:8103/wiki/PPCA_2011)
-* 数据结构 (Spring 2011)
-* 程序设计 (Fall 2010)
+* Data Structures (Spring 2011)
+* C++ Programming (Fall 2010)
 
 ## Engineering
 * I am leading the [ACM Infrastructure Working Group](http://acm.sjtu.edu.cn/iwg)
