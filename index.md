@@ -82,7 +82,6 @@ Recent conferences:
   * [https://github.com/kswedberg/jquery-tmbundle](https://github.com/kswedberg/jquery-tmbundle)
   * [https://github.com/jcf/git-tmbundle](https://github.com/jcf/git-tmbundle)
   * [https://github.com/mocoso/code-beautifier.tmbundle](https://github.com/mocoso/code-beautifier.tmbundle)
-  * [https://github.com/grimen/compass_blueprint_tmbundle](https://github.com/grimen/compass_blueprint_tmbundle)
 * [TextMate Bundle for Haskell](https://github.com/textmate/haskell.tmbundle)
 * [TextMate Bundle for io](https://github.com/textmate/io.tmbundle)
 * [Cena - Offline Judge](http://code.google.com/p/cena/)
