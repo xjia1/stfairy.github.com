@@ -1,4 +1,4 @@
-![图片：做人要低调](/images/didiao.gif "做人要低调")
+<center>![图片：做人要低调](/images/didiao.gif "做人要低调")</center>
 
 ## Research
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
@@ -6,6 +6,7 @@
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
 
 Recent conferences:
+
 * [PLDI 2013](http://pldi2013.ucombinator.org/) (Nov 11, 2012)
 * [GPCE 2013](http://program-transformation.org/Gpce) (May, 2013)
 
@@ -19,7 +20,10 @@ Recent conferences:
 
 ## Engineering
 * I am leading the [ACM Infrastructure Working Group](http://acm.sjtu.edu.cn/iwg)
-* I developed (i) [ACM Class homepage](http://acm.sjtu.edu.cn/), (ii) [ACM Class Online Judge](http://acm.sjtu.edu.cn/OnlineJudge/), (iii) [ACM Class Xiaoyou](http://acm.sjtu.edu.cn/xiaoyou/)
+* I developed
+  1. [ACM Class homepage](http://acm.sjtu.edu.cn/)
+  2. [ACM Class Online Judge](http://acm.sjtu.edu.cn/OnlineJudge/)
+  3. [ACM Class Xiaoyou](http://acm.sjtu.edu.cn/xiaoyou/)
 * [My GitHub Page](http://stfairy.github.com/)
 
 ## Miscellaneous
@@ -41,9 +45,9 @@ Recent conferences:
 
 ### Paper Writing
 * Writing Abstract
-  * [](http://www.ece.cmu.edu/~koopman/essays/abstract.html)
-  * [](http://research.berkeley.edu/ucday/abstract.html)
-  * [](http://writingcenter.unlv.edu/writing/abstract.html)
+  * [http://www.ece.cmu.edu/~koopman/essays/abstract.html](http://www.ece.cmu.edu/~koopman/essays/abstract.html)
+  * [http://research.berkeley.edu/ucday/abstract.html](http://research.berkeley.edu/ucday/abstract.html)
+  * [http://writingcenter.unlv.edu/writing/abstract.html](http://writingcenter.unlv.edu/writing/abstract.html)
 * [Writing a Good Introduction](http://www.cs.columbia.edu/~hgs/etc/intro-style.html) (important)
 
 ### Parser Generator
@@ -72,13 +76,13 @@ Recent conferences:
 * [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
 * TextMate Bundles for Ruby on Rails
   * [TmCodeBrowser](http://www.cocoabits.com/TmCodeBrowser/)
-  * [](https://github.com/carlosbrando/ruby-on-rails-tmbundle)
-  * [](https://github.com/protocool/AckMate)
-  * [](https://github.com/subtleGradient/javascript-tools.tmbundle)
-  * [](https://github.com/kswedberg/jquery-tmbundle)
-  * [](https://github.com/jcf/git-tmbundle)
-  * [](https://github.com/mocoso/code-beautifier.tmbundle
-  * [](https://github.com/grimen/compass_blueprint_tmbundle)
+  * [https://github.com/carlosbrando/ruby-on-rails-tmbundle](https://github.com/carlosbrando/ruby-on-rails-tmbundle)
+  * [https://github.com/protocool/AckMate](https://github.com/protocool/AckMate)
+  * [https://github.com/subtleGradient/javascript-tools.tmbundle](https://github.com/subtleGradient/javascript-tools.tmbundle)
+  * [https://github.com/kswedberg/jquery-tmbundle](https://github.com/kswedberg/jquery-tmbundle)
+  * [https://github.com/jcf/git-tmbundle](https://github.com/jcf/git-tmbundle)
+  * [https://github.com/mocoso/code-beautifier.tmbundle](https://github.com/mocoso/code-beautifier.tmbundle)
+  * [https://github.com/grimen/compass_blueprint_tmbundle](https://github.com/grimen/compass_blueprint_tmbundle)
 * [TextMate Bundle for Haskell](https://github.com/textmate/haskell.tmbundle)
 * [TextMate Bundle for io](https://github.com/textmate/io.tmbundle)
 * [Cena - Offline Judge](http://code.google.com/p/cena/)
