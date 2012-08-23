@@ -1,4 +1,4 @@
-<center>![图片：做人要低调](/images/didiao.gif "做人要低调")</center>
+![图片：做人要低调](/images/didiao.gif "做人要低调")
 
 ## Research
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
