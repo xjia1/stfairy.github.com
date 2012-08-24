@@ -34,7 +34,7 @@ Recent conferences:
 * [GoNative](http://sos.cse.lehigh.edu/gonative/) -- Safe Execution of Native Code
 
 ### Online Reading
-* [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html)
+* [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
 * [Build your own compiler in Ruby with LLVM](http://macournoyer.com/blog/2008/12/09/orange/)
 * [Final version of the C99 standard with corrigenda TC1, TC2, and TC3 included, formatted as a draft](http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf) PDF (3.61&nbsp;MB)
 * [The syntax of C in Backus-Naur form](http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf)
