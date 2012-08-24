@@ -86,6 +86,9 @@ header h2 {
   width: 100%;
   -webkit-font-smoothing: antialiased;
 }
+pre#main_content {
+  font-size: 20px;
+}
 section img {
   max-width: 100%
 }
