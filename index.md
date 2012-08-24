@@ -45,9 +45,9 @@ Recent conferences:
 
 ### Paper Writing
 * Writing Abstract
-  * [http://www.ece.cmu.edu/~koopman/essays/abstract.html](http://www.ece.cmu.edu/~koopman/essays/abstract.html)
-  * [http://research.berkeley.edu/ucday/abstract.html](http://research.berkeley.edu/ucday/abstract.html)
-  * [http://writingcenter.unlv.edu/writing/abstract.html](http://writingcenter.unlv.edu/writing/abstract.html)
+  * <http://www.ece.cmu.edu/~koopman/essays/abstract.html>
+  * <http://research.berkeley.edu/ucday/abstract.html>
+  * <http://writingcenter.unlv.edu/writing/abstract.html>
 * [Writing a Good Introduction](http://www.cs.columbia.edu/~hgs/etc/intro-style.html) (important)
 
 ### Parser Generator
@@ -61,7 +61,7 @@ Recent conferences:
 * [Kotlin](http://confluence.jetbrains.net/display/Kotlin/Welcome) -- Java enhancement
 * [PyPy](http://pypy.org/) -- alternative Python implementation; sandboxing
 * [BicaVM](http://github.com/nurv/BicaVM) -- JavaScript JVM
-* [ql.io](http://ql.io/) a declarative, data-retrieval and aggregation gateway for quickly consuming HTTP APIs
+* [ql.io](http://ql.io/) -- a declarative, data-retrieval and aggregation gateway for quickly consuming HTTP APIs
 
 ### JavaScript Library
 * [Sugar.js](http://sugarjs.com/)
