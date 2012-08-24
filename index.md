@@ -76,12 +76,12 @@ Recent conferences:
 * [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
 * TextMate Bundles for Ruby on Rails
   * [TmCodeBrowser](http://www.cocoabits.com/TmCodeBrowser/)
-  * [https://github.com/carlosbrando/ruby-on-rails-tmbundle](https://github.com/carlosbrando/ruby-on-rails-tmbundle)
-  * [https://github.com/protocool/AckMate](https://github.com/protocool/AckMate)
-  * [https://github.com/subtleGradient/javascript-tools.tmbundle](https://github.com/subtleGradient/javascript-tools.tmbundle)
-  * [https://github.com/kswedberg/jquery-tmbundle](https://github.com/kswedberg/jquery-tmbundle)
-  * [https://github.com/jcf/git-tmbundle](https://github.com/jcf/git-tmbundle)
-  * [https://github.com/mocoso/code-beautifier.tmbundle](https://github.com/mocoso/code-beautifier.tmbundle)
+  * <https://github.com/carlosbrando/ruby-on-rails-tmbundle>
+  * <https://github.com/protocool/AckMate>
+  * <https://github.com/subtleGradient/javascript-tools.tmbundle>
+  * <https://github.com/kswedberg/jquery-tmbundle>
+  * <https://github.com/jcf/git-tmbundle>
+  * <https://github.com/mocoso/code-beautifier.tmbundle>
 * [TextMate Bundle for Haskell](https://github.com/textmate/haskell.tmbundle)
 * [TextMate Bundle for io](https://github.com/textmate/io.tmbundle)
 * [Cena - Offline Judge](http://code.google.com/p/cena/)
