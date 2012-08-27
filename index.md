@@ -35,6 +35,7 @@ Recent conferences:
 
 ### Online Reading
 * [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
+  * I translated [Violet (Chapter 22 of Volume I)](http://www.ituring.com.cn/article/details/9806)
 * [Build your own compiler in Ruby with LLVM](http://macournoyer.com/blog/2008/12/09/orange/)
 * [Final version of the C99 standard with corrigenda TC1, TC2, and TC3 included, formatted as a draft](http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf) PDF (3.61&nbsp;MB)
 * [The syntax of C in Backus-Naur form](http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf)
