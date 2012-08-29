@@ -28,6 +28,11 @@ Recent conferences:
 
 ## Miscellaneous
 
+### Erlang
+* [Yaws](http://yaws.hyber.org/)
+* [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
+* [Chicago Boss](http://www.chicagoboss.org/)
+
 ### PLDI 2012
 * [xtc (eXTensible Compiler)](http://cs.nyu.edu/xtc/) -- SuperC
 * [C-Reduce](http://embed.cs.utah.edu/creduce/) -- Test-Case Reduction for C Compiler Bugs
