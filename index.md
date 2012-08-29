@@ -32,6 +32,7 @@ Recent conferences:
 * [Yaws](http://yaws.hyber.org/)
 * [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
 * [Chicago Boss](http://www.chicagoboss.org/)
+  * [An Evening With Chicago Boss](http://www.evanmiller.org/chicago-boss-guide.html)
 
 ### PLDI 2012
 * [xtc (eXTensible Compiler)](http://cs.nyu.edu/xtc/) -- SuperC
