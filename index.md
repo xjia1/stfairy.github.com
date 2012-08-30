@@ -1,7 +1,7 @@
 ![图片：做人要低调](/images/didiao.gif "做人要低调")
 
 <p style="display: inline-block; color: #333; background: white; border: 1px solid #ccc; padding: 10px; margin: 0;">
-Hey! I am a fan of &nbsp;<img alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/>now!
+Hey! I am a fan of &nbsp;<img style="vertical-align: bottom;" alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/>now!
 </p>
 
 ## Research
