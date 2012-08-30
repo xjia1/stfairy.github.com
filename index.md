@@ -1,8 +1,8 @@
-<p style="color: #333; background: white; border: 1px solid #ccc; padding-left: 20px;">
+![图片：做人要低调](/images/didiao.gif "做人要低调")
+
+<p style="display: inline-block; color: #333; background: white; border: 1px solid #ccc; padding: 10px; margin: 0;">
 Hey! I am a fan of <img alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/>now!.
 </p>
-
-![图片：做人要低调](/images/didiao.gif "做人要低调")
 
 ## Research
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
