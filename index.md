@@ -109,6 +109,7 @@ Recent conferences:
 * [Font Awesome](http://fortawesome.github.com/Font-Awesome/), the iconic font designed for use with Twitter Bootstrap
 * [jQuery UI Bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap/) -- A Bootstrap-themed kickstart for jQuery UI widgets
 * [GitHub Styleguide](https://github.com/styleguide)
+* [Force websites to use SSL in Google Chrome](http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html)
 
 ### Useful Java Libraries used by Confluence
 * [XStream](http://xstream.codehaus.org/) is a simple library to serialize objects to XML and back again
