@@ -1,5 +1,7 @@
 ![图片：做人要低调](/images/didiao.gif "做人要低调")
 
+Hey! I am a fan of ![the Erlang programming language](http://www.erlang.org/images/logo_small.png "the Erlang programming language") now!.
+
 ## Research
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
   * [Speculative Nondeterminism: A Web Demo](http://adapt.seiee.sjtu.edu.cn/speculate/)
