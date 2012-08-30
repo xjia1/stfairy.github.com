@@ -1,6 +1,6 @@
 ![图片：做人要低调](/images/didiao.gif "做人要低调")
 
-<p style="background: white; border: 1px solid #ccc;">
+<p style="color: #333; background: white; border: 1px solid #ccc;">
 Hey! I am a fan of <img alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/> now!.
 </p>
 
