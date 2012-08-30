@@ -1,9 +1,7 @@
 ![图片：做人要低调](/images/didiao.gif "做人要低调")
 
 <p style="background: white; border: 1px solid #ccc;">
-
-Hey! I am a fan of ![the Erlang programming language](http://www.erlang.org/images/logo_small.png "the Erlang programming language") now!.
-
+Hey! I am a fan of <img alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/> now!.
 </p>
 
 ## Research
