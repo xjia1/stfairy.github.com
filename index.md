@@ -106,17 +106,15 @@ Recent conferences:
 ### Other Resources
 * [Setup LAMP on Mac OS X Lion](http://todsul.com/lamp-mac-os-x-lion)
 * [How to enable VNC access to Ubuntu from Mac](http://are4.us/raysblog/?p=983)
-* [JTikZ](http://jtikz.sourceforge.net/) A Java AWT/Swing Graphics drop-in replacement that renders to the TikZ/PGF (La)TeX language.
 * [Simon Peyton-Jones](http://research.microsoft.com/en-us/people/simonpj/)
 * [Programming, Logic, and Semantics Group of Computer Laboratory at University of Cambridge](http://www.cl.cam.ac.uk/research/pls/)
-* [Happstack](http://www.happstack.com/)
 * [Program Synthesis](http://research.microsoft.com/en-us/um/people/sumitg/pubs/synthesis.html) (IMPORTANT)
 * [LaTeX CV Template](http://jblevins.org/projects/cv-template/)
-* [SKETCH](http://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home) is a software synthesis tool that allows for rapid development of highly tuned bug-free algorithm implementations
+* [SKETCH](http://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home) is a software synthesis tool of highly tuned bug-free algorithm implementations
 * [Emoji cheat sheet](http://www.emoji-cheat-sheet.com)
 * [20 Great PHP Libraries You Need to Know](http://komunitasweb.com/2009/03/20-great-php-library-you-need-to-know/)
-* [Font Awesome](http://fortawesome.github.com/Font-Awesome/), the iconic font designed for use with Twitter Bootstrap
-* [jQuery UI Bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap/) -- A Bootstrap-themed kickstart for jQuery UI widgets
+* [Font Awesome](http://fortawesome.github.com/Font-Awesome/) is an iconic font designed for use with Twitter Bootstrap
+* [jQuery UI Bootstrap](http://addyosmani.github.com/jquery-ui-bootstrap/) is a Bootstrap-themed kickstart for jQuery UI widgets
 * [GitHub Styleguide](https://github.com/styleguide)
 * [Force websites to use SSL in Google Chrome](http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html)
 
