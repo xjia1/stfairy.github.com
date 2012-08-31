@@ -83,15 +83,15 @@ Recent conferences:
 * [Tick](http://harvesthq.github.com/tick/) makes visualizing dynamically changing numbers a breeze
 
 ### Utilities
-* [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
-* TextMate Bundles for Ruby on Rails
-  * [TmCodeBrowser](http://www.cocoabits.com/TmCodeBrowser/)
-  * <https://github.com/carlosbrando/ruby-on-rails-tmbundle>
-  * <https://github.com/protocool/AckMate>
-  * <https://github.com/subtleGradient/javascript-tools.tmbundle>
-  * <https://github.com/kswedberg/jquery-tmbundle>
-  * <https://github.com/jcf/git-tmbundle>
-  * <https://github.com/mocoso/code-beautifier.tmbundle>
+* [Pandoc](http://johnmacfarlane.net/pandoc/) is a universal document converter
+* TextMate Bundles for Ruby on Rails:
+    [1](http://www.cocoabits.com/TmCodeBrowser/)
+    [2](https://github.com/carlosbrando/ruby-on-rails-tmbundle)
+    [3](https://github.com/protocool/AckMate)
+    [4](ttps://github.com/subtleGradient/javascript-tools.tmbundle)
+    [5](https://github.com/kswedberg/jquery-tmbundle)
+    [6](https://github.com/jcf/git-tmbundle)
+    [7](https://github.com/mocoso/code-beautifier.tmbundle)
 * [TextMate Bundle for Haskell](https://github.com/textmate/haskell.tmbundle)
 * [TextMate Bundle for io](https://github.com/textmate/io.tmbundle)
 * [Cena - Offline Judge](http://code.google.com/p/cena/)
