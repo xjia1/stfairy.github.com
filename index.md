@@ -83,6 +83,7 @@ Recent conferences:
 * [Raphaël](http://raphaeljs.com/) is a small JavaScript library that should simplify your work with vector graphics on the web
 * [jFontSize](http://www.jfontsize.com/)
 * [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) is a small jQuery plugin that makes it easy to execute a function whenever you scroll to an element
+* [Chosen](http://harvesthq.github.com/chosen/) is a JavaScript plugin that makes long, unwieldy select boxes much more user-friendly
 
 ### Utilities
 * [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
