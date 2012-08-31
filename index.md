@@ -93,7 +93,7 @@ Recent conferences:
     [6](https://github.com/jcf/git-tmbundle)
     [7](https://github.com/mocoso/code-beautifier.tmbundle)
 * [TextMate Bundle for Haskell](https://github.com/textmate/haskell.tmbundle)
-* [TextMate Bundle for io](https://github.com/textmate/io.tmbundle)
+* [TextMate Bundle for Io](https://github.com/textmate/io.tmbundle)
 * [Cena - Offline Judge](http://code.google.com/p/cena/)
 * [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)
 
