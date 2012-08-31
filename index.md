@@ -37,7 +37,8 @@ Recent conferences:
 ### Erlang
 * [Yaws](http://yaws.hyber.org/)
 * [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
-* [Chicago Boss](http://www.chicagoboss.org/) (see also [_An Evening With Chicago Boss_](http://www.evanmiller.org/chicago-boss-guide.html))
+* [Chicago Boss](http://www.chicagoboss.org/)
+  * see also [_An Evening With Chicago Boss_](http://www.evanmiller.org/chicago-boss-guide.html)
 * [Two Erlang Finds: Atomic Names and Parameterized Modules](http://userprimary.net/posts/2009/03/04/two-erlang-finds-atomic-names-and-parameterized-modules/) (see also [_Parameterized Modules_](http://www.trapexit.org/Parameterized_Modules), [_Extend Module_](http://www.trapexit.org/Extend_Module), and [_this StackOverflow topic_](http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang))
 * BeeBole -- [Erlang Archives](http://beebole.com/blog/erlang/) -- [Erlang Tutorials for Web Applications](http://beebole.com/erlang/)
 
@@ -50,7 +51,6 @@ Recent conferences:
 * [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
   * I translated [Violet (Chapter 22 of Volume I)](http://blog.xiao-jia.com/posts/2012/08/violet.html)
 * [Build your own compiler in Ruby with LLVM](http://macournoyer.com/blog/2008/12/09/orange/)
-* [Final version of the C99 standard with corrigenda TC1, TC2, and TC3 included, formatted as a draft](http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf) PDF (3.61&nbsp;MB)
 * [The syntax of C in Backus-Naur form](http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf)
 * [Re: How to Design (Declarative) Programming Languages](http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html)
 * [Great Works in Programming Languages Collected by Benjamin C. Pierce](http://www.cis.upenn.edu/~bcpierce/courses/670Fall04/GreatWorksInPL.shtml)
@@ -64,29 +64,22 @@ Recent conferences:
   * <http://writingcenter.unlv.edu/writing/abstract.html>
 * [Writing a Good Introduction](http://www.cs.columbia.edu/~hgs/etc/intro-style.html) (important)
 
-### Parser Generator
-* [PEG.js](http://pegjs.majda.cz/) -- Parser Generator for JavaScript
+### Parser Generators
+* [PEG.js](http://pegjs.majda.cz/)
 * [Treetop](http://treetop.rubyforge.org/)
 * [Ragel State Machine Compiler](http://www.complang.org/ragel/)
 * [Hyacc](http://hyacc.sourceforge.net/)
 
-### Languages & Implementation
-* [Rust](http://www.rust-lang.org/) -- a safe, concurrent, practical language
-* [Kotlin](http://confluence.jetbrains.net/display/Kotlin/Welcome) -- Java enhancement
-* [PyPy](http://pypy.org/) -- alternative Python implementation; sandboxing
-* [BicaVM](http://github.com/nurv/BicaVM) -- JavaScript JVM
-* [ql.io](http://ql.io/) -- a declarative, data-retrieval and aggregation gateway for quickly consuming HTTP APIs
-
-### JavaScript Library
+### JavaScript Libraries
 * [Sugar.js](http://sugarjs.com/)
 * [jwerty](http://keithamus.github.com/jwerty/)
 * [jStorage](http://www.jstorage.info/)
 * [Countdown.js](http://countdownjs.org/)
-* [Raphaël](http://raphaeljs.com/) is a small JavaScript library that should simplify your work with vector graphics on the web
+* [Raphaël](http://raphaeljs.com/) simplifies your work with vector graphics on the web
 * [jFontSize](http://www.jfontsize.com/)
-* [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) is a small jQuery plugin that makes it easy to execute a function whenever you scroll to an element
-* [Chosen](http://harvesthq.github.com/chosen/) is a JavaScript plugin that makes long, unwieldy select boxes much more user-friendly
-* [Tick](http://harvesthq.github.com/tick/) is a modular JavaScript plugin that makes visualizing dynamically changing numbers a breeze
+* [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) makes it easy to execute a function whenever you scroll to an element
+* [Chosen](http://harvesthq.github.com/chosen/) makes long, unwieldy select boxes much more user-friendly
+* [Tick](http://harvesthq.github.com/tick/) makes visualizing dynamically changing numbers a breeze
 
 ### Utilities
 * [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
