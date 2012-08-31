@@ -133,8 +133,8 @@ Recent conferences:
 * [Daisy Diff](http://code.google.com/p/daisydiff/) diffs (compares) HTML files
 * [The Commons FileUpload package](http://commons.apache.org/fileupload/) makes it easy to add file upload capability
 * [The CSS Parser](http://cssparser.sourceforge.net/) inputs CSS source and outputs a DOM tree
-* [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) provides easy-to-use wrappers around reflection and introspection capabilities
-* [Bean Scripting Framework (BSF)](http://commons.apache.org/bsf/) provides scripting language support within Java applications, and access to Java objects and methods from scripting languages
+* [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) provides wrappers around reflection and introspection capabilities
+* [Bean Scripting Framework](http://commons.apache.org/bsf/) provides scripting language support and access to Java objects and methods from scripting languages
 * [Batik](http://xmlgraphics.apache.org/batik/) is a toolkit for display, generation and manipulation of SVG images
 * [Quartz](http://quartz-scheduler.org/) is a full-featured job scheduling service for any Java EE/SE application
 
