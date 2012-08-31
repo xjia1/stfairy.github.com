@@ -2,6 +2,8 @@
 
 <p style="display: inline-block; color: #333; background: white; border: 1px solid #ccc; padding: 10px; margin: 0 0 20px 0;">
 Hey! I am a fan of &nbsp;<img style="vertical-align: bottom;" alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/>now!
+<br/>
+You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV here</a>.
 </p>
 
 ## Research
