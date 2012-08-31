@@ -84,6 +84,7 @@ Recent conferences:
 * [jFontSize](http://www.jfontsize.com/)
 * [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) is a small jQuery plugin that makes it easy to execute a function whenever you scroll to an element
 * [Chosen](http://harvesthq.github.com/chosen/) is a JavaScript plugin that makes long, unwieldy select boxes much more user-friendly
+* [Tick](http://harvesthq.github.com/tick/) is a modular JavaScript plugin that makes visualizing dynamically changing numbers a breeze
 
 ### Utilities
 * [Pandoc](http://johnmacfarlane.net/pandoc/) a universal document converter
