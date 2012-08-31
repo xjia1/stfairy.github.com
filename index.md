@@ -122,20 +122,19 @@ Recent conferences:
 
 ### Useful Java Libraries used by Confluence
 * [XStream](http://xstream.codehaus.org/) is a simple library to serialize objects to XML and back again
-* [JFugue](http://www.jfugue.org/) is an open-source Java API for programming music without the complexities of MIDI
-* [Gson](http://code.google.com/p/google-gson/) is a Java library that can be used to convert Java Objects into their JSON representation
-* [The Guava project](http://code.google.com/p/guava-libraries/) contains several of Google's core libraries that we rely on in our Java-based projects: collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth
-* [jsoup](http://jsoup.org/) is a Java library for working with real-world HTML
-* [JCAPTCHA](http://jcaptcha.sourceforge.net/) for captcha definition and integration
-* [The Apache PDFBox™ library](http://pdfbox.apache.org/) is an open source Java tool for working with PDF documents
-* [Apache POI](http://poi.apache.org/) - the Java API for Microsoft Documents
-* [NekoHTML](http://nekohtml.sourceforge.net/) is a simple HTML scanner and tag balancer that enables application programmers to parse HTML documents and access the information using standard XML interfaces
-* [Daisy Diff](http://code.google.com/p/daisydiff/) is a Java library that diffs (compares) HTML files
-* [The Commons FileUpload package](http://commons.apache.org/fileupload/) makes it easy to add robust, high-performance, file upload capability to your servlets and web applications
-* [The CSS Parser](http://cssparser.sourceforge.net/) is implemented as a package of Java classes, that inputs Cascading Style Sheets Level 2 source text and outputs a Document Object Model Level 2 Style tree
-* [cglib](http://cglib.sourceforge.net/) is a powerful, high performance and quality Code Generation Library
+* [JFugue](http://www.jfugue.org/) is for programming music without the complexities of MIDI
+* [Gson](http://code.google.com/p/google-gson/) is used to convert Java Objects into their JSON representation
+* [The Guava project](http://code.google.com/p/guava-libraries/) (from Google) contains collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth
+* [jsoup](http://jsoup.org/) is for working with real-world HTML
+* [JCAPTCHA](http://jcaptcha.sourceforge.net/) is for captcha definition and integration
+* [The Apache PDFBox™ library](http://pdfbox.apache.org/) is for working with PDF documents
+* [Apache POI](http://poi.apache.org/) is the Java API for Microsoft Documents
+* [NekoHTML](http://nekohtml.sourceforge.net/) is a simple HTML scanner and tag balancer
+* [Daisy Diff](http://code.google.com/p/daisydiff/) diffs (compares) HTML files
+* [The Commons FileUpload package](http://commons.apache.org/fileupload/) makes it easy to add file upload capability
+* [The CSS Parser](http://cssparser.sourceforge.net/) inputs CSS source and outputs a DOM tree
 * [Apache Commons BeanUtils](http://commons.apache.org/beanutils/) provides easy-to-use wrappers around reflection and introspection capabilities
-* [Bean Scripting Framework (BSF)](http://commons.apache.org/bsf/) is a set of Java classes which provides scripting language support within Java applications, and access to Java objects and methods from scripting languages
-* [Batik](http://xmlgraphics.apache.org/batik/) is a Java-based toolkit for applications or applets that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as display, generation or manipulation
-* [Quartz](http://quartz-scheduler.org/) is a full-featured, open source job scheduling service that can be integrated with, or used along side virtually any Java EE or Java SE application - from the smallest stand-alone application to the largest e-commerce system
+* [Bean Scripting Framework (BSF)](http://commons.apache.org/bsf/) provides scripting language support within Java applications, and access to Java objects and methods from scripting languages
+* [Batik](http://xmlgraphics.apache.org/batik/) is a toolkit for display, generation and manipulation of SVG images
+* [Quartz](http://quartz-scheduler.org/) is a full-featured job scheduling service for any Java EE/SE application
 
