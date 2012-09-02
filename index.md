@@ -51,7 +51,7 @@ Recent conferences:
 
 ### Online Reading
 * [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
-  * I translated [Violet (Chapter 22 of Volume I)](http://blog.xiao-jia.com/posts/2012/08/violet.html)
+  * I translated [Violet (Chapter 22 of Volume I)](http://blog.xiao-jia.com/article/2012/08/27/violet/)
 * [Build your own compiler in Ruby with LLVM](http://macournoyer.com/blog/2008/12/09/orange/)
 * [The syntax of C in Backus-Naur form](http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf)
 * [Re: How to Design (Declarative) Programming Languages](http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html)
