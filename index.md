@@ -7,6 +7,7 @@ You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV her
 </p>
 
 ## Research
+* I'm a Junior Research Assistant @ NUS now (supervisor: [Joxan Jaffar](http://www.comp.nus.edu.sg/~joxan/) and [Roland Yap](http://www.comp.nus.edu.sg/~ryap/))
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
   * [Speculative Nondeterminism: A Web Demo](http://adapt.seiee.sjtu.edu.cn/speculate/)
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
