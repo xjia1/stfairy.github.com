@@ -19,6 +19,17 @@ Recent conferences:
 * [PLDI 2013](http://pldi2013.ucombinator.org/) (Nov 11, 2012)
 * [GPCE 2013](http://program-transformation.org/Gpce) (May, 2013)
 
+## Erlang
+* [Erlide](http://erlide.org/) - the Erlang IDE powered by Eclipse
+* [Yaws](http://yaws.hyber.org/)
+* [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
+* [Chicago Boss](http://www.chicagoboss.org/)
+  * see also [_An Evening With Chicago Boss_](http://www.evanmiller.org/chicago-boss-guide.html)
+* [Two Erlang Finds: Atomic Names and Parameterized Modules](http://userprimary.net/posts/2009/03/04/two-erlang-finds-atomic-names-and-parameterized-modules/)
+  * see also [_Parameterized Modules_](http://www.trapexit.org/Parameterized_Modules), [_Extend Module_](http://www.trapexit.org/Extend_Module), and [_this StackOverflow topic_](http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang)
+* BeeBole ([Erlang Archives](http://beebole.com/blog/erlang/), [Erlang Tutorials for Web Applications](http://beebole.com/erlang/))
+* Series: [Web Development With Erlang](http://buffered.io/series/web-development-with-erlang/)
+
 ## Teaching
 * [PPCA (Summer 2012)](http://acm.sjtu.edu.cn/ppca/)
 * [Compiler (Spring 2012)](http://acm.sjtu.edu.cn/compiler/)
@@ -36,16 +47,6 @@ Recent conferences:
 * [My GitHub Page](https://github.com/stfairy)
 
 ## Miscellaneous
-
-### Erlang
-* [Yaws](http://yaws.hyber.org/)
-* [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
-* [Chicago Boss](http://www.chicagoboss.org/)
-  * see also [_An Evening With Chicago Boss_](http://www.evanmiller.org/chicago-boss-guide.html)
-* [Two Erlang Finds: Atomic Names and Parameterized Modules](http://userprimary.net/posts/2009/03/04/two-erlang-finds-atomic-names-and-parameterized-modules/)
-  * see also [_Parameterized Modules_](http://www.trapexit.org/Parameterized_Modules), [_Extend Module_](http://www.trapexit.org/Extend_Module), and [_this StackOverflow topic_](http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang)
-* BeeBole ([Erlang Archives](http://beebole.com/blog/erlang/), [Erlang Tutorials for Web Applications](http://beebole.com/erlang/))
-* Series: [Web Development With Erlang](http://buffered.io/series/web-development-with-erlang/)
 
 ### PLDI 2012
 * [xtc (eXTensible Compiler)](http://cs.nyu.edu/xtc/) -- SuperC
