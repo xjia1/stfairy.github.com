@@ -13,6 +13,8 @@ You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV her
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
   * [Speculative Nondeterminism: A Web Demo](http://adapt.seiee.sjtu.edu.cn/speculate/)
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
+* Program Synthesis
+  * [Integrating Programming Languages & Databases: What's the Problem?](http://www.cs.utexas.edu/~wcook/Drafts/2005/PLDBProblem.pdf)
 
 Recent conferences:
 
