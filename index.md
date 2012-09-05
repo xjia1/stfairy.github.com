@@ -15,7 +15,7 @@ You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV her
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
 * Program Synthesis
   * [Integrating Programming Languages & Databases: What's the Problem?](http://www.cs.utexas.edu/~wcook/Drafts/2005/PLDBProblem.pdf)
-  * [StatusQup](http://db.csail.mit.edu/statusquo/) automatically refactors database applications for performance
+  * [StatusQuo](http://db.csail.mit.edu/statusquo/) automatically refactors database applications for performance (related [paper](http://people.csail.mit.edu/akcheung/papers/vldb12.pdf) and [slides](http://people.csail.mit.edu/akcheung/papers/vldb12_slides.pdf))
 
 Recent conferences:
 
