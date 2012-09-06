@@ -108,6 +108,10 @@ Recent conferences:
 * [MultiMarkdown](http://fletcherpenney.net/multimarkdown/)
 
 ### Other Resources
+* Install and tweak classic gnome in Ubuntu 12.04
+ * `sudo apt-get install gnome-session-fallback`
+ * `sudo apt-get purge liboverlay-scrollbar-0.2-0 liboverlay-scrollbar3-0.2-0 overlay-scrollbar`
+ * `gconftool-2 --set "/apps/metacity/general/button_layout" --type string ":minimize,maximize,close"`
 * [Setup LAMP on Mac OS X Lion](http://todsul.com/lamp-mac-os-x-lion)
 * [How to enable VNC access to Ubuntu from Mac](http://are4.us/raysblog/?p=983)
 * [Simon Peyton-Jones](http://research.microsoft.com/en-us/people/simonpj/)
