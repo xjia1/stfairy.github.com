@@ -32,6 +32,8 @@ Recent conferences:
   * see also [_Parameterized Modules_](http://www.trapexit.org/Parameterized_Modules), [_Extend Module_](http://www.trapexit.org/Extend_Module), and [_this StackOverflow topic_](http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang)
 * BeeBole ([Erlang Archives](http://beebole.com/blog/erlang/), [Erlang Tutorials for Web Applications](http://beebole.com/erlang/))
 * Series: [Web Development With Erlang](http://buffered.io/series/web-development-with-erlang/)
+* [MochiWeb](https://github.com/mochi/mochiweb)
+* A Million-user Comet Application with Mochiweb ([Part 1](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1), [Part 2](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-2), [Part 3](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3))
 
 ## Teaching
 * [PPCA (Summer 2012)](http://acm.sjtu.edu.cn/ppca/)
