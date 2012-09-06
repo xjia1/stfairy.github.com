@@ -112,6 +112,11 @@ Recent conferences:
  * `sudo apt-get install gnome-session-fallback`
  * `sudo apt-get purge liboverlay-scrollbar-0.2-0 liboverlay-scrollbar3-0.2-0 overlay-scrollbar`
  * `gconftool-2 --set "/apps/metacity/general/button_layout" --type string ":minimize,maximize,close"`
+* LaTeX and Chinese support in Ubuntu 12.04
+ * `sudo apt-get install texlive-full`
+ * `sudo apt-get install latex-cjk-all`
+ * `\usepackage{CJKutf8}`
+ * `\begin{CJK}{UTF8}{gkai}中文\end{CJK}`
 * [Setup LAMP on Mac OS X Lion](http://todsul.com/lamp-mac-os-x-lion)
 * [How to enable VNC access to Ubuntu from Mac](http://are4.us/raysblog/?p=983)
 * [Simon Peyton-Jones](http://research.microsoft.com/en-us/people/simonpj/)
