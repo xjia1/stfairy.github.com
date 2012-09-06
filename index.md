@@ -116,6 +116,7 @@ Recent conferences:
  * `sudo apt-get install texlive-full latex-cjk-all`
  * `\usepackage{CJKutf8}`
  * `\begin{CJK}{UTF8}{gkai}中文\end{CJK}`
+* [Enable Skype notifications in gnome classic](http://askubuntu.com/a/72764/85426)
 * [Setup LAMP on Mac OS X Lion](http://todsul.com/lamp-mac-os-x-lion)
 * [How to enable VNC access to Ubuntu from Mac](http://are4.us/raysblog/?p=983)
 * [Simon Peyton-Jones](http://research.microsoft.com/en-us/people/simonpj/)
