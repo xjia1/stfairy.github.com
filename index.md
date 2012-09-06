@@ -10,6 +10,7 @@ You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV her
 * I'm a Junior Research Assistant @ NUS now (supervisor: [Joxan Jaffar](http://www.comp.nus.edu.sg/~joxan/) and [Roland Yap](http://www.comp.nus.edu.sg/~ryap/))
   * [SoC Webmail](https://mysoc.nus.edu.sg/~webmail/src/login.php)
   * [Soc Mail Guide](http://www.comp.nus.edu.sg/~zaini/emails/tech-email.htm) (Forwarding, Outlook, IMAP, etc.)
+  * [Erlang Implementation of SN](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Erlang_Implementation) (private)
 * [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))
   * [Speculative Nondeterminism: A Web Demo](http://adapt.seiee.sjtu.edu.cn/speculate/)
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
