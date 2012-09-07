@@ -93,6 +93,7 @@ Recent conferences:
 * [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) makes it easy to execute a function whenever you scroll to an element
 * [Chosen](http://harvesthq.github.com/chosen/) makes long, unwieldy select boxes much more user-friendly
 * [Tick](http://harvesthq.github.com/tick/) makes visualizing dynamically changing numbers a breeze
+* Favicon manipulation: [Piecon](http://lipka.github.com/piecon/) - [Tinycon](http://tommoor.github.com/tinycon/) - [Notificon](http://makeable.github.com/Notificon/)
 
 ### Utilities
 * [Pandoc](http://johnmacfarlane.net/pandoc/) is a universal document converter
