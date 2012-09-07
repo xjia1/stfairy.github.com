@@ -24,7 +24,7 @@ Recent conferences:
 * [GPCE 2013](http://program-transformation.org/Gpce) (May, 2013)
 
 ## Erlang
-* [http://www.erlang.org/doc/tutorial/users_guide.html Interoperability Tutorial User's Guide]
+* [Interoperability Tutorial User's Guide](http://www.erlang.org/doc/tutorial/users_guide.html)
 * [Erlide](http://erlide.org/) - the Erlang IDE powered by Eclipse
 * [Yaws](http://yaws.hyber.org/)
 * [Mnesia](http://www.erlang.org/doc/apps/mnesia/index.html)
