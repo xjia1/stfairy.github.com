@@ -61,6 +61,7 @@ Recent conferences:
 * [GoNative](http://sos.cse.lehigh.edu/gonative/) -- Safe Execution of Native Code
 
 ### Online Reading
+* [Developing Backbone.js Applications](http://addyosmani.github.com/backbone-fundamentals/)
 * [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
   * I translated [Violet (Chapter 22 of Volume I)](http://blog.xiao-jia.com/article/2012/08/27/violet/)
 * [Build your own compiler in Ruby with LLVM](http://macournoyer.com/blog/2008/12/09/orange/)
