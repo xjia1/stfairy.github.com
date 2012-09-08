@@ -85,9 +85,10 @@ Recent conferences:
 * [Hyacc](http://hyacc.sourceforge.net/)
 
 ### JavaScript Libraries
+* [Page.js](http://visionmedia.github.com/page.js/) - Tiny ~1200 byte Express-inspired client-side router
+* [Handlebars.js](http://handlebarsjs.com/)
 * [Sugar.js](http://sugarjs.com/)
 * [jwerty](http://keithamus.github.com/jwerty/)
-* [jStorage](http://www.jstorage.info/)
 * [Countdown.js](http://countdownjs.org/)
 * [Raphaël](http://raphaeljs.com/) simplifies your work with vector graphics on the web
 * [jFontSize](http://www.jfontsize.com/)
@@ -95,6 +96,7 @@ Recent conferences:
 * [Chosen](http://harvesthq.github.com/chosen/) makes long, unwieldy select boxes much more user-friendly
 * [Tick](http://harvesthq.github.com/tick/) makes visualizing dynamically changing numbers a breeze
 * Favicon manipulation: [Piecon](http://lipka.github.com/piecon/) - [Tinycon](http://tommoor.github.com/tinycon/) - [Notificon](http://makeable.github.com/Notificon/)
+* [spin.js](http://fgnass.github.com/spin.js/) (the famous animation)
 
 ### Utilities
 * [Pandoc](http://johnmacfarlane.net/pandoc/) is a universal document converter
