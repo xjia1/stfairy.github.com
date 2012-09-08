@@ -89,7 +89,6 @@ Recent conferences:
 * [Handlebars.js](http://handlebarsjs.com/)
 * [Sugar.js](http://sugarjs.com/)
 * [jwerty](http://keithamus.github.com/jwerty/)
-* [Countdown.js](http://countdownjs.org/)
 * [Raphaël](http://raphaeljs.com/) simplifies your work with vector graphics on the web
 * [jFontSize](http://www.jfontsize.com/)
 * [jQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) makes it easy to execute a function whenever you scroll to an element
