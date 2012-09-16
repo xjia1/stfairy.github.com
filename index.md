@@ -7,21 +7,14 @@ You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV her
 </p>
 
 ## Research
-* I'm a Junior Research Assistant @ NUS now (supervisor: [Joxan Jaffar](http://www.comp.nus.edu.sg/~joxan/) and [Roland Yap](http://www.comp.nus.edu.sg/~ryap/)) 
+* I'm a Junior Research Assistant @ NUS now (supervisor: [Joxan Jaffar](http://www.comp.nus.edu.sg/~joxan/) and [Roland Yap](http://www.comp.nus.edu.sg/~ryap/))   
   * [SoC Webmail](https://mysoc.nus.edu.sg/~webmail/src/login.php)
   * [Soc Mail Guide](http://www.comp.nus.edu.sg/~zaini/emails/tech-email.htm) (Forwarding, Outlook, IMAP, etc.)
   * [Erlang Implementation of SN](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Erlang_Implementation) (private)
-* [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/)) 
+* [Coordination Languages](http://www.cs.sjtu.edu.cn/~kzhu/wiki/index.php5/Coordination_Languages) (supervisor: [Kenny Q. Zhu](http://www.cs.sjtu.edu.cn/~kzhu/))   
   * [Speculative Nondeterminism: A Web Demo](http://adapt.seiee.sjtu.edu.cn/speculate/)
 * [Apparel Recommendation System](http://acm.sjtu.edu.cn/~xjia/recsys) ([doku](http://recsys.acm-project.org/wiki/))
-* Program Synthesis
-  * [Integrating Programming Languages & Databases: What's the Problem?](http://www.cs.utexas.edu/~wcook/Drafts/2005/PLDBProblem.pdf)
-  * [StatusQuo](http://db.csail.mit.edu/statusquo/) automatically refactors database applications for performance (related [paper](http://people.csail.mit.edu/akcheung/papers/vldb12.pdf) and [slides](http://people.csail.mit.edu/akcheung/papers/vldb12_slides.pdf))
-    * Pyxis only reduces **network latency** by running part of the application code on the DB server
-    * No REAL stored procedure is generated
-    * Also they state that (in Page 3) "We ﬁnd that running the program outside the DBMS does not signiﬁcantly hurt performance as long as it is colocated"
-    * But the experiment section only compares (1) JDBC, (2) Manual, (3) Pyxis, where "Manual" is to manually separate Java code
-    * Should do experiments on manually translating Java code to SQL stored procedure
+* [Program Synthesis](http://xiao-jia.com/synthesis/)
 
 Recent conferences:
 
@@ -53,7 +46,7 @@ Recent conferences:
 ## Engineering
 * I am leading the [ACM Infrastructure Working Group](http://acm.sjtu.edu.cn/iwg)
 * I developed
-  1. [ACM Class homepage](http://acm.sjtu.edu.cn/)
+  1. [ACM Class Homepage](http://acm.sjtu.edu.cn/)
   2. [ACM Class Online Judge](http://acm.sjtu.edu.cn/OnlineJudge/)
   3. [ACM Class Xiaoyou](http://acm.sjtu.edu.cn/xiaoyou/)
 * [My GitHub Page](https://github.com/stfairy)
