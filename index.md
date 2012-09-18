@@ -59,6 +59,7 @@ Recent conferences:
 * [GoNative](http://sos.cse.lehigh.edu/gonative/) -- Safe Execution of Native Code
 
 ### Online Reading
+* [Reading C type declarations](http://unixwiz.net/techtips/reading-cdecl.html)
 * [Learn Prolog](https://sites.google.com/site/learnprolog/) (I made this site long time ago)
 * [Developing Backbone.js Applications](http://addyosmani.github.com/backbone-fundamentals/)
 * [The Architecture of Open Source Applications](http://www.aosabook.org/en/index.html) ([Chinese translation](http://www.ituring.com.cn/minibook/19))
