@@ -1,8 +1,8 @@
 ![图片：做人要低调](/images/didiao.gif "做人要低调")
 
 <p style="display: inline-block; color: #333; background: white; border: 1px solid #ccc; padding: 10px; margin: 0 0 20px 0;">
-Hey! My chinese name is 贾枭<br/>
-I am a fan of &nbsp;<img async="async" style="vertical-align: bottom;" alt="the Erlang programming language" src="http://www.erlang.org/images/logo_small.png"/>now!
+Hey! My Chinese name is 贾枭.<br/>
+I am a fan of <a href="http://www.erlang.org/" target="_blank">Erlang</a> now!
 <br/>
 You can find <a href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV here</a> and <a href="http://blog.xiao-jia.com/">my blog here</a>.
 </p>
