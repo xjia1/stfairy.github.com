@@ -9,3 +9,9 @@
   * But the experiment section only compares (1) JDBC, (2) Manual, (3) Pyxis, where "Manual" is to manually separate Java code
   * Should do experiments on manually translating Java code to SQL stored procedure
   * But they also have another paper [Inferring SQL Queries Using Program Synthesis (arXiv 1208.2013)](http://arxiv.org/abs/1208.2013), which extracts relational specifications from imperative code fragments, and uses the [Sketch](https://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home) synthesizer to find a provably correct transformation from Java into SQL (this is the QBS (Query By Synthesis) part)
+
+-----
+
+Old archives:
+
+* [Automatic generation of model-intensive web-based applications](http://acm.sjtu.edu.cn/~xjia/agmi)
