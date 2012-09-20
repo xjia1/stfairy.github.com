@@ -35,6 +35,7 @@ Recent conferences:
 * Series: [Web Development With Erlang](http://buffered.io/series/web-development-with-erlang/)
 * [MochiWeb](https://github.com/mochi/mochiweb)
 * A Million-user Comet Application with Mochiweb ([Part 1](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1), [Part 2](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-2), [Part 3](http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3))
+* [Cowboy vs Misultin](http://erlang.2086793.n4.nabble.com/Cowboy-vs-Misultin-td3558963.html)
 
 ## Teaching
 * [PPCA (Summer 2012)](http://acm.sjtu.edu.cn/ppca/)
