@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" type="text/css" href="http://xiao-jia.com/stylesheets/stylesheet.css">
+    <title>404</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <section id="downloads">
+          <a href="https://github.com/stfairy" class="btn btn-github"><span class="icon"></span>Xiao Jia @ GitHub</a>
+        </section>
+        <h1>404</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <pre id="main_content">
+Welcome to Xiao Jia's Homepage (hosted by <a href="http://pages.github.com/">GitHub Pages</a>)
+
+<a href="/">xiao-jia.com</a>:~$ <script>document.write(window.location);</script>
+<script>document.write(window.location);</script>: page not found
+
+<a href="/">xiao-jia.com</a>:~$ exit
+logout
+Connection to <a href="/">xiao-jia.com</a> closed.</pre>
+    </div>
+  </body>
+</html>
