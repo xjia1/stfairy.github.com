@@ -155,8 +155,7 @@
 <li><a href="http://unixwiz.net/techtips/reading-cdecl.html">Reading C type declarations</a></li>
 <li><a href="https://sites.google.com/site/learnprolog/">Learn Prolog</a> (I made this site long time ago)</li>
 <li><a href="http://addyosmani.github.com/backbone-fundamentals/">Developing Backbone.js Applications</a></li>
-<li><a href="http://www.aosabook.org/en/index.html">The Architecture of Open Source Applications</a> (<a href="http://www.ituring.com.cn/minibook/19">Chinese translation</a>)
-<ul><li>I translated <a href="http://blog.xiao-jia.com/2012/08/27/violet/">Violet (Chapter 22 of Volume I)</a></li></ul></li>
+<li><a href="http://www.aosabook.org/en/index.html">The Architecture of Open Source Applications</a> (<a href="http://www.ituring.com.cn/minibook/19">Chinese translation</a>)</li>
 <li><a href="http://macournoyer.com/blog/2008/12/09/orange/">Build your own compiler in Ruby with LLVM</a></li>
 <li><a href="http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf">The syntax of C in Backus-Naur form</a></li>
 <li><a href="http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html">Re: How to Design (Declarative) Programming Languages</a></li>
@@ -168,10 +167,16 @@
 <h3 id="paperwriting">Paper Writing</h3>
 
 <ul>
-<li>Writing Abstract
-<ul><li><a href="http://www.ece.cmu.edu/~koopman/essays/abstract.html">http://www.ece.cmu.edu/~koopman/essays/abstract.html</a></li>
-<li><a href="http://research.berkeley.edu/ucday/abstract.html">http://research.berkeley.edu/ucday/abstract.html</a></li>
-<li><a href="http://writingcenter.unlv.edu/writing/abstract.html">http://writingcenter.unlv.edu/writing/abstract.html</a></li></ul></li>
+<li>
+  <details>
+    <summary>Writing Abstract</summary>
+    <ul>
+      <li><a href="http://www.ece.cmu.edu/~koopman/essays/abstract.html">http://www.ece.cmu.edu/~koopman/essays/abstract.html</a></li>
+      <li><a href="http://research.berkeley.edu/ucday/abstract.html">http://research.berkeley.edu/ucday/abstract.html</a></li>
+      <li><a href="http://writingcenter.unlv.edu/writing/abstract.html">http://writingcenter.unlv.edu/writing/abstract.html</a></li>
+    </ul>
+  </details>
+</li>
 <li><a href="http://www.cs.columbia.edu/~hgs/etc/intro-style.html">Writing a Good Introduction</a> (important)</li>
 </ul>
 
@@ -221,14 +226,25 @@
 <h3 id="otherresources">Other Resources</h3>
 
 <ul>
-<li>Install and tweak classic gnome in Ubuntu 12.04
-<ul><li><code>sudo apt-get install gnome-session-fallback</code></li>
-<li><code>sudo apt-get purge liboverlay-scrollbar-0.2-0 liboverlay-scrollbar3-0.2-0 overlay-scrollbar</code></li>
-<li><code>gconftool-2 --set "/apps/metacity/general/button_layout" --type string ":minimize,maximize,close"</code></li></ul></li>
-<li>LaTeX and Chinese support in Ubuntu 12.04
-<ul><li><code>sudo apt-get install texlive-full latex-cjk-all</code></li>
-<li><code>\usepackage{CJKutf8}</code></li>
-<li><code>\begin{CJK}{UTF8}{gkai}中文\end{CJK}</code></li></ul></li>
+<li>
+  <details>
+    <summary>Install and tweak classic gnome in Ubuntu 12.04</summary>
+    <pre>sudo apt-get install gnome-session-fallback
+sudo apt-get purge liboverlay-scrollbar-0.2-0 \
+                   liboverlay-scrollbar3-0.2-0 \
+                   overlay-scrollbar
+gconftool-2 --set "/apps/metacity/general/button_layout" \
+            --type string ":minimize,maximize,close"</pre>
+  </details>
+</li>
+<li>
+  <details>
+    <summary>LaTeX and Chinese support in Ubuntu 12.04</summary>
+    <pre>sudo apt-get install texlive-full latex-cjk-all
+\usepackage{CJKutf8}
+\begin{CJK}{UTF8}{gkai}中文\end{CJK}</pre>
+  </details>
+</li>
 <li><a href="http://askubuntu.com/a/72764/85426">Enable Skype notifications in gnome classic</a></li>
 <li><a href="http://todsul.com/lamp-mac-os-x-lion">Setup LAMP on Mac OS X Lion</a></li>
 <li><a href="http://are4.us/raysblog/?p=983">How to enable VNC access to Ubuntu from Mac</a></li>
@@ -243,27 +259,29 @@
 <li><a href="http://addyosmani.github.com/jquery-ui-bootstrap/">jQuery UI Bootstrap</a> is a Bootstrap-themed kickstart for jQuery UI widgets</li>
 <li><a href="https://github.com/styleguide">GitHub Styleguide</a></li>
 <li><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">Force websites to use SSL in Google Chrome</a></li>
-</ul>
-
-<h3 id="usefuljavalibrariesusedbyconfluence">Useful Java Libraries used by Confluence</h3>
-
-<ul>
-<li><a href="http://xstream.codehaus.org/">XStream</a> is a simple library to serialize objects to XML and back again</li>
-<li><a href="http://www.jfugue.org/">JFugue</a> is for programming music without the complexities of MIDI</li>
-<li><a href="http://code.google.com/p/google-gson/">Gson</a> is used to convert Java Objects into their JSON representation</li>
-<li><a href="http://code.google.com/p/guava-libraries/">The Guava project</a> (from Google) contains collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth</li>
-<li><a href="http://jsoup.org/">jsoup</a> is for working with real-world HTML</li>
-<li><a href="http://jcaptcha.sourceforge.net/">JCAPTCHA</a> is for captcha definition and integration</li>
-<li><a href="http://pdfbox.apache.org/">The Apache PDFBox™ library</a> is for working with PDF documents</li>
-<li><a href="http://poi.apache.org/">Apache POI</a> is the Java API for Microsoft Documents</li>
-<li><a href="http://nekohtml.sourceforge.net/">NekoHTML</a> is a simple HTML scanner and tag balancer</li>
-<li><a href="http://code.google.com/p/daisydiff/">Daisy Diff</a> diffs (compares) HTML files</li>
-<li><a href="http://commons.apache.org/fileupload/">The Commons FileUpload package</a> makes it easy to add file upload capability</li>
-<li><a href="http://cssparser.sourceforge.net/">The CSS Parser</a> inputs CSS source and outputs a DOM tree</li>
-<li><a href="http://commons.apache.org/beanutils/">Apache Commons BeanUtils</a> provides wrappers around reflection and introspection capabilities</li>
-<li><a href="http://commons.apache.org/bsf/">Bean Scripting Framework</a> provides scripting language support and access to Java objects and methods from scripting languages</li>
-<li><a href="http://xmlgraphics.apache.org/batik/">Batik</a> is a toolkit for display, generation and manipulation of SVG images</li>
-<li><a href="http://quartz-scheduler.org/">Quartz</a> is a full-featured job scheduling service for any Java EE/SE application</li>
+<li>
+  <details>
+    <summary>Useful Java Libraries used by Confluence</summary>
+    <ul>
+      <li><a href="http://xstream.codehaus.org/">XStream</a> is a simple library to serialize objects to XML and back again</li>
+      <li><a href="http://www.jfugue.org/">JFugue</a> is for programming music without the complexities of MIDI</li>
+      <li><a href="http://code.google.com/p/google-gson/">Gson</a> is used to convert Java Objects into their JSON representation</li>
+      <li><a href="http://code.google.com/p/guava-libraries/">The Guava project</a> (from Google) contains collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth</li>
+      <li><a href="http://jsoup.org/">jsoup</a> is for working with real-world HTML</li>
+      <li><a href="http://jcaptcha.sourceforge.net/">JCAPTCHA</a> is for captcha definition and integration</li>
+      <li><a href="http://pdfbox.apache.org/">The Apache PDFBox™ library</a> is for working with PDF documents</li>
+      <li><a href="http://poi.apache.org/">Apache POI</a> is the Java API for Microsoft Documents</li>
+      <li><a href="http://nekohtml.sourceforge.net/">NekoHTML</a> is a simple HTML scanner and tag balancer</li>
+      <li><a href="http://code.google.com/p/daisydiff/">Daisy Diff</a> diffs (compares) HTML files</li>
+      <li><a href="http://commons.apache.org/fileupload/">The Commons FileUpload package</a> makes it easy to add file upload capability</li>
+      <li><a href="http://cssparser.sourceforge.net/">The CSS Parser</a> inputs CSS source and outputs a DOM tree</li>
+      <li><a href="http://commons.apache.org/beanutils/">Apache Commons BeanUtils</a> provides wrappers around reflection and introspection capabilities</li>
+      <li><a href="http://commons.apache.org/bsf/">Bean Scripting Framework</a> provides scripting language support and access to Java objects and methods from scripting languages</li>
+      <li><a href="http://xmlgraphics.apache.org/batik/">Batik</a> is a toolkit for display, generation and manipulation of SVG images</li>
+      <li><a href="http://quartz-scheduler.org/">Quartz</a> is a full-featured job scheduling service for any Java EE/SE application</li>
+    </ul>
+  </details>
+</li>
 </ul>
 
   </section>
