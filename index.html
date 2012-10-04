@@ -3,8 +3,34 @@
 <head>
   <meta charset="utf-8"/>
   <title>Homepage of Xiao Jia</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter" type="text/css" media="screen, projection"/>
-  <link rel="stylesheet" href="css/simple.css" type="text/css" media="screen, projection"/>
+  <style type="text/css" media="screen, projection">
+  a { color: blue; text-decoration: none; cursor: pointer; border: 0; outline: 0; }
+  a:visited { color: blue; }
+  a:hover { color: green; }
+  details, summary { outline: 0; }
+  body { font-size: 16px; font-family: Georgia; color: #333; background: #ddd; margin: 0; padding: 0; text-align: center; }
+  article { width: 690px; background: white; text-align: left; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 25px; padding: 50px; border-radius: 10px; box-shadow: 0 0 10px #000; }
+  header * { margin: 0; padding: 0; font-weight: normal; }
+  header div { float: left; }
+  header div h1 { font-size: 50px; line-height: 60px; margin-top: 10px; }
+  header div h1 small { display: none; }
+  header div h2 { font-size: 17px; line-height: 20px;}
+  header aside { float: right; }
+  header aside section { float: left; margin-top: 10px; text-align: right; line-height: 14px; }
+  header aside h1 { font-size: 12px; }
+  header aside h1 small { font-size: 12px; display: block; }
+  header aside h2 { font-size: 12px; font-weight: bold; }
+  header nav { clear: both; text-align: center; margin: 0 auto; padding: 20px 0; }
+  header nav ul { list-style: none; border-top: 1px solid gray; border-bottom: 1px solid gray; padding: 5px 0; }
+  header nav ul li { display: inline; margin: 0 5px; }
+  article section { clear: both; line-height: 30px; }
+  section h1 { font-size: 28px; }
+  section section h1 { font-size: 24px; }
+  label { background-color: orange; border-radius: 1000px; box-sizing: border-box; color: white; display: inline; font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: normal; line-height: 12px; margin: 0; padding: 1px 7px 1px 7px; text-align: center; text-decoration: none; white-space: nowrap; width: auto; }
+  .liame { color: blue; list-style: none; display: inline; margin: 0; padding: 0; }
+  .liame li { display: inline; }
+  .liame li img { display: none; }
+  </style>
 </head>
 <body>
 <article>
@@ -25,9 +51,9 @@
     </aside>
     <nav>
       <ul>
-        <li><a href="http://blog.xiao-jia.com/">Blog</a></li>
+        <li><a target="_blank" href="http://blog.xiao-jia.com/">Blog</a></li>
         <li>&middot;</li>
-        <li><a href="https://github.com/stfairy/cv/raw/master/cv.pdf">CV</a></li>
+        <li><a target="_blank" href="https://github.com/stfairy/cv/raw/master/cv.pdf">CV</a></li>
         <li>&middot;</li>
         <li><a href="#projects">Projects</a></li>
         <li>&middot;</li>
@@ -300,18 +326,20 @@ gconftool-2 --set "/apps/metacity/general/button_layout" \
       <li><a href="https://sites.google.com/site/yudongpage/">Yudong Yang</a></li>
     </ul>
   </section>
-  <footer><!-- TODO --></footer>
 </article>
-<a href="https://github.com/stfairy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/></a>
+<a target="_blank" href="https://github.com/stfairy"><img style="position:absolute;top:0;right:0;border:0;outline:0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"/></a>
+<style type="text/css" media="screen, projection">
+body { background: #001118 url(img/reel-background.jpg) fixed 0 0 no-repeat; }
+</style>
 <script type="text/javascript" async="async">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7475348-7']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7475348-7']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 </script>
 </body>
 </html>
