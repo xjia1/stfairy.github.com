@@ -43,12 +43,12 @@
   <section id="intro">
     <p>My primary research area is <em>coordination language design &amp; implementation</em>.</p>
     <p>My broader interests include <em>program synthesis</em>, <em>compiler implementation</em>, and <em>software engineering</em>.</p>
-    <p>I'm now a Junior Research Assistant of <a href="http://www.comp.nus.edu.sg/labs/proglang/">the Programming Languages and Systems Lab</a> at <a href="http://www.comp.nus.edu.sg/">NUS SoC</a>.</p>
+    <p>I'm now a Junior Research Assistant of <a href="http://www.comp.nus.edu.sg/labs/proglang/">the Programming Languages and Systems Lab</a> at <a href="http://www.comp.nus.edu.sg/">NUS SoC</a>, building a system in <a href="http://www.erlang.org/">Erlang</a> for <em>speculative nondeterminism</em>, which is a coordination construct that we proposed.</p>
     <div>Feel free to contact <ul class="liame"><li>me</li><li><img/></li><li>&#64;</li><li><img/></li><li>xiao-jia.com</li></ul> and have a look at <a target="_blank" href="https://github.com/stfairy/cv/raw/master/cv.pdf">my CV</a>.</div>
   </section>
   <section id="projects">
     <h1>Projects</h1>
-    <p>Some of my finished projects are listed below with brief descriptions and even links to source code. For more interesting and ongoing projects, <a href="https://github.com/stfairy">fork me on GitHub</a>.</p>
+    <p>Some of my finished (released/discontinued) projects are listed below with brief descriptions and even links to source code. For more interesting and ongoing projects, <a href="https://github.com/stfairy">fork me on GitHub</a>.</p>
     <section id="websites">
       <h1>Websites</h1>
       <p>I have developed many websites since 2003. Three pieces of recent representative work are listed as follows.</p>
@@ -64,6 +64,7 @@
           (<a href="https://github.com/stfairy/Enterprise-Wiki">source code</a>)
           <label>Ruby</label>
           <label>Rails</label>
+          <label>SQLite</label>
         </li>
         <li>
           <a href="http://acm.sjtu.edu.cn/xiaoyou/">ACM Class Alumni</a>
@@ -102,6 +103,20 @@
         </li>
         <li>
           <details>
+            <summary>CoBrain (<a href="http://cobrain.xiao-jia.com/">online demo</a>) <label>Java</label> <label>Google App Engine</label> <label>2nd year</label> <label>Teamwork</label></summary>
+            <p>TODO: will write details later</p>
+            <p><a href="http://cobrain.xiao-jia.com/public/slides/CoBrainWeb.pdf">Click here to download slides</a>.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Commodities risk exposure and valuation system <label>Java</label> <label>EJB</label> <label>ExtJS</label> <label>2nd year</label> <label>Teamwork</label></summary>
+            <p>TODO: will write details later (Morgan Stanley, 2 courses, real-time)</p>
+            <p><a href="http://xiao-jia.com/downloads/comrisk.pdf">Click here to download slides</a>.</p>
+          </details>
+        </li>
+        <li>
+          <details>
             <summary>Nachos operating system <label>Java</label> <label>3rd year</label></summary>
             <p>TODO: will write details later</p>
           </details>
@@ -129,6 +144,30 @@
         </li>
       </ol>
       <p>Boring course projects are omitted for brevity :-)</p>
+    </section>
+    <section id="proprietary_softwares">
+      <h1>Proprietary softwares</h1>
+      <p>I have built proprietary softwares for startup companies, and also contributed to commercial products of traditional companies.</p>
+      <ol>
+        <li>Personal futures transaction data fetching (from <a href="https://investorservice.cfmmc.com/">China Futures Margin Monitoring Center</a>) and analysis (desktop application with embedded Nginx) <label>C++</label> <label>ATL</label> <label>PHP</label> <label>JavaScript</label></li>
+        <li>Batch transferring tool via <a href="http://www.alipay.com/">Alipay</a> <label>C#</label></li>
+        <li>City-wide social networking website <label>PHP</label></li>
+        <li>Personal cloud storage synchronization based on <a href="http://en.wikipedia.org/wiki/Rolling_hash">rolling checksum</a> <label>C</label> <label>Teamwork</label></li>
+        <li><a href="http://www.symmetricds.org/">SymmetricDS</a> control panel for ease of use <label>Java</label> <label>Teamwork</label></li>
+      </ol>
+    </section>
+    <section id="old_projects">
+      <h1>Old projects (games, demos, etc.)</h1>
+      <p>My good old dream was to write my own video game, which motivated me to learn various technologies.</p>
+      <ol>
+        <li>Ruby Blitz3D <label>Ruby</label> <label>2008</label></li>
+        <li>Online Grading System <label>C</label> <label>Sandbox</label> <label>PHP</label> <label>2008</label></li>
+        <li>MIDI Piano <label>C</label> <label>MIDI</label> <label>2009</label></li>
+        <li>Tetris Demo <label>C++</label> <label>2009</label></li>
+        <li>Remote control of video games <label>C++</label> <label>2009</label></li>
+        <li>Arkanoid Demo <label>Python</label> <label>2012</label></li>
+      </ol>
+      <p>I'm now fully capable of writing a video game but don't have a good story. Please do not hesitate to contact me if you're also interested in building a 2D RPG. (3D was not my dream :-)</p>
     </section>
   </section>
   <section id="publications">
@@ -163,11 +202,18 @@
         <a href="http://acm.sjtu.edu.cn/ppca/">PPCA (Summer 2012)</a>
         <label>TF</label>
         <label>Lecturer</label>
+        <ul>
+          <li>Introduced and lectured on new materials about programming languages</li>
+        </ul>
       </li>
       <li>
         <a href="http://acm.sjtu.edu.cn/compiler/">Project Workshop of Compiler Principles (Spring 2012)</a>
         <label>TF</label>
         <label>Lecturer</label>
+        <ul>
+          <li>Proposed <a href="http://acm.sjtu.edu.cn/compiler/language_definition">a new language</a> based on previous experiences in C, Java, and <a href="http://www.cs.princeton.edu/~appel/modern/">Tiger</a></li>
+          <li>Implemented a parser in <a href="http://antlr.org/">ANTLR</a></li>
+        </ul>
       </li>
       <li>
         <a href="http://acm.sjtu.edu.cn/courses/cs110/fa11">C++ Programming (Fall 2011)</a>
@@ -178,10 +224,29 @@
         <label>TF</label>
         <label>Lecturer</label>
       </li>
-      <li>Data Structures (Spring 2011) <label>TF</label></li>
-      <li>C++ Programming (Fall 2010) <label>TA</label></li>
+      <li>
+        Data Structures (Spring 2011)
+        <label>TF</label>
+        <ul>
+          <li>Proposed BEES (Beginners' Educational Emulation of STL)</li>
+          <li><a href="http://xiao-jia.com/downloads/bees.pdf">Click here to download my slides</a>.</li>
+        </ul>
+      </li>
+      <li>
+        C++ Programming (Fall 2010)
+        <label>TA</label>
+        <ul>
+          <li>Implemented a framework for the library management system</li>
+          <li>Implemented <a href="http://code.google.com/p/mycpptest/">mycpptest</a> to facilitate automatic testing of student programs</li>
+        </ul>
+      </li>
     </ul>
-    <p>I'm also leading the <a href="https://github.com/iwg">ACM Infrastructure Working Group</a>.</p>
+    <p>I'm also leading the <a href="https://github.com/iwg">ACM Infrastructure Working Group</a> wherein I guided students to build internal systems for <a href="http://acm.sjtu.edu.cn/">ACM Class</a>. Three pieces of representative work are listed as follows.</p>
+    <ol>
+      <li><a href="https://github.com/iwg/Giti.me">Giti.me</a> is a project hosting service featuring <a href="http://git-scm.com/">git</a> for student course projects</li>
+      <li><a href="https://github.com/iwg/phpwiki">phpwiki</a> is a wiki software featuring ease of use and integration with legacy code/data</li>
+      <li><a href="https://github.com/iwg/db-auth-ldap-wrapper">db-auth-ldap-wrapper</a> is an LDAP gateway for our secured user database in MySQL</li>
+    </ol>
   </section>
   <section id="honors">
     <h1>Awards &amp; Honors</h1>
