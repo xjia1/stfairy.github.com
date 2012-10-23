@@ -382,6 +382,17 @@
 <ul>
 <li>
   <details>
+    <summary>UXTerm font configuration</summary>
+    <pre>$ sudo apt-get install ttf-bitstream-vera
+$ cat > ~/.Xresources
+UXTerm.vt100.renderFont: true
+UXTerm*faceName: Bitstream Vera Sans Mono
+UXTerm*faceSize: 10
+$ xrdb -merge ~/.Xresources</pre>
+  </details>
+</li>
+<li>
+  <details>
     <summary>Install and tweak classic gnome in Ubuntu 12.04</summary>
     <pre>sudo apt-get install gnome-session-fallback
 sudo apt-get purge liboverlay-scrollbar-0.2-0 \
