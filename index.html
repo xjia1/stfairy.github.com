@@ -284,6 +284,7 @@
   <li><kbd>pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf</kbd></li>
   <li><kbd>pdf2ps ch1-2x1.pdf ch1-2x1.ps</kbd></li>
   <li><kbd>lpr -P psd404-dx ch1-2x1.ps</kbd></li>
+  <li><kbd>pdfjam all.pdf --trim '2cm 3cm 2.5cm 1.5cm' --clip true --outfile /dev/stdout | pdfjam --frame true --nup '2x2' --a4paper --outfile all-2x2-trim.pdf</kbd></li>
 </ul>
 
 <h2 id="erlang">Erlang</h2>
