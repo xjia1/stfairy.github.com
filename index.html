@@ -10,16 +10,14 @@
   <header>
     <div>
       <h1>Xiao Jia <small>贾枭</small></h1>
-      <h2>programming enthusiast</h2>
     </div>
     <aside>
       <section>
-        <h1>Shanghai Jiao Tong University <small>Department of Computer Science</small></h1>
-        <h2>B.S. Candidate <small>(2009.9 - 2013.6)</small></h2>
-      </section>
-      <section>
-        <h1>National University of Singapore <small>School of Computing</small></h1>
-        <h2>Junior Research Assistant <small>(2012.9 - 2013.2)</small></h2>
+        <a href="http://stackexchange.com/users/905286/xiao-jia">
+          <img src="http://stackexchange.com/users/flair/905286.png" width="208" height="58"
+               alt="profile for Xiao Jia on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+               title="profile for Xiao Jia on Stack Exchange, a network of free, community-driven Q&amp;A sites" />
+        </a>
       </section>
     </aside>
     <nav>
@@ -45,11 +43,12 @@
   <section id="intro">
     <p>My primary research area is <em>programming language design &amp; implementation</em>.</p>
     <p>My broader interests include <em>program synthesis</em> and <em>software engineering</em>.</p>
-    <p>I'm now a Junior Research Assistant of <a href="http://www.comp.nus.edu.sg/labs/proglang/">the Programming Languages and Systems Lab</a> at <a href="http://www.comp.nus.edu.sg/">NUS SoC</a>, building a system in <a href="http://www.erlang.org/">Erlang</a> for <em>speculative nondeterminism</em>, which is a coordination construct that we proposed.</p>
+    <p>
+      I'm a student of Shanghai Jiao Tong University,
+      and now a research intern at National University of Singapore.
+      Here is <a href="https://gist.github.com/4076899">my reading list in Singapore</a>.
+    </p>
     <div>Feel free to contact <ul class="liame"><li>me</li><li><img/></li><li>&#64;</li><li><img/></li><li>xiao-jia.com</li></ul> and have a look at <a target="_blank" href="cv.html">my CV</a>.</div>
-    <hr/>
-    <p><a href="https://gist.github.com/4076899">Reading List @ SG</a></p>
-    <p><a href="http://stackexchange.com/users/905286/xiao-jia"><img src="http://stackexchange.com/users/flair/905286.png" width="208" height="58" alt="profile for Xiao Jia on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Xiao Jia on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a></p>
   </section>
 </article>
 <article>
@@ -188,7 +187,6 @@
         <li>Remote control of video games <label>C++</label> <label>2009</label></li>
         <li>Arkanoid Demo <label>Python</label> <label>2012</label></li>
       </ol>
-      <p>I'm now fully capable of writing a video game but don't have a good story. Please do not hesitate to contact me if you're also interested in building a 2D RPG. <del>(3D was not my dream :-)</del> (3D is also OK since I'm learning 3D modeling :-)</p>
     </section>
   </section>
 </article>
@@ -284,13 +282,20 @@
 <h2>@sg</h2>
 <ul>
   <li><a href="https://mysoc.nus.edu.sg/~eprint/forms/quota.php">SoC Print Quota</a></li>
-  <li><a href="https://docs.comp.nus.edu.sg/node/1498">SoC Printers</a> (<kbd>psd404-dx</kbd> for COM2-04-04, Programming Languages and Software Engineering Research Lab 2)</li>
+  <li><a href="https://docs.comp.nus.edu.sg/node/1498">SoC Printers</a> (<kbd>psd404-dx</kbd> for COM2-04-04)</li>
   <li><a href="https://docs.comp.nus.edu.sg/node/1583">Printing from SunA or Sunfire</a></li>
-  <li><a href="http://www.pdflabs.com/docs/pdftk-cli-examples/">Pdftk Examples</a></li>
-  <li><kbd>pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf</kbd></li>
-  <li><kbd>pdf2ps ch1-2x1.pdf ch1-2x1.ps</kbd></li>
-  <li><kbd>lpr -P psd404-dx ch1-2x1.ps</kbd></li>
-  <li><kbd>pdfjam all.pdf --trim '2cm 3cm 2.5cm 1.5cm' --clip true --outfile /dev/stdout | pdfjam --frame true --nup '2x2' --a4paper --outfile all-2x2-trim.pdf</kbd></li>
+  <li><a href="http://www.pdflabs.com/docs/pdftk-cli-examples/">pdftk examples</a></li>
+  <li>
+    <details>
+      <summary>pdfjam examples</summary>
+      <ul>
+        <li><kbd>pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf</kbd></li>
+        <li><kbd>pdf2ps ch1-2x1.pdf ch1-2x1.ps</kbd></li>
+        <li><kbd>lpr -P psd404-dx ch1-2x1.ps</kbd></li>
+        <li><kbd>pdfjam all.pdf --trim '2cm 3cm 2.5cm 1.5cm' --clip true --outfile /dev/stdout | pdfjam --frame true --nup '2x2' --a4paper --outfile all-2x2-trim.pdf</kbd></li>
+      </ul>
+    </details>
+  </li>
 </ul>
 
 <h2 id="erlang">Erlang</h2>
@@ -298,71 +303,67 @@
 <ul>
 <li><a href="http://tsung.erlang-projects.org/">Tsung</a> is an open-source multi-protocol distributed load testing tool</li>
 <li><a href="http://www.erlang.org/doc/tutorial/users_guide.html">Interoperability Tutorial User's Guide</a></li>
-<li><a href="http://erlide.org/">Erlide</a> - the Erlang IDE powered by Eclipse</li>
-<li><a href="http://yaws.hyber.org/">Yaws</a></li>
-<li><a href="http://www.erlang.org/doc/apps/mnesia/index.html">Mnesia</a></li>
-<li><a href="http://www.chicagoboss.org/">Chicago Boss</a>
-<ul><li>see also <a href="http://www.evanmiller.org/chicago-boss-guide.html"><em>An Evening With Chicago Boss</em></a></li></ul></li>
+<li><a href="http://www.chicagoboss.org/">Chicago Boss</a>, and <a href="http://www.evanmiller.org/chicago-boss-guide.html"><em>An Evening With Chicago Boss</em></a></li>
 <li><a href="http://userprimary.net/posts/2009/03/04/two-erlang-finds-atomic-names-and-parameterized-modules/">Two Erlang Finds: Atomic Names and Parameterized Modules</a>
-<ul><li>see also <a href="http://www.trapexit.org/Parameterized_Modules"><em>Parameterized Modules</em></a>, <a href="http://www.trapexit.org/Extend_Module"><em>Extend Module</em></a>, and <a href="http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang"><em>this StackOverflow topic</em></a></li></ul></li>
+<ul><li>also <a href="http://www.trapexit.org/Parameterized_Modules"><em>Parameterized Modules</em></a>, <a href="http://www.trapexit.org/Extend_Module"><em>Extend Module</em></a>, and <a href="http://stackoverflow.com/questions/2291155/what-alternatives-are-there-to-parameterised-modules-in-erlang"><em>this StackOverflow topic</em></a></li></ul></li>
 <li>BeeBole (<a href="http://beebole.com/blog/erlang/">Erlang Archives</a>, <a href="http://beebole.com/erlang/">Erlang Tutorials for Web Applications</a>)</li>
 <li>Series: <a href="http://buffered.io/series/web-development-with-erlang/">Web Development With Erlang</a></li>
-<li><a href="https://github.com/mochi/mochiweb">MochiWeb</a></li>
 <li>A Million-user Comet Application with Mochiweb (<a href="http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1">Part 1</a>, <a href="http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-2">Part 2</a>, <a href="http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3">Part 3</a>)</li>
 <li><a href="http://erlang.2086793.n4.nabble.com/Cowboy-vs-Misultin-td3558963.html">Cowboy vs Misultin</a></li>
 </ul>
 
-<h2 id="miscellaneous">Miscellaneous</h2>
+<h2 id="onlinereading">Online Reading</h3>
 
-<h3 id="pldi2012">PLDI 2012</h3>
-
+<h3>Compiler</h3>
 <ul>
-<li><a href="http://cs.nyu.edu/xtc/">xtc (eXTensible Compiler)</a> -- SuperC</li>
-<li><a href="http://embed.cs.utah.edu/creduce/">C-Reduce</a> -- Test-Case Reduction for C Compiler Bugs</li>
-<li><a href="http://sos.cse.lehigh.edu/gonative/">GoNative</a> -- Safe Execution of Native Code</li>
-</ul>
-
-<h3 id="onlinereading">Online Reading</h3>
-
-<ul>
-<li><a href="http://dtracehol.com/">DTrace Hands-on Lab</a></li>
 <li><a href="http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html">Linux System Call Table</a></li>
-<li><a href="http://www.ibm.com/developerworks/library/os-php-flash/index.html">Generate Flash movies on the fly with PHP</a></li>
-<li><a href="http://learnyouahaskell.com/chapters">Learn You a Haskell for Great Good!</a></li>
-<li><a href="http://www.haskell.org/ghc/docs/7.2.2/html/users_guide/safe-haskell.html">Safe Haskell</a></li>
-<li><a href="http://book.realworldhaskell.org/read/">Real World Haskell</a></li>
 <li><a href="http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Mips/stack.html">Understanding the Stack</a></li>
 <li><a href="https://www.scss.tcd.ie/~waldroj/itral/spim_ref.html">SPIM Quick Reference</a></li>
-<li><a href="http://www.cs.fsu.edu/~engelen/courses/COP5621/">Compiler Construction for JVM</a> (course)</li>
+<li>Course: <a href="http://www.cs.fsu.edu/~engelen/courses/COP5621/">Compiler Construction for JVM</a></li>
 <li><a href="http://www.cse.nd.edu/~dthain/courses/cse40243/fall2008/ia32-intro.html">IA-32 Assembly for Compiler Writers</a></li>
 <li><a href="http://www.ibm.com/developerworks/linux/library/l-gas-nasm/">Linux assemblers: A comparison of GAS and NASM</a></li>
-<li><a href="https://github.com/blog/517-unicorn">GitHub Running Unicorn</a></li>
-<li><a href="http://catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></li>
-<li><a href="http://www.codingnow.com/temp/readinglua.pdf">Lua 源码欣赏 by 云风</a></li>
-<li><a href="http://viget.com/extend/effectively-using-git-with-subversion">Effectively Using Git With Subversion</a></li>
-<li><a href="http://paulgraham.com/gh.html">Great Hackers</a> by <em>Paul Graham</em></li>
-<li><a href="http://www.rxgl.net/gulong/">古龙小说全集</a></li>
-<li><a href="http://lua-users.org/wiki/CoroutinesTutorial">Lua Coroutines Tutorial</a></li>
-<li><a href="http://unixwiz.net/techtips/reading-cdecl.html">Reading C type declarations</a></li>
-<li><a href="https://sites.google.com/site/learnprolog/">Learn Prolog</a> (I made this site long time ago)</li>
-<li><a href="http://addyosmani.github.com/backbone-fundamentals/">Developing Backbone.js Applications</a></li>
-<li><a href="http://www.aosabook.org/en/index.html">The Architecture of Open Source Applications</a> (<a href="http://www.ituring.com.cn/minibook/19">Chinese translation</a>)</li>
 <li><a href="http://macournoyer.com/blog/2008/12/09/orange/">Build your own compiler in Ruby with LLVM</a></li>
 <li><a href="http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf">The syntax of C in Backus-Naur form</a></li>
+</ul>
+
+<h3>Articles and books</h3>
+<ul>
 <li><a href="http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html">Re: How to Design (Declarative) Programming Languages</a></li>
+<li><a href="http://catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></li>
+<li><a href="http://learnyouahaskell.com/chapters">Learn You a Haskell for Great Good!</a></li>
+<li><a href="http://book.realworldhaskell.org/read/">Real World Haskell</a></li>
+<li><a href="http://paulgraham.com/gh.html">Great Hackers</a> by <em>Paul Graham</em></li>
+<li><a href="http://www.aosabook.org/en/index.html">The Architecture of Open Source Applications</a> (<a href="http://www.ituring.com.cn/minibook/19">Chinese translation</a>)</li>
+<li><a href="http://addyosmani.github.com/backbone-fundamentals/">Developing Backbone.js Applications</a></li>
+<li><a href="http://www.cis.upenn.edu/~bcpierce/sf/">Software Foundations</a></li>
+<li><a href="http://lua-users.org/wiki/CoroutinesTutorial">Lua Coroutines Tutorial</a></li>
+<li><a href="http://www.codingnow.com/temp/readinglua.pdf">Lua 源码欣赏 by 云风</a></li>
+<li><a href="http://www.rxgl.net/gulong/">古龙小说全集</a></li>
+</ul>
+
+<h3>Other materials</h3>
+<ul>
+<li><a href="http://dtracehol.com/">DTrace Hands-on Lab</a></li>
+<li><a href="http://www.ibm.com/developerworks/library/os-php-flash/index.html">Generate Flash movies on the fly with PHP</a></li>
+<li><a href="http://www.haskell.org/ghc/docs/7.2.2/html/users_guide/safe-haskell.html">Safe Haskell</a></li>
+<li><a href="https://github.com/blog/517-unicorn">GitHub Running Unicorn</a></li>
+<li><a href="http://viget.com/extend/effectively-using-git-with-subversion">Effectively Using Git With Subversion</a></li>
+<li><a href="http://unixwiz.net/techtips/reading-cdecl.html">Reading C type declarations</a></li>
+<li><a href="https://sites.google.com/site/learnprolog/">Learn Prolog</a> (I made this site long time ago)</li>
 <li><a href="http://www.cis.upenn.edu/~bcpierce/courses/670Fall04/GreatWorksInPL.shtml">Great Works in Programming Languages Collected by Benjamin C. Pierce</a></li>
 <li><a href="http://en.wikipedia.org/wiki/List_of_important_publications_in_computer_science">List of important publications in computer science</a></li>
 <li><a href="http://computing.llnl.gov/tutorials/pthreads/">POSIX Threads Programming</a></li>
 <li><a href="http://www.dossier-andreas.net/software_architecture/">Garfixia Software Architectures</a></li>
-<li><a href="http://www.cis.upenn.edu/~bcpierce/sf/">Software Foundations</a></li>
 </ul>
 
-<h3 id="paperwriting">Paper Writing</h3>
+<h2 id="miscellaneous">Miscellaneous</h2>
+
+<h3 id="paperwriting">Paper writing</h3>
 
 <ul>
 <li>
   <details>
-    <summary>Writing Abstract</summary>
+    <summary>Writing abstract</summary>
     <ul>
       <li><a href="http://www.ece.cmu.edu/~koopman/essays/abstract.html">http://www.ece.cmu.edu/~koopman/essays/abstract.html</a></li>
       <li><a href="http://research.berkeley.edu/ucday/abstract.html">http://research.berkeley.edu/ucday/abstract.html</a></li>
@@ -370,10 +371,10 @@
     </ul>
   </details>
 </li>
-<li><a href="http://www.cs.columbia.edu/~hgs/etc/intro-style.html">Writing a Good Introduction</a> (important)</li>
+<li><a href="http://www.cs.columbia.edu/~hgs/etc/intro-style.html">Writing a good introduction</a> (important)</li>
 </ul>
 
-<h3 id="parsergenerators">Parser Generators</h3>
+<h3 id="parsergenerators">Parser generators</h3>
 
 <ul>
 <li><a href="http://pegjs.majda.cz/">PEG.js</a></li>
@@ -382,7 +383,7 @@
 <li><a href="http://hyacc.sourceforge.net/">Hyacc</a></li>
 </ul>
 
-<h3 id="javascriptlibraries">JavaScript Libraries</h3>
+<h3 id="javascriptlibraries">JavaScript libraries</h3>
 
 <ul>
 <li><a href="http://visionmedia.github.com/uikit/">UIKit</a> - Modern UI components for the modern web</li>
@@ -419,14 +420,14 @@
 <li><a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a></li>
 </ul>
 
-<h3 id="otherresources">Other Resources</h3>
+<h3 id="howtos">HOWTOs</h3>
 
 <ul>
-<li><a href="http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html">How To Disable A CPU Core On Ubuntu/Debian</a></li>
+<li><a href="http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html">How to disable a CPU core on Ubuntu/Debian</a></li>
 <li><a href="http://j-query.blogspot.sg/2011/03/adding-colors-to-git-diff-by-default.html">Adding colors to git</a></li>
 <li>
   <details>
-    <summary>Sublime Text 2 Configuration</summary>
+    <summary>Sublime Text 2 configuration</summary>
     <pre>{
   "color_scheme": "Packages/Tomorrow-Night.tmTheme",
   "drag_text": false,
@@ -460,7 +461,7 @@ $ xrdb -merge ~/.Xresources</pre>
 </li>
 <li>
   <details>
-    <summary>Install and tweak classic gnome in Ubuntu 12.04</summary>
+    <summary>Install and tweak classic Gnome in Ubuntu 12.04</summary>
     <pre>sudo apt-get install gnome-session-fallback
 sudo apt-get purge liboverlay-scrollbar-0.2-0 \
                    liboverlay-scrollbar3-0.2-0 \
@@ -477,23 +478,26 @@ gconftool-2 --set "/apps/metacity/general/button_layout" \
 \begin{CJK}{UTF8}{gkai}中文\end{CJK}</pre>
   </details>
 </li>
-<li><a href="http://askubuntu.com/a/72764/85426">Enable Skype notifications in gnome classic</a></li>
+<li><a href="http://askubuntu.com/a/72764/85426">Enable Skype notifications in Gnome classic</a></li>
 <li><a href="http://todsul.com/lamp-mac-os-x-lion">Setup LAMP on Mac OS X Lion</a></li>
 <li><a href="http://are4.us/raysblog/?p=983">How to enable VNC access to Ubuntu from Mac</a></li>
+<li><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">Force websites to use SSL in Google Chrome</a></li>
+</ul>
+
+<h3 id="otherresources">Other resources</h3>
+
+<ul>
 <li><a href="http://research.microsoft.com/en-us/people/simonpj/">Simon Peyton-Jones</a></li>
-<li><a href="http://www.cl.cam.ac.uk/research/pls/">Programming, Logic, and Semantics Group of Computer Laboratory at University of Cambridge</a></li>
+<li><a href="http://www.cl.cam.ac.uk/research/pls/">Programming, Logic, and Semantics Group at University of Cambridge</a></li>
 <li><a href="http://research.microsoft.com/en-us/um/people/sumitg/pubs/synthesis.html">Program Synthesis</a> (IMPORTANT)</li>
 <li><a href="http://jblevins.org/projects/cv-template/">LaTeX CV Template</a></li>
 <li><a href="http://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home">SKETCH</a> is a software synthesis tool of highly tuned bug-free algorithm implementations</li>
 <li><a href="http://www.emoji-cheat-sheet.com">Emoji cheat sheet</a></li>
-<li><a href="http://komunitasweb.com/2009/03/20-great-php-library-you-need-to-know/">20 Great PHP Libraries You Need to Know</a></li>
-<li><a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a> is an iconic font designed for use with Twitter Bootstrap</li>
-<li><a href="http://addyosmani.github.com/jquery-ui-bootstrap/">jQuery UI Bootstrap</a> is a Bootstrap-themed kickstart for jQuery UI widgets</li>
-<li><a href="https://github.com/styleguide">GitHub Styleguide</a></li>
-<li><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">Force websites to use SSL in Google Chrome</a></li>
+<li><a href="http://komunitasweb.com/2009/03/20-great-php-library-you-need-to-know/">20 great PHP libraries you need to know</a></li>
+<li><a href="https://github.com/styleguide">GitHub style guide</a></li>
 <li>
   <details>
-    <summary>Useful Java Libraries used by Confluence</summary>
+    <summary>Useful Java libraries used by Confluence</summary>
     <ul>
       <li><a href="http://xstream.codehaus.org/">XStream</a> is a simple library to serialize objects to XML and back again</li>
       <li><a href="http://www.jfugue.org/">JFugue</a> is for programming music without the complexities of MIDI</li>
