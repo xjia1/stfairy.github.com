@@ -9,7 +9,7 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
 []);
 mixpanel.init("ac9ff92e266e8a3719b1b166e789303e");</script><!-- end Mixpanel -->
 </head>
-<body>
+<body onload="mixpanel.track('homepage body onload')">
 <article>
   <header>
     <div>
@@ -559,5 +559,10 @@ gconftool-2 --set "/apps/metacity/general/button_layout" \
 </article>
 <a target="_blank" href="https://github.com/stfairy"><img class="ribbon" src="img/ribbon.png" alt="Fork me on GitHub"/></a>
 <script>var _gaq=[['_setAccount','UA-7475348-7'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+<script>
+function track(e){e=e||window.event;mixpanel.track((e.target||e.srcElement).href)}
+function addEvent(a,e,o){if(document.addEventListener){a.removeEventListener(e,o,false);a.addEventListener(e,o,false)}else{a.detachEvent('on'+e,o);a.attachEvent('on'+e,o)}}
+var a=document.getElementsByTagName('A'),i;for(i=0;i<a.length;i++)addEvent(a[i],'click',track);
+</script>
 </body>
 </html>
