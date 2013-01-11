@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">
+#container { width: 760px; margin-left: auto; margin-right: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #0000ff; }
+code > span.ch { color: #008080; }
+code > span.st { color: #008080; }
+code > span.co { color: #008000; }
+code > span.ot { color: #ff4000; }
+code > span.al { color: #ff0000; }
+code > span.er { font-weight: bold; }
+  </style>
+</head>
+<body>
+<div id="container">
+<h1 id="arithmetic-service">Arithmetic Service</h1>
+<p>This is a demonstration of the architecture employed by shiningshy.com. In this demo, we implement a service for handling arithmetic calculations such as addition, subtraction, multiplication, and division. Operands MUST be integers. For division, the divisor MUST NOT be zero. This requirement is used to show validation under this architecture. The calculation result is returned in the form of either a JSON response or an HTML page. HTML rendering is <em>considered</em> to be slow so there is a separate thread dedicated to that. This separation demonstrates how to setup internal services in real-world applications, e.g. mailing or logging systems. Besides, all valid requests are also duplicated to a thread dedicated to journaling. For simplicity, requests are flushed to the standard output instead of being journaled to persistent storage.</p>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span>
+<span class="kw">import</span> <span class="dt">Blaze.ByteString.Builder.ByteString</span> (fromByteString)
+<span class="kw">import</span> <span class="dt">Control.Concurrent</span> (forkIO, <span class="dt">MVar</span>, newEmptyMVar, putMVar, takeMVar)
+<span class="kw">import</span> <span class="dt">Control.Concurrent.Chan</span> (<span class="dt">Chan</span>, newChan, readChan, writeChan)
+<span class="kw">import</span> <span class="dt">Control.Monad.Trans.Class</span> (lift)
+<span class="kw">import</span> <span class="dt">Data.ByteString</span> (<span class="dt">ByteString</span>)
+<span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.ByteString.Char8</span> <span class="kw">as</span> <span class="dt">C</span>
+<span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.Text.Read</span> <span class="kw">as</span> <span class="kw">Read</span>
+<span class="kw">import</span> <span class="dt">Network.Wai</span> (<span class="dt">Request</span>, <span class="dt">Response</span>(<span class="fu">..</span>), pathInfo, queryString)
+<span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Network.HTTP.Types</span> <span class="kw">as</span> <span class="dt">H</span>
+<span class="kw">import</span> <span class="dt">Network.HTTP.Types.Header</span> (<span class="dt">HeaderName</span>)
+<span class="kw">import</span> <span class="dt">Network.Wai.Handler.Warp</span> (run)
+<span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Text.JSON</span> <span class="kw">as</span> <span class="dt">J</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">main ::</span> <span class="dt">IO</span> ()
+main <span class="fu">=</span> <span class="kw">do</span>
+  coreChan <span class="ot">&lt;-</span> newChan
+  htmlChan <span class="ot">&lt;-</span> newChan
+  forkIO <span class="fu">$</span> coreHandler coreChan htmlChan
+  forkIO <span class="fu">$</span> htmlHandler htmlChan coreChan
+  run <span class="dv">3000</span> <span class="fu">$</span> lift <span class="fu">.</span> arithmeticService coreChan</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">responseBS ::</span> <span class="dt">H.Status</span>
+           <span class="ot">-&gt;</span> <span class="dt">H.ResponseHeaders</span>
+           <span class="ot">-&gt;</span> <span class="dt">ByteString</span>
+           <span class="ot">-&gt;</span> <span class="dt">Response</span>
+responseBS s h <span class="fu">=</span> <span class="dt">ResponseBuilder</span> s h <span class="fu">.</span> fromByteString</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">ServiceResponse</span> <span class="fu">=</span> <span class="dt">MVar</span> (<span class="dt">H.ResponseHeaders</span>, <span class="dt">ByteString</span>)</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">arithmeticService ::</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
+                  <span class="ot">-&gt;</span> <span class="dt">Request</span>
+                  <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Response</span>
+arithmeticService ch request <span class="fu">=</span>
+  <span class="kw">case</span> mkCoreRequest request <span class="kw">of</span>
+    <span class="kw">Nothing</span> <span class="ot">-&gt;</span> <span class="fu">return</span> <span class="fu">$</span> responseBS H.badRequest400 [] <span class="st">&quot;&quot;</span>
+    <span class="kw">Just</span> cr <span class="ot">-&gt;</span> validateAndProcess cr
+  <span class="kw">where</span>
+    validateAndProcess cr <span class="fu">=</span> <span class="kw">case</span> validate cr <span class="kw">of</span>
+      <span class="kw">Left</span> <span class="fu">error</span> <span class="ot">-&gt;</span> <span class="fu">return</span> <span class="fu">$</span> responseBS H.badRequest400 [] <span class="fu">error</span>
+      <span class="kw">Right</span> req <span class="ot">-&gt;</span> <span class="kw">do</span> resp <span class="ot">&lt;-</span> newEmptyMVar
+                      writeChan ch (req, resp)
+                      pair <span class="ot">&lt;-</span> takeMVar resp
+                      <span class="kw">let</span> (headers, body) <span class="fu">=</span> pair
+                      <span class="fu">return</span> <span class="fu">$</span> responseBS H.ok200 headers body</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">mkCoreRequest ::</span> <span class="dt">Request</span>
+              <span class="ot">-&gt;</span> <span class="dt">Maybe</span> <span class="dt">CoreRequest</span>
+mkCoreRequest req <span class="fu">=</span> <span class="kw">case</span> pathInfo req <span class="kw">of</span>
+  [<span class="st">&quot;add&quot;</span>, x, y] <span class="ot">-&gt;</span> <span class="kw">Just</span> <span class="fu">$</span> <span class="dt">CoreAdd</span> fmt (<span class="fu">toInt</span> x) (<span class="fu">toInt</span> y)
+  [<span class="st">&quot;sub&quot;</span>, x, y] <span class="ot">-&gt;</span> <span class="kw">Just</span> <span class="fu">$</span> <span class="dt">CoreSub</span> fmt (<span class="fu">toInt</span> x) (<span class="fu">toInt</span> y)
+  [<span class="st">&quot;mul&quot;</span>, x, y] <span class="ot">-&gt;</span> <span class="kw">Just</span> <span class="fu">$</span> <span class="dt">CoreMul</span> fmt (<span class="fu">toInt</span> x) (<span class="fu">toInt</span> y)
+  [<span class="st">&quot;div&quot;</span>, x, y] <span class="ot">-&gt;</span> <span class="kw">Just</span> <span class="fu">$</span> <span class="dt">CoreDiv</span> fmt (<span class="fu">toInt</span> x) (<span class="fu">toInt</span> y)
+  _             <span class="ot">-&gt;</span> <span class="kw">Nothing</span>
+ <span class="kw">where</span>
+  fmt <span class="fu">=</span> parseFormat <span class="fu">$</span> queryString req
+
+  parseFormat []                          <span class="fu">=</span> <span class="dt">JsonFormat</span>
+  parseFormat ((<span class="st">&quot;format&quot;</span>, <span class="kw">Just</span> <span class="st">&quot;json&quot;</span>)<span class="fu">:</span>_) <span class="fu">=</span> <span class="dt">JsonFormat</span>
+  parseFormat ((<span class="st">&quot;format&quot;</span>, <span class="kw">Just</span> <span class="st">&quot;html&quot;</span>)<span class="fu">:</span>_) <span class="fu">=</span> <span class="dt">HtmlFormat</span>
+  parseFormat (_<span class="fu">:</span>rest)                    <span class="fu">=</span> parseFormat rest
+
+  <span class="fu">toInt</span> text <span class="fu">=</span> <span class="kw">case</span> <span class="kw">Read</span><span class="fu">.</span>decimal text <span class="kw">of</span>
+    <span class="kw">Left</span> <span class="fu">error</span>  <span class="ot">-&gt;</span> <span class="dv">0</span>
+    <span class="kw">Right</span> (n,_) <span class="ot">-&gt;</span> n</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">ValidationError</span> <span class="fu">=</span> <span class="dt">ByteString</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">validate ::</span> <span class="dt">CoreRequest</span>
+         <span class="ot">-&gt;</span> <span class="dt">Either</span> <span class="dt">ValidationError</span> <span class="dt">CoreRequest</span>
+validate (<span class="dt">CoreDiv</span> _ _ <span class="dv">0</span>) <span class="fu">=</span> <span class="kw">Left</span> <span class="st">&quot;divide by zero&quot;</span>
+validate req             <span class="fu">=</span> <span class="kw">Right</span> req</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">CoreRequest</span> <span class="fu">=</span> <span class="dt">CoreAdd</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
+                 <span class="fu">|</span> <span class="dt">CoreSub</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
+                 <span class="fu">|</span> <span class="dt">CoreMul</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
+                 <span class="fu">|</span> <span class="dt">CoreDiv</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
+                 <span class="fu">|</span> <span class="dt">RenderedHtml</span> <span class="dt">ByteString</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Format</span> <span class="fu">=</span> <span class="dt">JsonFormat</span> <span class="fu">|</span> <span class="dt">HtmlFormat</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">getFormat ::</span> <span class="dt">CoreRequest</span>
+          <span class="ot">-&gt;</span> <span class="dt">Format</span>
+getFormat (<span class="dt">CoreAdd</span> fmt _ _) <span class="fu">=</span> fmt
+getFormat (<span class="dt">CoreSub</span> fmt _ _) <span class="fu">=</span> fmt
+getFormat (<span class="dt">CoreMul</span> fmt _ _) <span class="fu">=</span> fmt
+getFormat (<span class="dt">CoreDiv</span> fmt _ _) <span class="fu">=</span> fmt</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">toContentType ::</span> <span class="dt">Format</span>
+              <span class="ot">-&gt;</span> (<span class="dt">HeaderName</span>, <span class="dt">ByteString</span>)
+toContentType <span class="dt">JsonFormat</span> <span class="fu">=</span> (<span class="st">&quot;Content-Type&quot;</span>, <span class="st">&quot;application/json&quot;</span>)
+toContentType <span class="dt">HtmlFormat</span> <span class="fu">=</span> (<span class="st">&quot;Content-Type&quot;</span>, <span class="st">&quot;text/html&quot;</span>)</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">coreHandler ::</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
+            <span class="ot">-&gt;</span> <span class="dt">Chan</span> (<span class="dt">HtmlRequest</span>, <span class="dt">ServiceResponse</span>)
+            <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+coreHandler ch htmlChan <span class="fu">=</span> <span class="kw">do</span>
+  pair <span class="ot">&lt;-</span> readChan ch
+  <span class="kw">let</span> (req, resp) <span class="fu">=</span> pair
+  <span class="kw">case</span> req <span class="kw">of</span>
+    <span class="dt">RenderedHtml</span> html <span class="ot">-&gt;</span> putMVar resp ([toContentType <span class="dt">HtmlFormat</span>], html)
+    _ <span class="ot">-&gt;</span> <span class="kw">let</span> result <span class="fu">=</span> calculate req
+          <span class="kw">in</span> <span class="kw">case</span> getFormat req <span class="kw">of</span>
+              <span class="dt">JsonFormat</span> <span class="ot">-&gt;</span>
+                putMVar resp ([toContentType <span class="dt">JsonFormat</span>], jsonResult result)
+              <span class="dt">HtmlFormat</span> <span class="ot">-&gt;</span>
+                writeChan htmlChan ((<span class="dt">HtmlRequest</span> result), resp)
+  coreHandler ch htmlChan
+ <span class="kw">where</span>
+  calculate (<span class="dt">CoreAdd</span> _ x y) <span class="fu">=</span> x <span class="fu">+</span> y
+  calculate (<span class="dt">CoreSub</span> _ x y) <span class="fu">=</span> x <span class="fu">-</span> y
+  calculate (<span class="dt">CoreMul</span> _ x y) <span class="fu">=</span> x <span class="fu">*</span> y
+  calculate (<span class="dt">CoreDiv</span> _ x y) <span class="fu">=</span> x <span class="ot">`div`</span> y
+
+  jsonResult result <span class="fu">=</span> C.pack <span class="fu">$</span> J.encodeStrict
+                             <span class="fu">$</span> J.showJSON
+                             <span class="fu">$</span> J.toJSObject [(<span class="st">&quot;result&quot;</span>, result)]</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">HtmlRequest</span> <span class="fu">=</span> <span class="dt">HtmlRequest</span> <span class="dt">Integer</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">htmlHandler ::</span> <span class="dt">Chan</span> (<span class="dt">HtmlRequest</span>, <span class="dt">ServiceResponse</span>)
+            <span class="ot">-&gt;</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
+            <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+htmlHandler ch coreChan <span class="fu">=</span> <span class="kw">do</span>
+  pair <span class="ot">&lt;-</span> readChan ch
+  <span class="kw">let</span> (<span class="dt">HtmlRequest</span> result, resp) <span class="fu">=</span> pair
+      html <span class="fu">=</span> C.concat [<span class="st">&quot;&lt;html&gt;&lt;body&gt;&quot;</span>, C.pack <span class="fu">$</span> <span class="fu">show</span> result, <span class="st">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span>]
+  writeChan coreChan (<span class="dt">RenderedHtml</span> html, resp)
+  htmlHandler ch coreChan</code></pre>
+</div>
+</body>
+</html>
