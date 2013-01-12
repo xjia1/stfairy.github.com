@@ -28,7 +28,7 @@ code > span.er { font-weight: bold; }
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span>
 <span class="kw">import</span> <span class="dt">Blaze.ByteString.Builder.ByteString</span> (fromByteString)
 <span class="kw">import</span> <span class="dt">Control.Concurrent</span> (forkIO, <span class="dt">MVar</span>, newEmptyMVar, putMVar, takeMVar)
-<span class="kw">import</span> <span class="dt">Control.Concurrent.Chan</span> (<span class="dt">Chan</span>, newChan, readChan, writeChan)
+<span class="kw">import</span> <span class="dt">Control.Concurrent.Chan</span> (<span class="dt">Chan</span>, newChan, readChan, writeChan, dupChan)
 <span class="kw">import</span> <span class="dt">Control.Monad.Trans.Class</span> (lift)
 <span class="kw">import</span> <span class="dt">Data.ByteString</span> (<span class="dt">ByteString</span>)
 <span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Data.ByteString.Char8</span> <span class="kw">as</span> <span class="dt">C</span>
@@ -44,6 +44,8 @@ main <span class="fu">=</span> <span class="kw">do</span>
   htmlChan <span class="ot">&lt;-</span> newChan
   forkIO <span class="fu">$</span> coreHandler coreChan htmlChan
   forkIO <span class="fu">$</span> htmlHandler htmlChan coreChan
+  coreDup <span class="ot">&lt;-</span> dupChan coreChan
+  forkIO <span class="fu">$</span> journaler coreDup
   run <span class="dv">3000</span> <span class="fu">$</span> lift <span class="fu">.</span> arithmeticService coreChan</code></pre>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">responseBS ::</span> <span class="dt">H.Status</span>
            <span class="ot">-&gt;</span> <span class="dt">H.ResponseHeaders</span>
@@ -94,8 +96,9 @@ validate req             <span class="fu">=</span> <span class="kw">Right</span>
                  <span class="fu">|</span> <span class="dt">CoreSub</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
                  <span class="fu">|</span> <span class="dt">CoreMul</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
                  <span class="fu">|</span> <span class="dt">CoreDiv</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
-                 <span class="fu">|</span> <span class="dt">RenderedHtml</span> <span class="dt">ByteString</span></code></pre>
-<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Format</span> <span class="fu">=</span> <span class="dt">JsonFormat</span> <span class="fu">|</span> <span class="dt">HtmlFormat</span></code></pre>
+                 <span class="fu">|</span> <span class="dt">RenderedHtml</span> <span class="dt">ByteString</span>
+                 <span class="kw">deriving</span> (<span class="kw">Show</span>)</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Format</span> <span class="fu">=</span> <span class="dt">JsonFormat</span> <span class="fu">|</span> <span class="dt">HtmlFormat</span> <span class="kw">deriving</span> (<span class="kw">Show</span>)</code></pre>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">getFormat ::</span> <span class="dt">CoreRequest</span>
           <span class="ot">-&gt;</span> <span class="dt">Format</span>
 getFormat (<span class="dt">CoreAdd</span> fmt _ _) <span class="fu">=</span> fmt
@@ -140,6 +143,13 @@ htmlHandler ch coreChan <span class="fu">=</span> <span class="kw">do</span>
       html <span class="fu">=</span> C.concat [<span class="st">&quot;&lt;html&gt;&lt;body&gt;&quot;</span>, C.pack <span class="fu">$</span> <span class="fu">show</span> result, <span class="st">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span>]
   writeChan coreChan (<span class="dt">RenderedHtml</span> html, resp)
   htmlHandler ch coreChan</code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">journaler ::</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
+          <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
+journaler ch <span class="fu">=</span> <span class="kw">do</span>
+  pair <span class="ot">&lt;-</span> readChan ch
+  <span class="kw">let</span> (req, _) <span class="fu">=</span> pair
+  <span class="fu">putStrLn</span> <span class="fu">$</span> <span class="fu">show</span> <span class="fu">$</span> req
+  journaler ch</code></pre>
 </div>
 </body>
 </html>
