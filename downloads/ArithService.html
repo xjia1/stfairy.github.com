@@ -6,7 +6,6 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">
-#container { width: 760px; margin-left: auto; margin-right: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
 table.sourceCode { width: 100%; line-height: 100%; }
@@ -20,13 +19,13 @@ code > span.ot { color: #ff4000; }
 code > span.al { color: #ff0000; }
 code > span.er { font-weight: bold; }
   </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
 </head>
 <body>
-<div id="container">
 <h1 id="arithmetic-service">Arithmetic Service</h1>
 <p>This is a demonstration of the architecture employed by shiningshy.com. In this demo, we implement a service for handling arithmetic calculations such as addition, subtraction, multiplication, and division. Operands MUST be integers. For division, the divisor MUST NOT be zero. This requirement is used to show validation under this architecture. The calculation result is returned in the form of either a JSON response or an HTML page. HTML rendering is <em>considered</em> to be slow so there is a separate thread dedicated to that. This separation demonstrates how to setup internal services in real-world applications, e.g. mailing or logging systems. Besides, all valid requests are also duplicated to a thread dedicated to journaling. For simplicity, requests are flushed to the standard output instead of being journaled to persistent storage.</p>
-<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span>
-<span class="kw">import</span> <span class="dt">Blaze.ByteString.Builder.ByteString</span> (fromByteString)
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">{-# LANGUAGE OverloadedStrings #-}</span></code></pre>
+<pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">import</span> <span class="dt">Blaze.ByteString.Builder.ByteString</span> (fromByteString)
 <span class="kw">import</span> <span class="dt">Control.Concurrent</span> (forkIO, <span class="dt">MVar</span>, newEmptyMVar, putMVar, takeMVar)
 <span class="kw">import</span> <span class="dt">Control.Concurrent.Chan</span> (<span class="dt">Chan</span>, newChan, readChan, writeChan, dupChan)
 <span class="kw">import</span> <span class="dt">Control.Monad.Trans.Class</span> (lift)
@@ -38,6 +37,7 @@ code > span.er { font-weight: bold; }
 <span class="kw">import</span> <span class="dt">Network.HTTP.Types.Header</span> (<span class="dt">HeaderName</span>)
 <span class="kw">import</span> <span class="dt">Network.Wai.Handler.Warp</span> (run)
 <span class="kw">import</span> <span class="kw">qualified</span> <span class="dt">Text.JSON</span> <span class="kw">as</span> <span class="dt">J</span></code></pre>
+<p>Imports SHOULD be either explicit or qualified.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">main ::</span> <span class="dt">IO</span> ()
 main <span class="fu">=</span> <span class="kw">do</span>
   coreChan <span class="ot">&lt;-</span> newChan
@@ -52,6 +52,7 @@ main <span class="fu">=</span> <span class="kw">do</span>
            <span class="ot">-&gt;</span> <span class="dt">ByteString</span>
            <span class="ot">-&gt;</span> <span class="dt">Response</span>
 responseBS s h <span class="fu">=</span> <span class="dt">ResponseBuilder</span> s h <span class="fu">.</span> fromByteString</code></pre>
+<p>We use our own <code>responseBS</code> function instead of the <code>responseLBS</code> function provided by WAI, because the later one requires a lazy <code>ByteString</code> which is not well adopted by other packages. We don't need the laziness either.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">ServiceResponse</span> <span class="fu">=</span> <span class="dt">MVar</span> (<span class="dt">H.ResponseHeaders</span>, <span class="dt">ByteString</span>)</code></pre>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">arithmeticService ::</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
                   <span class="ot">-&gt;</span> <span class="dt">Request</span>
@@ -88,6 +89,7 @@ mkCoreRequest req <span class="fu">=</span> <span class="kw">case</span> pathInf
     <span class="kw">Left</span> <span class="fu">error</span>  <span class="ot">-&gt;</span> <span class="dv">0</span>
     <span class="kw">Right</span> (n,_) <span class="ot">-&gt;</span> n</code></pre>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">type</span> <span class="dt">ValidationError</span> <span class="fu">=</span> <span class="dt">ByteString</span></code></pre>
+<p>For simplicity, the validation error is just a string here. In reality, we should design a full set of possible errors and encode them as ADTs.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">validate ::</span> <span class="dt">CoreRequest</span>
          <span class="ot">-&gt;</span> <span class="dt">Either</span> <span class="dt">ValidationError</span> <span class="dt">CoreRequest</span>
 validate (<span class="dt">CoreDiv</span> _ _ <span class="dv">0</span>) <span class="fu">=</span> <span class="kw">Left</span> <span class="st">&quot;divide by zero&quot;</span>
@@ -98,6 +100,7 @@ validate req             <span class="fu">=</span> <span class="kw">Right</span>
                  <span class="fu">|</span> <span class="dt">CoreDiv</span> <span class="dt">Format</span> <span class="dt">Integer</span> <span class="dt">Integer</span>
                  <span class="fu">|</span> <span class="dt">RenderedHtml</span> <span class="dt">ByteString</span>
                  <span class="kw">deriving</span> (<span class="kw">Show</span>)</code></pre>
+<p>A <code>CoreRequest</code> is either an arithmetic calculation or a rendered HTML fragment from <code>htmlHandler</code>.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Format</span> <span class="fu">=</span> <span class="dt">JsonFormat</span> <span class="fu">|</span> <span class="dt">HtmlFormat</span> <span class="kw">deriving</span> (<span class="kw">Show</span>)</code></pre>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">getFormat ::</span> <span class="dt">CoreRequest</span>
           <span class="ot">-&gt;</span> <span class="dt">Format</span>
@@ -133,7 +136,9 @@ coreHandler ch htmlChan <span class="fu">=</span> <span class="kw">do</span>
   jsonResult result <span class="fu">=</span> C.pack <span class="fu">$</span> J.encodeStrict
                              <span class="fu">$</span> J.showJSON
                              <span class="fu">$</span> J.toJSObject [(<span class="st">&quot;result&quot;</span>, result)]</code></pre>
+<p>This <code>coreHandler</code> is impure due to channel operations. In practice, there should be a separate <strong>purely functional</strong> function for business modelling, while this handler just handles channel messages and states (by tail recursion).</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">HtmlRequest</span> <span class="fu">=</span> <span class="dt">HtmlRequest</span> <span class="dt">Integer</span></code></pre>
+<p>The integer in an <code>HtmlRequest</code> is the calculated result.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">htmlHandler ::</span> <span class="dt">Chan</span> (<span class="dt">HtmlRequest</span>, <span class="dt">ServiceResponse</span>)
             <span class="ot">-&gt;</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
             <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
@@ -143,6 +148,7 @@ htmlHandler ch coreChan <span class="fu">=</span> <span class="kw">do</span>
       html <span class="fu">=</span> C.concat [<span class="st">&quot;&lt;html&gt;&lt;body&gt;&quot;</span>, C.pack <span class="fu">$</span> <span class="fu">show</span> result, <span class="st">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span>]
   writeChan coreChan (<span class="dt">RenderedHtml</span> html, resp)
   htmlHandler ch coreChan</code></pre>
+<p>There's nothing expensive here. We're just pretending HTML is more heavyweight than JSON.</p>
 <pre class="sourceCode literate haskell"><code class="sourceCode haskell"><span class="ot">journaler ::</span> <span class="dt">Chan</span> (<span class="dt">CoreRequest</span>, <span class="dt">ServiceResponse</span>)
           <span class="ot">-&gt;</span> <span class="dt">IO</span> ()
 journaler ch <span class="fu">=</span> <span class="kw">do</span>
@@ -150,6 +156,10 @@ journaler ch <span class="fu">=</span> <span class="kw">do</span>
   <span class="kw">let</span> (req, _) <span class="fu">=</span> pair
   <span class="fu">putStrLn</span> <span class="fu">$</span> <span class="fu">show</span> <span class="fu">$</span> req
   journaler ch</code></pre>
+<p>This journaler function is just for demonstration. In reality it should write requests to a persistent storage, e.g. a file or a (fast) database.</p>
+<div id="footer">
+  Copyright &copy; 2013 <a href="http://xiao-jia.com/">Xiao Jia</a>
 </div>
+
 </body>
 </html>
