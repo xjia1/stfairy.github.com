@@ -437,6 +437,15 @@ mixpanel.init("ac9ff92e266e8a3719b1b166e789303e");</script><!-- end Mixpanel -->
 <h3 id="howtos">HOWTOs</h3>
 
 <ul>
+<li>
+  <details>
+    <summary>Enable PDF support in Chromium</summary>
+    <pre>wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg-deb -x google-chrome*.deb /tmp/chrome/
+sudo cp /tmp/chrome/opt/google/chrome/libpdf.so /usr/lib/chromium-browser/
+    </pre>
+  </details>
+</li>
 <li><a href="http://www.yesodweb.com/book/web-application-interface">Hello world with Warp and WAI</a></li>
 <li><a href="http://guides.rubygems.org/make-your-own-gem/">How to make your own gem</a></li>
 <li><a href="https://help.ubuntu.com/community/MuttAndGmail">How to setup mutt in Ubuntu</a></li>
