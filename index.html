@@ -599,5 +599,7 @@ function track(e){e=e||window.event;mixpanel.track((e.target||e.srcElement).href
 function addEvent(a,e,o){if(document.addEventListener){a.removeEventListener(e,o,false);a.addEventListener(e,o,false)}else{a.detachEvent('on'+e,o);a.attachEvent('on'+e,o)}}
 var a=document.getElementsByTagName('A'),i;for(i=0;i<a.length;i++)addEvent(a[i],'click',track);
 </script>
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/xjia1992"  data-widget-id="335943228434051072">@xjia1992 的推文</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
