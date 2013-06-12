@@ -1,0 +1,94 @@
+# jemdoc: menu{MENU}{howto.html}, title{HOWTOs}
+
+= HOWTOs
+- [http://unixwiz.net/techtips/reading-cdecl.html How to read C type declarations]
+- [http://catb.org/~esr/faqs/smart-questions.html How to ask questions the smart way]
+
+== Research
+- [http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html How to design (declarative) programming languages]
+- How to write abstracts [http://www.ece.cmu.edu/~koopman/essays/abstract.html (1)] [http://research.berkeley.edu/ucday/abstract.html (2)] [http://writingcenter.unlv.edu/writing/abstract.html (3)]
+- [http://www.cs.columbia.edu/~hgs/etc/intro-style.html How to write a good introduction]
+
+== Programming
+- [http://guides.rubygems.org/make-your-own-gem/ How to make your own Ruby gem]
+- [http://www.yesodweb.com/book/web-application-interface How to get started with Warp and WAI]
+- [http://bisqwit.iki.fi/story/howto/openmp/ How to use OpenMP in C\++]
+- [http://computing.llnl.gov/tutorials/pthreads/ How to program POSIX threads in C]
+- [http://lua-users.org/wiki/CoroutinesTutorial How to use Lua coroutines]
+- [http://stackoverflow.com/a/14120513/940313 How to do server push (comet) in PHP]
+- [http://www.ibm.com/developerworks/library/os-php-flash/index.html How to generate Flash movies on the fly with PHP]
+- [http://gun.io/blog/how-to-github-fork-branch-and-pull-request/ How to GitHub: fork, branch, track, squash and pull request]
+- How to attach a pull request to an existing GitHub issue [http://www.topbug.net/blog/2012/03/25/attach-a-pull-request-to-an-existing-github-issue/ (1)] [http://stackoverflow.com/questions/4528869/how-do-you-attach-a-new-pull-request-to-an-existing-issue-on-github (2)]
+
+== Softwares
+- [https://help.ubuntu.com/community/MuttAndGmail How to setup mutt in Ubuntu]
+- [http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html How to disable a CPU core on Ubuntu/Debian]
+- [http://j-query.blogspot.sg/2011/03/adding-colors-to-git-diff-by-default.html How to add colors to git]
+- [http://viget.com/extend/effectively-using-git-with-subversion How to effectively use git with Subversion]
+- [http://askubuntu.com/a/72764/85426 How to enable Skype notifications in Gnome classic]
+- [http://todsul.com/lamp-mac-os-x-lion How to setup LAMP on Mac OS X Lion]
+- [http://are4.us/raysblog/?p=983 How to enable VNC access to Ubuntu from Mac]
+- [http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html How to force websites to use SSL in Google Chrome]
+
+~~~
+{pdfjam examples}{pdfjam}
+pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf
+pdf2ps ch1-2x1.pdf ch1-2x1.ps
+pdfjam all.pdf --trim '2cm 3cm 2.5cm 1.5cm' --clip true --outfile /dev/stdout |\
+  pdfjam --frame true --nup '2x2' --a4paper --outfile all-2x2-trim.pdf
+~~~
+
+~~~
+{Enable PDF support in Chromium}{chromium}
+wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg-deb -x google-chrome*.deb /tmp/chrome/
+sudo cp /tmp/chrome/opt/google/chrome/libpdf.so /usr/lib/chromium-browser/
+~~~
+
+~~~
+{Sublime Text 2 configuration}{sublime}
+{
+  "color_scheme": "Packages/Tomorrow-Night.tmTheme",
+  "drag_text": false,
+  "highlight_line": true,
+  "shift_tab_unindent": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "ignored_packages": []
+}
+~~~
+
+~~~
+{Fcitx installation}{fcitx}
+sudo apt-get install fcitx \
+                     fcitx-sunpinyin \
+                     fcitx-module-cloudpinyin
+~~~
+
+~~~
+{UXTerm font configuration}{uxterm}
+$ sudo apt-get install ttf-bitstream-vera
+$ cat > ~/.Xresources
+UXTerm.vt100.renderFont: true
+UXTerm*faceName: Bitstream Vera Sans Mono
+UXTerm*faceNameDoublesize: Heiti SC
+UXTerm*faceSize: 10
+$ xrdb -merge ~/.Xresources
+~~~
+
+~~~
+{Install and tweak classic Gnome in Ubuntu 12.04}{gnome}
+sudo apt-get install gnome-session-fallback
+sudo apt-get purge liboverlay-scrollbar-0.2-0 \
+                   liboverlay-scrollbar3-0.2-0 \
+                   overlay-scrollbar
+gconftool-2 --set "/apps/metacity/general/button_layout" \
+            --type string ":minimize,maximize,close"
+~~~
+
+~~~
+{LaTeX and Chinese support in Ubuntu 12.04}{latex}
+sudo apt-get install texlive-full latex-cjk-all
+\usepackage{CJKutf8}
+\begin{CJK}{UTF8}{gkai}中文\end{CJK}
+~~~

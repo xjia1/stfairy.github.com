@@ -1,0 +1,17 @@
+# jemdoc: menu{MENU}{pubs.html}, title{Xiao Jia's Publications}
+
+= Publications
+
+== Workshop Papers
+
+- A Runtime System for Generalized Committed Choice,
+in /APPLC 2012 (affiliated with PLDI 2012)./\n
+*Xiao Jia*, Kenny Q. Zhu, Joxan Jaffar, Roland H.C. Yap.\n
+
+== Book Translations
+
+- Chapter 22 Violet,
+in /The Architecture of Open Source Applications, Volume I./\n
+([http://www.aosabook.org/en/violet.html original text] by
+[http://www.horstmann.com/ Cay Horstmann]) -
+([http://www.ituring.com.cn/article/9806 translation])

@@ -1,0 +1,12 @@
+# jemdoc: menu{MENU}{articles.html}, title{Articles}
+
+= Articles
+- [http://joshcheek.com/blog/1_lambda_proc_and_proc_new lambda, proc, and Proc.new - The difference between Ruby closure types]
+- [http://paulgraham.com/gh.html Great Hackers] by /Paul Graham/
+- [http://docs.neo4j.org/chunked/stable/data-modeling-examples.html Neo4j Data Modeling Examples]
+- [http://dtracehol.com/ DTrace Hands-on Lab]
+- [http://www.haskell.org/ghc/docs/7.2.2/html/users_guide/safe-haskell.html Safe Haskell]
+- [https://github.com/blog/517-unicorn GitHub Running Unicorn]
+- [http://www.cis.upenn.edu/~bcpierce/courses/670Fall04/GreatWorksInPL.shtml Great Works in Programming Languages] by /Benjamin C. Pierce/
+- [http://en.wikipedia.org/wiki/List_of_important_publications_in_computer_science List of important publications in computer science]
+- [http://www.dossier-andreas.net/software_architecture/ Garfixia Software Architectures]

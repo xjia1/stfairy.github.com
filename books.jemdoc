@@ -1,0 +1,11 @@
+# jemdoc: menu{MENU}{books.html}, title{Books}
+
+= Books
+- [http://www.cs.cmu.edu/~rwh/smlbook/ Programming in Standard ML]
+- [http://learnyouahaskell.com/chapters Learn You a Haskell for Great Good!]
+- [http://book.realworldhaskell.org/read/ Real World Haskell]
+- [http://www.aosabook.org/en/index.html The Architecture of Open Source Applications] ([http://www.ituring.com.cn/minibook/19 Chinese translation])
+- [http://addyosmani.github.com/backbone-fundamentals/ Developing Backbone.js Applications]
+- [http://www.cis.upenn.edu/~bcpierce/sf/ Software Foundations]
+- [http://www.codingnow.com/temp/readinglua.pdf Lua 源码欣赏] by 云风
+- [http://www.rxgl.net/gulong/ 古龙小说全集]

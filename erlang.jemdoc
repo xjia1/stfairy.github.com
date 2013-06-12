@@ -1,0 +1,15 @@
+# jemdoc: menu{MENU}{erlang.html}, title{Erlang}
+
+= Erlang
+
+- [http://www.erlang.se/euc/07/papers/1700Carlsson.pdf Inheritance in Erlang] (slides)
+- [https://github.com/extend/elevators Elevator control system demonstrating Erlang/OTP upgrades]
+- [http://tsung.erlang-projects.org/ Tsung] is an open-source multi-protocol distributed load testing tool
+- [http://www.erlang.org/doc/tutorial/users_guide.html Interoperability Tutorial User's Guide]
+- [http://www.chicagoboss.org/ Chicago Boss], and [http://www.evanmiller.org/chicago-boss-guide.html /An Evening With Chicago Boss/]
+- [http://userprimary.net/posts/2009/03/04/two-erlang-finds-atomic-names-and-parameterized-modules/ Two Erlang Finds: Atomic Names and Parameterized Modules]
+  -- also [http://www.trapexit.org/Parameterized_Modules /Parameterized Modules/], [http://www.trapexit.org/Extend_Module /Extend Module/], and [http://www.trapexit.org/Extend_Module /this StackOverflow topic/]
+- BeeBole ([http://beebole.com/blog/erlang/ Erlang Archives], [http://beebole.com/erlang/ Erlang Tutorials for Web Applications])
+- [http://buffered.io/series/web-development-with-erlang/ Web Development With Erlang] (series)
+- A Million-user Comet Application with Mochiweb ([http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-1 Part 1], [http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-2 Part 2], [http://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3 Part 3])
+- [http://erlang.2086793.n4.nabble.com/Cowboy-vs-Misultin-td3558963.html Cowboy vs Misultin]

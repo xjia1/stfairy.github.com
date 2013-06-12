@@ -1,0 +1,24 @@
+# jemdoc: menu{MENU}{compiler.html}, title{Compiler}
+
+= Compiler
+- [http://swtch.com/~rsc/regexp/ Implementing Regular Expressions]
+- AST and IR generation
+[http://stackoverflow.com/questions/5359391/generating-intermediate-code-in-a-compiler-is-an-ast-or-parse-tree-always-neces (1)]
+[http://stackoverflow.com/questions/6642844/is-there-any-way-to-write-a-compiler-front-end-without-using-syntax-directed-tra (2)]
+[http://stackoverflow.com/questions/11120343/advantages-of-stack-based-bytecodes-or-infinite-register-machines (3)]
+- [http://meri-stuff.blogspot.sg/2012/12/antlr-semantic-predicates.html ANTLR semantic predicates]
+- [http://docs.cs.up.ac.za/programming/asm/derick_tut/syscalls.html Linux System Call Table]
+- [http://macournoyer.com/blog/2008/12/09/orange/ Build your own compiler in Ruby with LLVM]
+- [http://www.cs.manchester.ac.uk/~pjj/bnf/c_syntax.bnf The syntax of C in Backus-Naur form]
+
+== Assembly
+- [http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Mips/stack.html Understanding the Stack]
+- [https://www.scss.tcd.ie/~waldroj/itral/spim_ref.html SPIM Quick Reference]
+- [http://www.cse.nd.edu/~dthain/courses/cse40243/fall2008/ia32-intro.html IA-32 Assembly for Compiler Writers]
+- [http://www.ibm.com/developerworks/linux/library/l-gas-nasm/ Linux assemblers: A comparison of GAS and NASM]
+
+== Parser Generators
+- [http://pegjs.majda.cz/ PEG.js]
+- [http://treetop.rubyforge.org/ Treetop]
+- [http://www.complang.org/ragel/ Ragel State Machine Compiler]
+- [http://hyacc.sourceforge.net/ Hyacc]

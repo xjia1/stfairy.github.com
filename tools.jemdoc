@@ -1,0 +1,38 @@
+# jemdoc: menu{MENU}{tools.html}, title{Utilities & Tools}
+
+= Utilities & Tools
+- [http://www.w3.org/Talks/Tools/Slidy2/ HTML Slidy]: Slide Shows in HTML and XHTML
+- [http://unicorn.bogomips.org/ Unicorn]: Rack HTTP server for fast clients and Unix
+- [http://johnmacfarlane.net/pandoc/ Pandoc] is a universal document converter
+- [http://fletcherpenney.net/multimarkdown/ MultiMarkdown]
+- [http://komunitasweb.com/2009/03/20-great-php-library-you-need-to-know/ 20 great PHP libraries you need to know]
+
+== Java Libraries
+- [http://xstream.codehaus.org/ XStream] is a simple library to serialize objects to XML and back again
+- [http://www.jfugue.org/ JFugue] is for programming music without the complexities of MIDI
+- [http://code.google.com/p/google-gson/ Gson] is used to convert Java Objects into their JSON representation
+- [http://code.google.com/p/guava-libraries/ The Guava project] (from Google) contains collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth
+- [http://jsoup.org/ jsoup] is for working with real-world HTML
+- [http://jcaptcha.sourceforge.net/ JCAPTCHA] is for captcha definition and integration
+- [http://pdfbox.apache.org/ The Apache PDFBox™ library] is for working with PDF documents
+- [http://poi.apache.org/ Apache POI] is the Java API for Microsoft Documents
+- [http://nekohtml.sourceforge.net/ NekoHTML] is a simple HTML scanner and tag balancer
+- [http://code.google.com/p/daisydiff/ Daisy Diff] diffs (compares) HTML files
+- [http://commons.apache.org/fileupload/ The Commons FileUpload package] makes it easy to add file upload capability
+- [http://cssparser.sourceforge.net/ The CSS Parser] inputs CSS source and outputs a DOM tree
+- [http://commons.apache.org/beanutils/ Apache Commons BeanUtils] provides wrappers around reflection and introspection capabilities
+- [http://commons.apache.org/bsf/ Bean Scripting Framework] provides scripting language support and access to Java objects and methods from scripting languages
+- [http://xmlgraphics.apache.org/batik/ Batik] is a toolkit for display, generation and manipulation of SVG images
+- [http://quartz-scheduler.org/ Quartz] is a full-featured job scheduling service for any Java EE/SE application
+
+== JavaScript Libraries
+- [http://visionmedia.github.com/uikit/ UIKit] - Modern UI components for the modern web
+- [http://visionmedia.github.com/page.js/ Page.js] - Tiny ~1200 byte Express-inspired client-side router
+- [http://sugarjs.com/ Sugar.js]
+- [http://keithamus.github.com/jwerty/ jwerty]
+- [http://www.jfontsize.com/ jFontSize]
+- [http://imakewebthings.com/jquery-waypoints/ jQuery Waypoints] makes it easy to execute a function whenever you scroll to an element
+- [http://harvesthq.github.com/chosen/ Chosen] makes long, unwieldy select boxes much more user-friendly
+- [http://harvesthq.github.com/tick/ Tick] makes visualizing dynamically changing numbers a breeze
+- Favicon manipulation: [http://lipka.github.com/piecon/ Piecon] - [http://tommoor.github.com/tinycon/ Tinycon] - [http://makeable.github.com/Notificon/ Notificon]
+- [http://fgnass.github.com/spin.js/ spin.js] (the famous animation)

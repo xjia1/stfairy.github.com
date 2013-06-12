@@ -1,0 +1,89 @@
+# jemdoc: menu{MENU}{teaching.html}, title{Teaching Experience of Xiao Jia}
+
+= Teaching
+In [http://acm.sjtu.edu.cn/ ACM Class], [http://www.sjtu.edu.cn/ Shanghai Jiao Tong University], there are about 2-6 teaching assistants for every course in computer science. Students in ACM Class are /required/ to be a teaching assistant for at least one semester, both to help younger students learn better and to be qualified for a senior course of /teaching college-level computer science/. In order to control the quality of teaching, students with better performance in these courses are selected to be teaching assistants earlier.
+
+I have been a teaching assistant since my second undergraduate year in Fall 2010, and leading the group of teaching assistants since Spring 2011. This page contains my contributions to these courses. Students who are interested in the courses themselves should refer to the course websites.
+
+== C\++ Programming
+
+This is the first course in computer science for students in ACM Class, and consists of three parts:
+
+. Lectures and the final exam (in paper)
+. Tutorials and onsite exams (3 programming problems in 2 hours, in the computer centre)
+. A course project
+
+Teaching assistants of this course are in charge of part (2) and (3).
+
+=== Fall 2010
+
+Traditionally, students are required to build a /campus library management system/ for their course projects. However, as most of them never wrote a project before, it's easy to get lost in tens of source code files.
+
+During this semester, I designed and implemented a framework for the library management system, as well as an unit testing tool, [http://code.google.com/p/mycpptest/ mycpptest], to facilitate automatic testing of student programs.
+
+=== Fall 2011 [http://acm.sjtu.edu.cn/courses/cs110/fa11 (website)]
+
+After one year's experience of teaching, I finally found that junior students need guidance on
+
+. best practice in real-world programming,
+. intuitive but in-depth understanding of programming language constructs, and
+. general software design and development.
+
+Based on these findings, I gave three tutorials during this semester: (click to view my slides)
+
+. [http://xiao-jia.com/downloads/cs110-refactoring.html Refactoring] (bad smells, composing methods, organizing data, simplifying expressions)
+. [http://xiao-jia.com/downloads/cs110-pointer.html Pointers in C] (multiple indirection, function pointers, dynamic memory, when to use pointers)
+. [http://xiao-jia.com/downloads/cs110-software.html Software development] (problem vs. solution domain, indirection, manpower, design principles)
+
+In addition to the tutorials and the course project, I also developed the [http://acm.sjtu.edu.cn/OnlineJudge/ SJTU Online Judge], which is an online system to test student programs automatically. The system can compile and execute codes written in C, C\++, or Java, and test them with pre-constructed data. We use this system for all the homework and onsite exams.
+
+== Data Structures
+
+This is the second course in computer science for students in ACM Class, with an emphasis on classical data structures such as lists, balanced search trees, graphs, and so on. Teaching assistants are in charge of programming exams and the course project (since Spring 2011, details below).
+
+=== Spring 2011
+
+I proposed the /Beginners' Educational Emulation of STL/, a.k.a. *BEES*, as the course project topic, which consists of common data structure interfaces such as hash tables, resizable arrays, balanced trees, and linked lists. The design is primarily based on Java collections in order to reduce the emphasis on templates in C\++ STL, which is not that easy for beginners. Here is [http://xiao-jia.com/downloads/bees.html my slides].
+
+== Principle and Practice of Computer Algorithms (PPCA)
+
+PPCA is a special course in the summer with a length of exactly one month. The purpose of this course is to enhance the coding ability and the in-depth understanding of programming and advanced algorithms. Teaching assistants are *fully* in charge of this course.
+
+=== Summer 2011 [http://202.120.61.3:8103/wiki/PPCA_2011 (website)]
+
+In summer 2011, I led a group of teaching assistants to conduct three sessions of this course.
+
+. Algorithm training based on [http://ace.delos.com/usacogate USACO Training Program]
+. Advanced algorithms related to dynamic programming
+. Structure and interpretation of computer programs (SICP)
+
+I primarily motivated the discussions on SICP and programming language design.
+
+=== Summer 2012 [http://acm.sjtu.edu.cn/ppca/ (website)]
+
+In summer 2012, I led the TA group again, introduced and lectured on new materials about programming languages. My lectures are primarily based on two previous works:
+
+. A structural approach to operational semantics \[1981\] by Gordon D. Plotkin
+. The evolution of programming languages \[1999, revised 2002\] by Peter Grogono
+
+I also organized the students to give presentations on various programming languages.
+
+== Project Workshop of Compiler Principles
+
+This course is in the fourth semester, where students are required to write a compiler individually from scratch. Originally, it was a compiler for the Tiger programming language proposed in [http://www.cs.princeton.edu/~appel/modern/ Modern Compiler Implementation] by Andrew W. Appel. Since Spring 2012, we switched to a new language (details below) while the underlying techniques remain the same.
+
+For both languages, student compilers are required to tokenize and parse the source code, to build the abstract syntax tree (AST) and do type checking, to translate AST into intermediate representation and then into MIPS assembly, and finally to allocate registers for temporary variables.
+
+Teaching assistants are *fully* in charge of this course, including lectures, code reviews, and final testing and grading. I have been leading the TA group for this course since Spring 2012.
+
+=== Spring 2012 [http://acm.sjtu.edu.cn/compiler/ (website)]
+
+From this semester, we started to compile [http://acm.sjtu.edu.cn/compiler/ a new language] based on the syntax and semantics of C and Java. My contributions include
+
+. designing the new language and leading the discussion of its refinement,
+. defining the grammar and implementing a parser in ANTLR as a proof of concept, and
+. giving lectures on [http://acm.sjtu.edu.cn/compiler/_media/cs216-introduction.pdf course overview], [http://acm.sjtu.edu.cn/compiler/_media/syntactic-analysis.pdf syntactic analysis], and [http://acm.sjtu.edu.cn/compiler/_media/register_allocation.pdf register allocation]
+
+=== Spring 2013 [http://acm.sjtu.edu.cn/wiki/Compiler_2013 (website)]
+
+/This semester hasn't started yet./

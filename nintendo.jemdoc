@@ -1,0 +1,7 @@
+# jemdoc: menu{MENU}{nintendo.html}, title{Nintendo Entertainment System}
+
+= Nintendo Entertainment System
+- [http://skilldrick.github.io/easy6502/ Easy 6502]
+- [http://nesdev.com/6502.txt 6502 Microprocessor]
+- [http://fms.komkon.org/EMUL8/NES.html NES Architecture]
+- [http://stackoverflow.com/questions/448673/how-do-emulators-work-and-how-are-they-written How do emulators work and how are they written?]
