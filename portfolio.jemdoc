@@ -1,0 +1,80 @@
+# jemdoc: menu{MENU}{portfolio.html}, title{Portfolio of Xiao Jia}
+
+= Portfolio of Xiao Jia
+
+== Bash
+- [https://github.com/stfairy/markpress *markpress*] is a simple blogging script written in Bash, designed to work with GitHub Pages. I wrote it for my own blog: [http://blog.xiao-jia.com/ blog.xiao-jia.com].
+~~~
+{}{img_left}{markpress.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/markpress.png}
+~~~
+
+== C/C\++
+- [http://www.tradememo.net/download *Tradememo*] is a desktop software for futures transaction data analysis, written in C++, PHP and JavaScript.
+~~~
+{}{img_left}{tradememo.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/tradememo.png}
+~~~
+
+- [https://github.com/stfairy/sense *Single-sink wireless sensor network*] is a prototype system based on TinyOS and TelosB devices, written in C and Java. This is a teamwork with Menghui Wang and [http://www.lishijian.com/ Shijian Li]. ([http://xiao-jia.com/downloads/sense.html report])
+~~~
+{}{img_left}{sense.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/sense.png}
+~~~
+
+== Erlang & Haskell
+- *Speculative nondeterminism* is a research project in which we propose a novel concurrency control framework to allow real-time agents to speculate against the future by multiple exclusive choices that encode different strategies to achieve its goals. We developed a prototype system in Erlang and a simulator in Haskell.
+
+== Java
+- [https://github.com/stfairy/tiger *Tiger compiler*] is a course project written in Java, which targets the MIPS architecture, and leverages quadruples, linear scan register allocation, inter-procedural optimization, and garbage collection.
+
+- [http://cobrain.xiao-jia.com/ *CoBrain*] is a distributed system for tasks like MapReduce, with a Web front-end for task management. This is a teamwork with Chunzhi Su, Hongyang Zhang, Li Han, and Linping Tang. ([http://xiao-jia.com/downloads/CoBrainWeb.html slides])
+~~~
+{}{img_left}{cobrain.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/cobrain.png}
+~~~
+
+- *Commodities risk exposure and valuation system* is a real-time system based on server-push technologies, leveraging ExtJS, EJB, and other J2EE technologies. The proposal of the requirements comes from Morgan Stanley. This is a teamwork with Jijia Wang and Liufeng Ren. ([http://xiao-jia.com/downloads/comrisk.html slides])
+
+- [http://xiao-jia.com/nachos/ *Nachos operating system*] is an operating system built from scratch, including the major pieces of a modern operating system: thread management, multiprogramming, virtual memory, file system, etc. ([http://xiao-jia.com/nachos/ details])
+
+- [http://xiao-jia.com/fatworm/ *Fatworm DBMS*] is a complete database system built from scratch, with support of a subset of SQL and JDBC. ([http://xiao-jia.com/fatworm/ details])
+
+- [https://github.com/stfairy/gogogo *gogogo*] is a computer Go program developed for my artificial intelligence (AI) course. This is a teamwork with [http://www.lishijian.com/ Shijian Li]. ([http://xiao-jia.com/downloads/gogogo.html report])
+
+== JavaScript
+- [http://xiao-jia.com/dfj/ *dfj*] is an in-browser board game (like Minesweeper). This is a teamwork with [http://www.lishijian.com/ Shijian Li]. [http://xiao-jia.com/dfj/ Play it now!]
+~~~
+{}{img_left}{dfj.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/dfj.png}
+~~~
+
+== PHP
+- [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU online judge*] is a publicly available online system for testing programs in programming contests, and has \~1000 users, \~200 problems, 60\+ contests, and \~70000 submissions. We leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
+~~~
+{}{img_left}{oj.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/oj.png}
+~~~
+
+- [http://acm.sjtu.edu.cn/xiaoyou/ *ACM class alumni*] is a personal profile showcase for alumni with social networking features. It is available to \~400 students from ACM Class.
+~~~
+{}{img_left}{xiaoyou.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/xiaoyou.png}
+~~~
+
+- [https://github.com/stfairy/dw2012 *TEP*] is a website developed for the Developer Weekend Hackathon by NUS Student Chapter of the ACM. It supports specialized, strongly-typed bookmarks for various websites such as GitHub, StackOverflow, CiteSeer, etc. There's also a Chrome extension for bookmarking.
+~~~
+{}{img_left}{tep.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/tep.jpg}
+~~~
+
+- [http://f09.xiao-jia.com/ *SJTU map of stories*] is a website which allows anyone to create markers and story descriptions on a map of SJTU campus. ([http://xiao-jia.com/f09map/ details])
+~~~
+{}{img_left}{f09map.jpg}{}{400px}{}{http://xiao-jia.com/f09map/images/screenshot.png}
+~~~
+
+== Python
+- [https://github.com/stfairy/arkanoid *Arkanoid*]
+~~~
+{}{img_left}{arkanoid.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/arkanoid.png}
+~~~
+
+== Ruby
+- [http://acm.sjtu.edu.cn/ *ACM class portal*] is a wiki software featuring flexible markup and theme support, written in Rails.
+~~~
+{}{img_left}{acmclass.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/acmclass.png}
+~~~
+
+- [http://xiao-jia.com/todo_manager/ *Todo manager*] is a command-line tool for managing todo items and synchronizing them via git. It is packaged as a Ruby gem, so you can try +gem install todo_manager+. ([http://xiao-jia.com/todo_manager/ details])

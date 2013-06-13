@@ -4,7 +4,7 @@ COMMON=MENU
 all: \
 	index.html resume.html contact.html \
 	pubs.html deadlines.html teaching.html \
-	ug.html \
+	portfolio.html ug.html \
 	people.html howto.html erlang.html nintendo.html \
 	compiler.html articles.html books.html courses.html \
 	tools.html misc.html
@@ -26,6 +26,9 @@ deadlines.html: deadlines.jemdoc $(COMMON)
 
 teaching.html: teaching.jemdoc $(COMMON)
 	$(JEMDOC) teaching
+
+portfolio.html: portfolio.jemdoc $(COMMON)
+	$(JEMDOC) portfolio
 
 ug.html: ug.jemdoc $(COMMON)
 	$(JEMDOC) ug
