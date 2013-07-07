@@ -9,7 +9,10 @@ I started programming around 2003 and mastered various programming languages and
 == Education
 
 *B.Eng., Computer Science*, Shanghai Jiao Tong University (SJTU). GPA: 3.6/4.3. (2009 Sep - 2013 Jul)
-- Thesis: /Automatic Program Synthesis/ (Grade A+)
+- Thesis: /Automatic Program Synthesis/ (*Grade A+*) \n
+I designed an algorithm based on /symbolic transducers/
+for synthesizing string transformation programs using input-output examples,
+and implemented it as a prototype system in *Standard ML*.
 - *Full score* in *6* courses such as /Algorithms/ and /Project Workshop of Operating Systems/.
 - *Grade A* (90+) in *16* courses such as /Compiler Principles/, /Project Workshop of Compiler Principles/,
 /Database System Implementation/, /Computer Networking/, and /Object-Oriented Analysis and Design/.
@@ -19,7 +22,7 @@ Workshop of Compiler Principles/. (See [http://xiao-jia.com/teaching/] for detai
 == Projects
 
 - Wrote the [http://github.com/stfairy/tiger *Tiger Compiler*] (course project) in *Java*, which targets the MIPS architecture, and leverages quadruples, linear scan register allocation, inter-procedural optimization, and garbage collection. /Earned score 99\/100 and ranked *2 out of 31* students./
-- Wrote the *Nachos Operating System* (course project) in *Java*, including threading and multipro- gramming, cache and virtual memory, and a self-designed file system. /Earned full score 100\/100 and ranked *1 out of 31* students./
+- Wrote the [http://xiao-jia.com/nachos/ *Nachos Operating System*] (course project) in *Java*, including threading and multipro- gramming, cache and virtual memory, and a self-designed file system. /Earned full score 100\/100 and ranked *1 out of 31* students./
 - Led a group of 10\+ students building IT infrastructures\/services for [http://acm.sjtu.edu/cn/ ACM Class], including [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU Online Judge*], which is a publicly available online system written in *PHP* for testing programs in programming contests, and has \~1000 users, \~200 problems, \~100 contests, and \~70000 submissions. We also leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
 
 (See [portfolio.html my portfolio] for more projects.)
