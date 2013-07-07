@@ -20,14 +20,14 @@ Workshop of Compiler Principles/. (See [http://xiao-jia.com/teaching/] for detai
 
 - Wrote the [http://github.com/stfairy/tiger *Tiger Compiler*] (course project) in *Java*, which targets the MIPS architecture, and leverages quadruples, linear scan register allocation, inter-procedural optimization, and garbage collection. /Earned score 99\/100 and ranked *2 out of 31* students./
 - Wrote the *Nachos Operating System* (course project) in *Java*, including threading and multipro- gramming, cache and virtual memory, and a self-designed file system. /Earned full score 100\/100 and ranked *1 out of 31* students./
-- Led a group of 10\+ students building IT infrastructures\/services for [http://acm.sjtu.edu/cn/ ACM Class], including [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU Online Judge*], which is a publicly available online system written in *PHP* for testing programs in programming contests, and has \~1000 users, \~200 problems, 60\+ contests, and \~70000 submissions. We also leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
+- Led a group of 10\+ students building IT infrastructures\/services for [http://acm.sjtu.edu/cn/ ACM Class], including [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU Online Judge*], which is a publicly available online system written in *PHP* for testing programs in programming contests, and has \~1000 users, \~200 problems, \~100 contests, and \~70000 submissions. We also leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
 
-(See [http://xiao-jia.com/portfolio/] for more projects.)
+(See [portfolio.html my portfolio] for more projects.)
 
 == Work Experience
 
 *Research Assistant*, School of Computing, National University of Singapore. (2012 Sep - 2013 Feb)
-- Researched in programming languages, supervised by Joxan Jaffar and Roland Yap.
+- Researched in programming languages, supervised by [http://www.comp.nus.edu.sg/~joxan/ Joxan Jaffar] and [http://www.comp.nus.edu.sg/~ryap/ Roland Yap].
 - Built a novel concurrency framework in *Erlang*, which allows real-time agents to speculate against the future by multiple exclusive choices that encode different strategies to achieve its goals.
 - Built a simulator of the framework mentioned above in *Haskell*, for debugging and further research.
 - Compared threading support in *Erlang*, Kilim (on JVM), and *Haskell*, confirmed the performance claim of Kilim, and discovered a performance impact due to memory management in Erlang VM.

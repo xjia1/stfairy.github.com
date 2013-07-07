@@ -45,7 +45,7 @@
 ~~~
 
 == PHP
-- [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU online judge*] is a publicly available online system for testing programs in programming contests, and has \~1000 users, \~200 problems, 60\+ contests, and \~70000 submissions. We leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
+- [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU online judge*] is a publicly available online system for testing programs in programming contests, and has \~1000 users, \~200 problems, \~100 contests, and \~70000 submissions. We leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
 ~~~
 {}{img_left}{oj.jpg}{}{400px}{}{http://xiao-jia.com/portfolio/images/oj.png}
 ~~~
