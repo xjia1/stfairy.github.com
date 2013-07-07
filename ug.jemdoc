@@ -1,3 +1,34 @@
 # jemdoc: menu{MENU}{ug.html}, title{Xiao Jia's Undergraduate Work}
 
 = Undergraduate Work
+
+1st semester:
+- Turing machine simulator
+- Accumulator machine simulator
+- University library management system
+
+2nd semester: /none/ (This semester was filled up with math courses)
+
+3rd semester:
+- CoBrain
+
+4th semester:
+- Compiler
+- MIPS CPU emulator
+- Simics
+- Information system ...
+
+5th semester:
+- Nachos
+- Tenet
+- TelosB
+
+6th semester:
+- Fatworm
+- gogogo
+- StackOverflow
+
+7th semester: /none/ (I was doing a research internship at National University of Singapore)
+
+8th semester:
+- Bachelor thesis
