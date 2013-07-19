@@ -93,6 +93,14 @@
 </li>
 </ul>
 <div class="codeblock">
+<div class="blocktitle">Remove watermarks (e.g. DRAFT) in PDF files</div>
+<div class="blockcontent"><pre>
+pdftk draft.pdf output uncompressed.pdf uncompress
+less uncompressed.pdf          # check general structure
+grep -a DRAFT uncompressed.pdf # check specific lines
+cat uncompressed.pdf | sed 's/DRAFT//g' &gt; without-draft.pdf
+</pre></div></div>
+<div class="codeblock">
 <div class="blocktitle">pdfjam examples</div>
 <div class="blockcontent"><pre>
 pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf
@@ -157,7 +165,7 @@ sudo apt-get install texlive-full latex-cjk-all
 </pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2013-06-13 17:04:25 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2013-07-19 21:52:10 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </td>
