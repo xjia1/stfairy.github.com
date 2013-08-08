@@ -1,0 +1,11 @@
+# jemdoc: menu{MENU}{rs.html}, title{Research Statement}
+
+(This page is incomplete and will be refined in the future)
+
+= Research Statement
+
+Based on my observation since I started programming in 2003,
+most of the difficulties that we encountered in programming activities could be
+explained by using the formula below.
+
+Problem Complexity = Tool Complexity × Labour Complexity

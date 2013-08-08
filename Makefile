@@ -3,7 +3,7 @@ COMMON=MENU
 
 all: \
 	index.html resume.html contact.html \
-	pubs.html deadlines.html teaching.html \
+	rs.html pubs.html deadlines.html teaching.html \
 	portfolio.html ug.html \
 	people.html howto.html erlang.html nintendo.html \
 	compiler.html articles.html books.html courses.html \
@@ -17,6 +17,9 @@ resume.html: resume.jemdoc $(COMMON)
 
 contact.html: contact.jemdoc $(COMMON)
 	$(JEMDOC) contact
+
+rs.html: rs.jemdoc $(COMMON)
+	$(JEMDOC) rs
 
 pubs.html: pubs.jemdoc $(COMMON)
 	$(JEMDOC) pubs
