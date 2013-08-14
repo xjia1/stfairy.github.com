@@ -55,7 +55,7 @@ Workshop of Compiler Principles/. (See [teaching.html] for details.)
 
 - Wrote the [http://github.com/stfairy/tiger *Tiger Compiler*] (course project) in *Java*, which targets the MIPS architecture, and leverages quadruples, linear scan register allocation, inter-procedural optimization, and garbage collection. /Earned score 99\/100 and ranked *2 out of 31* students./
 - Wrote the [http://xiao-jia.com/nachos/ *Nachos Operating System*] (course project) in *Java*, including threading and multipro- gramming, cache and virtual memory, and a self-designed file system. /Earned full score 100\/100 and ranked *1 out of 31* students./
-- Led a group of 10\+ students building IT infrastructures\/services for [http://acm.sjtu.edu/cn/ ACM Class], including [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU Online Judge*], which is a publicly available online system written in *PHP* for testing programs in programming contests, and has \~1000 users, \~200 problems, \~100 contests, and \~70000 submissions. We also leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
+- Led a group of 10\+ students building IT infrastructures\/services for [http://acm.sjtu.edu/cn/ ACM Class], including [http://acm.sjtu.edu.cn/OnlineJudge/ *SJTU Online Judge*], which is a publicly available online system written in *PHP* for testing programs in programming contests, and has \~1000 users, \~300 problems, \~100 contests, and \~90000 submissions. We also leverage open source softwares such as /Linux/, /nginx/, /Varnish/, /MySQL/, /Redis/, /memcached/, etc.
 
 (See [portfolio.html my portfolio] for more projects.)
 
