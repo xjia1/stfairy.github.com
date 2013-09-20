@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fatworm by stfairy</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Fatworm</h1>
+        <p class="header">RDBMS design and implementation course of ACM Class, SJTU</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/stfairy/fatworm/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/stfairy/fatworm/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/stfairy/fatworm">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/stfairy">stfairy</a></p>
+
+
+      </header>
+      <section>
+        <h3>Introduction</h3>
+
+<p>Fatworm is the RDBMS design and implementation course of <a href="http://acm.sjtu.edu.cn/">ACM Class</a>, <a href="http://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>. Students are required to work in teams to design and implement a complete database system from scratch, with support of a subset of SQL and JDBC. Query execution and optimization is encouraged as advanced topic. Student programs will be graded by an auto-grading system against various test-cases.</p>
+
+<h3>As my course project</h3>
+
+<p>I was in a team with my classmates <a href="http://www.lishijian.com/">Shijian Li</a> and <a href="https://sites.google.com/site/liulichencs/">Liuli Chen</a> for this course project, and wrote several components of the system as follows.</p>
+
+<ol>
+<li>Write a SQL parser in ANTLR v3</li>
+<li>Add JDBC support</li>
+<li>Design the interfaces between different phases</li>
+<li>Write the storage backend, including a buffer manager and an on-disk B+ tree implementation</li>
+<li>Write a low-level access layer like <a href="http://sqljet.com/">SQLJet</a>, which allows one to manipulate and query records with keys and indexes directly <em>(we employ this special design in order to work in parallel, since query plans can be naively translated to operations provided by this low-level access layer)</em>
+</li>
+</ol>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-7475348-7");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
