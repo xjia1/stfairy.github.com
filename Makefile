@@ -2,7 +2,7 @@ JEMDOC=./jemdoc.py
 COMMON=MENU
 
 all: \
-	index.html resume.html contact.html \
+	index.html contact.html \
 	rs.html pubs.html deadlines.html teaching.html \
 	portfolio.html ug.html \
 	people.html howto.html erlang.html nintendo.html \
@@ -11,9 +11,6 @@ all: \
 
 index.html: index.jemdoc $(COMMON)
 	$(JEMDOC) index
-
-resume.html: resume.jemdoc $(COMMON)
-	$(JEMDOC) resume
 
 contact.html: contact.jemdoc $(COMMON)
 	$(JEMDOC) contact
