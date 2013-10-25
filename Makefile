@@ -2,15 +2,15 @@ JEMDOC=./jemdoc.py
 COMMON=MENU
 
 all: \
-	index.html contact.html \
+	oldindex.html contact.html \
 	rs.html pubs.html deadlines.html teaching.html \
 	portfolio.html ug.html \
 	people.html howto.html erlang.html nintendo.html \
 	compiler.html articles.html books.html courses.html \
 	tools.html misc.html
 
-index.html: index.jemdoc $(COMMON)
-	$(JEMDOC) index
+oldindex.html: oldindex.jemdoc $(COMMON)
+	$(JEMDOC) oldindex
 
 contact.html: contact.jemdoc $(COMMON)
 	$(JEMDOC) contact
