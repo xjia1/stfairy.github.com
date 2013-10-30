@@ -21,7 +21,7 @@
 - How to attach a pull request to an existing GitHub issue [http://www.topbug.net/blog/2012/03/25/attach-a-pull-request-to-an-existing-github-issue/ (1)] [http://stackoverflow.com/questions/4528869/how-do-you-attach-a-new-pull-request-to-an-existing-issue-on-github (2)]
 
 == Softwares
-- [http://www.howtoforge.com/linux_lvm How to setup LVM in Ubuntu]
+- How to setup LVM in Ubuntu [http://www.howtoforge.com/linux_lvm (1)] [https://help.ubuntu.com/12.04/serverguide/advanced-installation.html#lvm (2)]
 - [https://help.ubuntu.com/community/MuttAndGmail How to setup mutt in Ubuntu]
 - [http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html How to disable a CPU core on Ubuntu/Debian]
 - [http://j-query.blogspot.sg/2011/03/adding-colors-to-git-diff-by-default.html How to add colors to git]
