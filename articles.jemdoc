@@ -1,6 +1,7 @@
 # jemdoc: menu{MENU}{articles.html}, title{Articles}
 
 = Articles
+- [http://www.cse.unsw.edu.au/~billw/prologdict.html The Prolog Dictionary]
 - [http://joshcheek.com/blog/1_lambda_proc_and_proc_new lambda, proc, and Proc.new - The difference between Ruby closure types]
 - [http://paulgraham.com/gh.html Great Hackers] by /Paul Graham/
 - [http://docs.neo4j.org/chunked/stable/data-modeling-examples.html Neo4j Data Modeling Examples]
