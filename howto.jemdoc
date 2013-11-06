@@ -32,7 +32,7 @@
 - [http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html How to force websites to use SSL in Google Chrome]
 
 ~~~
-Remove delay in SSH login}(sshdelay)
+{Remove delay in SSH login}(sshdelay)
 # Edit /etc/ssh/sshd_config and add
 UseDNS no
 # Edit /etc/resolv.conf and add
