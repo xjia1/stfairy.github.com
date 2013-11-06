@@ -33,8 +33,10 @@
 
 ~~~
 {Remove delay in SSH login}(sshdelay)
-UseDNS no # Edit /etc/ssh/sshd_config and add
-options single-request-reopen # Edit /etc/resolv.conf and add
+// Edit /etc/ssh/sshd_config and add
+UseDNS no
+// Edit /etc/resolv.conf and add
+options single-request-reopen
 ~~~
 
 ~~~
