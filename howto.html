@@ -94,14 +94,12 @@
 <li><p><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">How to force websites to use SSL in Google Chrome</a></p>
 </li>
 </ul>
-<div class="infoblock">
+<div class="codeblock">
 <div class="blocktitle">Remove delay in SSH login</div>
-<div class="blockcontent">
-<p><i></i> Edit <i>etc</i>ssh<i>sshd_config and add
-UseDNS no
-</i><i> Edit </i>etc/resolv.conf and add
-options single-request-reopen</p>
-</div></div>
+<div class="blockcontent"><pre>
+UseDNS no                     # Add to /etc/ssh/sshd_config
+options single-request-reopen # Add to /etc/resolv.conf
+</pre></div></div>
 <div class="codeblock">
 <div class="blocktitle">Remove watermarks (e.g. DRAFT) in PDF files</div>
 <div class="blockcontent"><pre>
@@ -175,7 +173,7 @@ sudo apt-get install texlive-full latex-cjk-all
 </pre></div></div>
 <div id="footer">
 <div id="footer-text">
-Page generated 2013-11-06 10:33:27 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2013-11-06 10:34:26 CST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </td>
