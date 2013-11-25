@@ -26,6 +26,7 @@
 - [http://quartz-scheduler.org/ Quartz] is a full-featured job scheduling service for any Java EE/SE application
 
 == JavaScript Libraries
+- [http://jscrollpane.kelvinluck.com/ jScrollPane] - cross browser styleable scrollbars with jQuery and CSS
 - [http://visionmedia.github.com/uikit/ UIKit] - Modern UI components for the modern web
 - [http://visionmedia.github.com/page.js/ Page.js] - Tiny ~1200 byte Express-inspired client-side router
 - [http://sugarjs.com/ Sugar.js]
