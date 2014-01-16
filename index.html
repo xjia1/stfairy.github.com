@@ -116,6 +116,151 @@ Rho-uncertainty Anonymization by Partial Suppression, <b>DASFAA</b> 2014.
 </p>
 
 </div>
+<div id="howto">
+<h2>HOWTOs</h2>
+<ul>
+<li><p><a href="http://unixwiz.net/techtips/reading-cdecl.html">How to read C type declarations</a></p>
+</li>
+<li><p><a href="http://catb.org/~esr/faqs/smart-questions.html">How to ask questions the smart way</a></p>
+</li>
+</ul>
+
+<h3>Research</h3>
+<ul>
+<li><p><a href="http://people.csail.mit.edu/gregs/ll1-discuss-archive-html/msg04323.html">How to design (declarative) programming languages</a></p>
+</li>
+<li><p>How to write abstracts <a href="http://www.ece.cmu.edu/~koopman/essays/abstract.html">(1)</a> <a href="http://research.berkeley.edu/ucday/abstract.html">(2)</a> <a href="http://writingcenter.unlv.edu/writing/abstract.html">(3)</a></p>
+</li>
+<li><p><a href="http://www.cs.columbia.edu/~hgs/etc/intro-style.html">How to write a good introduction</a></p>
+</li>
+</ul>
+
+<h3>Programming</h3>
+<ul>
+<li><p><a href="http://guides.rubygems.org/make-your-own-gem/">How to make your own Ruby gem</a></p>
+</li>
+<li><p><a href="http://www.yesodweb.com/book/web-application-interface">How to get started with Warp and WAI</a></p>
+</li>
+<li><p><a href="http://bisqwit.iki.fi/story/howto/openmp/">How to use OpenMP in C++</a></p>
+</li>
+<li><p><a href="http://computing.llnl.gov/tutorials/pthreads/">How to program POSIX threads in C</a></p>
+</li>
+<li><p><a href="http://lua-users.org/wiki/CoroutinesTutorial">How to use Lua coroutines</a></p>
+</li>
+<li><p><a href="http://stackoverflow.com/a/14120513/940313">How to do server push (comet) in PHP</a></p>
+</li>
+<li><p><a href="http://www.ibm.com/developerworks/library/os-php-flash/index.html">How to generate Flash movies on the fly with PHP</a></p>
+</li>
+<li><p><a href="http://gun.io/blog/how-to-github-fork-branch-and-pull-request/">How to GitHub: fork, branch, track, squash and pull request</a></p>
+</li>
+<li><p>How to attach a pull request to an existing GitHub issue <a href="http://www.topbug.net/blog/2012/03/25/attach-a-pull-request-to-an-existing-github-issue/">(1)</a> <a href="http://stackoverflow.com/questions/4528869/how-do-you-attach-a-new-pull-request-to-an-existing-issue-on-github">(2)</a></p>
+</li>
+</ul>
+
+<h3>Software</h3>
+<ul>
+<li><p><a href="http://rbgeek.wordpress.com/2012/06/25/how-to-install-vnc-server-on-ubuntu-server-12-04/">How to install VNC server on Ubuntu Server 12.04</a></p>
+</li>
+<li><p>How to setup LVM in Ubuntu <a href="http://www.howtoforge.com/linux_lvm">(1)</a> <a href="https://help.ubuntu.com/12.04/serverguide/advanced-installation.html#lvm">(2)</a></p>
+</li>
+<li><p><a href="https://help.ubuntu.com/community/MuttAndGmail">How to setup mutt in Ubuntu</a></p>
+</li>
+<li><p><a href="http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html">How to disable a CPU core on Ubuntu/Debian</a></p>
+</li>
+<li><p><a href="http://j-query.blogspot.sg/2011/03/adding-colors-to-git-diff-by-default.html">How to add colors to git</a></p>
+</li>
+<li><p><a href="http://viget.com/extend/effectively-using-git-with-subversion">How to effectively use git with Subversion</a></p>
+</li>
+<li><p><a href="http://askubuntu.com/a/72764/85426">How to enable Skype notifications in Gnome classic</a></p>
+</li>
+<li><p><a href="http://todsul.com/lamp-mac-os-x-lion">How to setup LAMP on Mac OS X Lion</a></p>
+</li>
+<li><p><a href="http://are4.us/raysblog/?p=983">How to enable VNC access to Ubuntu from Mac</a></p>
+</li>
+<li><p><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">How to force websites to use SSL in Google Chrome</a></p>
+</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+<div class="codeblock">
+<div class="blocktitle">Remove delay in SSH login</div>
+<div class="blockcontent"><pre>
+UseDNS no                     # Add to /etc/ssh/sshd_config
+options single-request-reopen # Add to /etc/resolv.conf
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Remove watermarks (e.g. DRAFT) in PDF files</div>
+<div class="blockcontent"><pre>
+pdftk draft.pdf output uncompressed.pdf uncompress
+less uncompressed.pdf          # check general structure
+grep -a DRAFT uncompressed.pdf # check specific lines
+cat uncompressed.pdf | sed 's/DRAFT//g' &gt; without-draft.pdf
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">pdfjam examples</div>
+<div class="blockcontent"><pre>
+pdfjam ch1.pdf --landscape --nup 2x1 --a4paper --outfile ch1-2x1.pdf
+pdf2ps ch1-2x1.pdf ch1-2x1.ps
+pdfjam all.pdf --trim '2cm 3cm 2.5cm 1.5cm' --clip true --outfile /dev/stdout |\
+pdfjam --frame true --nup '2x2' --a4paper --outfile all-2x2-trim.pdf
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Enable PDF support in Chromium</div>
+<div class="blockcontent"><pre>
+wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg-deb -x google-chrome*.deb /tmp/chrome/
+sudo cp /tmp/chrome/opt/google/chrome/libpdf.so /usr/lib/chromium-browser/
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Sublime Text 2 configuration</div>
+<div class="blockcontent"><pre>
+{
+"color_scheme": "Packages/Tomorrow-Night.tmTheme",
+"drag_text": false,
+"highlight_line": true,
+"shift_tab_unindent": true,
+"tab_size": 2,
+"translate_tabs_to_spaces": true,
+"ignored_packages": []
+}
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Fcitx installation</div>
+<div class="blockcontent"><pre>
+sudo apt-get install fcitx \
+                   fcitx-sunpinyin \
+                   fcitx-module-cloudpinyin
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">UXTerm font configuration</div>
+<div class="blockcontent"><pre>
+$ sudo apt-get install ttf-bitstream-vera
+$ cat &gt; ~/.Xresources
+UXTerm.vt100.renderFont: true
+UXTerm*faceName: Bitstream Vera Sans Mono
+UXTerm*faceNameDoublesize: Heiti SC
+UXTerm*faceSize: 10
+$ xrdb -merge ~/.Xresources
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">Install and tweak classic Gnome in Ubuntu 12.04</div>
+<div class="blockcontent"><pre>
+sudo apt-get install gnome-session-fallback
+sudo apt-get purge liboverlay-scrollbar-0.2-0 \
+                 liboverlay-scrollbar3-0.2-0 \
+                 overlay-scrollbar
+gconftool-2 --set "/apps/metacity/general/button_layout" \
+          --type string ":minimize,maximize,close"
+</pre></div></div>
+<div class="codeblock">
+<div class="blocktitle">LaTeX and Chinese support in Ubuntu 12.04</div>
+<div class="blockcontent"><pre>
+sudo apt-get install texlive-full latex-cjk-all
+\usepackage{CJKutf8}
+\begin{CJK}{UTF8}{gkai}中文\end{CJK}
+</pre></div></div>
+
+</div>
 </div>
 </body>
 </html>
