@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>How to export a JAR file</title>
+  <style>
+  em { color: red; font-style: normal; }
+  img { border-radius: 3px; box-shadow: 0 0 3px 3px #ccc; }
+  </style>
+</head>
+<body>
+  <h1>How to export a JAR file</h1>
+  <h2>Step 1</h2>
+  <p>
+    Right click on the name of the project which you want to export.
+    Click "Export..." in the popup memu.
+  </p>
+  <img src="images/export1.png">
+  <h2>Step 2</h2>
+  <p>
+    Click the triangle to expand "Java" and click on "JAR file" to select it.
+    Click "Next >" to continue.
+  </p>
+  <img src="images/export2.png">
+  <h2>Step 3</h2>
+  <p>
+    Click the triangle to expand your project folder,
+    and select "src" folder (and/or any other folder that you want to export).
+    <ul>
+      <li>Make sure "Export generated class files and resources" is checked.</li>
+      <li>Make sure "Export Java source files and resources" is checked.</li>
+      <li>You may choose to check all the options.</li>
+    </ul>
+    Remember you have to choose where to save the exported JAR file.
+    Then click "Next >" to continue.
+  </p>
+  <img src="images/export3.png">
+  <h2>Step 4</h2>
+  <p>
+    Nothing special in this page. Click "Next >" to continue.
+  </p>
+  <img src="images/export4.png">
+  <h2>Step 5</h2>
+  <ol>
+    <li>Choose "Generate the manifest file".</li>
+    <li>Make sure "Save the manifest in the workspace" is <em>unselected</em>.</li>
+    <li>Choose "Seal the JAR".</li>
+    <li>Type in the name of your main class. <em>Otherwise the JAR file is not executable.</em></li>
+    <li>Click "Finish" to export the JAR file.</li>
+  </ol>
+  <img src="images/export5.png">
+</body>
+</html>

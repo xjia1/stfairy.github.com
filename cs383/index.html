@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CS383 Course Project &amp; Tutorials</title>
+  <style>
+  body {
+    width: 600px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+    padding: 30px 50px;
+  }
+  </style>
+</head>
+<body>
+  <h1>CS383 Course Project &amp; Tutorials</h1>
+  
+  <h2>News</h2>
+  <ul>
+    <li>(Dec 16) Final test is done: <a href="dec16.txt">view summary</a> or <a href="2013.12.16.12.31.38.tar.gz">download 2013.12.16.12.31.38.tar.gz</a></li>
+    <li>(Dec 12) <a href="dec12.html">Test command updated. Please resubmit ASAP!</a></li>
+    <li>(Oct 10) Tutorial slides are updated (including HW solutions).</li>
+    <li>(Sep 26) Project deadline is Dec 1st!</li>
+    <li>(Sep 11) Project skeleton is provided, and specification is updated to version 4.2</li>
+    <li>(Sep 10) Specification is updated to version 4.1</li>
+    <li>(Sep 6) Hello, world!</li>
+  </ul>
+  
+  <h2>Introduction</h2>
+  <p>
+    In this project, you are required to implement an interpreter
+    for the programming language SimPL (pronounced simple).
+    SimPL is a simplified dialect of ML, which can be used for
+    both functional and imperative programming.
+    The specification below presents a definition of SimPL and
+    provides guidelines to help you implement the interpreter.
+  </p>
+  
+  <h2>Specification</h2>
+  <p>
+    <a href="spec-4.3.pdf">Version 4.3</a> (PDF, 88KB)
+    <em>October 15, 2013</em>
+    <ul>
+      <li>Fix updateable mapping on page 5 (before "otherwise", change "f(x)" to "f(x')")</li>
+    </ul>
+  </p>
+  <p>
+    <a href="spec-4.2.pdf">Version 4.2</a> (PDF, 88KB)
+    <em>September 11, 2013</em>
+    <ul>
+      <li>Fix examples/gcd2.spl syntax</li>
+      <li>Add examples/sum.spl (list operations)</li>
+      <li>Update output specifications of nil, unit, and pair</li>
+    </ul>
+  </p>
+  <p>
+    <a href="spec-4.1.pdf">Version 4.1</a> (PDF, 86KB)
+    <em>September 10, 2013</em>
+    <ul>
+      <li>Fix semantics rules (rename E' to E)</li>
+      <li>Add blue color and spaces to \Downarrow for better readability</li>
+    </ul>
+  </p>
+  <p>
+    <a href="spec-4.0.pdf">Version 4.0</a> (PDF, 85KB)
+    <em>September 7, 2013</em>
+  </p>
+  
+  <h2>Skeleton</h2>
+  <p>
+    A project skeleton is provided at
+    <a href="https://github.com/stfairy/cs383-skeleton">
+      github.com/stfairy/cs383-skeleton</a>.
+    You can start writing your interpreter using the provided skeleton.
+    It includes a ready-to-import Eclipse project, a source code formatter style
+    (formatter.xml), a full-featured parser for SimPL, and skeleton files for
+    abstract syntax tree (AST) nodes, types, and values.
+  </p>
+  <p>
+    Given the project skeleton, you may finish coding the course project within
+    24 hours, if you fully understand the specification and the lectures.
+  </p>
+  <p>
+    FYI:
+    The TA finished the whole project, including the parser, within 10 hours.
+  </p>
+  
+  <h2>Submission</h2>
+  <p>
+    Deadline: 2013/12/1 23:59:59
+  </p>
+  <p>
+    Read: <a href="how-to-export-jar.html">How to export a JAR file</a>
+  </p>
+  <p>
+    Send your exported JAR file, which includes compiled .class files as well as .java files,
+    to xjia@cs.sjtu.edu.cn before 2013/12/1 23:59:59.  Your email subject (title) MUST include
+    "[CS383]" (without the quotes) as a substring, e.g. "[CS383] 5090379042", and the JAR file
+    MUST be attached to your email with exactly the name "<em>Your Student ID</em>.jar" (without
+    the quotes) where <em>Your Student ID</em> is replaced with your student ID number, e.g.
+    "5090379042.jar".
+  </p>
+  <p>
+    Your email will be processed by a computer program.  And I assume you are aware of
+    the implications of this.
+  </p>
+  
+  <h2>Tutorials</h2>
+  <p>
+    <a href="Tutorial1.pdf">Tutorial 1</a> (PDF, 115KB)
+    <em>September 13, 2013</em>
+  </p>
+  <p>
+    <a href="Tutorial2.pdf">Tutorial 2</a> (PDF, 127KB)
+    <em>September 23, 2013</em>
+  </p>
+  <p>
+    <a href="Tutorial3.pdf">Tutorial 3</a> (PDF, 132KB)
+    <em>September 28, 2013</em>
+    <ul>
+      <li><a href="Quiz1-Solution.pdf">Quiz 1 Solution</a></li>
+      <li><a href="lambda-calculus-handout.pdf">Reading 1: Lambda Calculus Examples</a></li>
+      <li><a href="Collected-Lambdas.html">Reading 2: Collected Lambda Calculus Functions</a></li>
+      <li><a href="lambdanotes.pdf">Reading 3: Lecture Notes on the Lambda Calculus</a></li>
+    </ul>
+  </p>
+  <p>
+    <a href="Tutorial4.pdf">Tutorial 4</a> (PDF, 155KB)
+    <em>October 10, 2013</em>
+    <ul>
+      <li><a href="a3p4.20131014.tar.gz">Test cases and result of problem 4 (TAR.GZ, 10KB)</a></li>
+    </ul>
+  </p>
+  <p>
+    <a href="Tutorial5.pdf">Tutorial 5</a> (PDF, 96KB)
+    <em>October 16, 2013</em>
+    <ul>
+      <li><a href="Quiz2-Solution.pdf">Quiz 2 Solution</a></li>
+      <li><a href="Quiz3-Solution.pdf">Quiz 3 Solution</a></li>
+    </ul>
+  </p>
+  <p>
+    <a href="Tutorial6.pdf">Tutorial 6</a> (PDF, 327KB)
+    <em>October 23, 2013</em>
+    <ul>
+      <li><a href="a5p2/result.txt">Result of problem 2</a> (<a href="a5p2/test.sh">test script</a>, <a href="a5p2/gctester.jar">gctester.jar</a>)</li>
+      <li><a href="how-to-export-jar.html">How to export a JAR file</a></li>
+    </ul>
+  </p>
+  <p>
+    <a href="Tutorial7.pdf">Tutorial 7</a> (PDF, 96KB)
+    <em>October 30, 2013</em>
+  </p>
+  <p>
+    <a href="Tutorial8.pdf">Tutorial 8</a> (PDF, 255KB)
+    <em>November 1, 2013</em>
+  </p>
+  
+  <h2>Links</h2>
+  <ul>
+    <li>
+      <a href="https://github.com/stfairy/cs383-skeleton">Project skeleton</a>
+    </li>
+    <li>
+      <a href="http://adapt.seiee.sjtu.edu.cn/~tianwan/CourseProject/">
+        Last semester's course project website
+      </a>
+    </li>
+  </ul>
+  
+  <h2>Feedback</h2>
+  <p>
+    Please send your feedback via email to xjia@cs.sjtu.edu.cn
+  </p>
+</body>
+</html>

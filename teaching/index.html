@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Teaching by Xiao Jia</title>
+<link rel="stylesheet" href="stylesheets/styles.css">
+<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<script src="javascripts/scale.fix.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||
+[]);
+mixpanel.init("ac9ff92e266e8a3719b1b166e789303e");</script><!-- end Mixpanel -->
+</head>
+<body onload="mixpanel.track('teaching body onload')">
+<div class="wrapper">
+<header>
+<h1 class="header">Teaching</h1>
+<p class="header">Teaching information and contributions during my undergraduate years.</p>
+<ul>
+<li><a class="buttons" href="#cpp">C++ Programming</a></li>
+<li><a class="buttons" href="#ds">Data Structures</a></li>
+<li><a class="buttons" href="#ppca">Principle &amp; Practice of Computer Algorithms</a></li>
+<li><a class="buttons" href="#compiler">Project Workshop of Compiler Principles</a></li>
+</ul>
+</header>
+<section>
+
+<h3 id="intro">Introduction</h3>
+<p>
+In <a href="http://acm.sjtu.edu.cn/">ACM Class</a>, 
+<a href="http://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>,
+there are about 2-6 teaching assistants for every course in computer science.
+Students in ACM Class are <em>required</em> to be a teaching assistant for at least 
+one semester, both to help younger students learn better and to be qualified 
+for a senior course of <em>teaching college-level computer science</em>.
+In order to control the quality of teaching, students with better performance in these 
+courses are selected to be teaching assistants earlier.
+</p>
+<p>
+I have been a teaching assistant since my second undergraduate year in Fall 2010, 
+and leading the group of teaching assistants since Spring 2011. This page contains my 
+contributions to these courses. Students who are interested in the courses themselves 
+should refer to the course websites.
+</p>
+
+<h3 id="cpp">C++ Programming</h3>
+<p>
+This is the first course in computer science for students in ACM Class,
+and consists of three parts:
+<ol>
+<li>Lectures and the final exam (in paper)</li>
+<li>Tutorials and onsite exams (3 programming problems in 2 hours, in the computer centre)</li>
+<li>A course project</li>
+</ol>
+</p>
+<p>
+Teaching assistants of this course are in charge of part (2) and (3).
+</p>
+
+<h4>Fall 2010</h4>
+<p>
+Traditionally, students are required to build a <em>campus library management system</em> for their course projects.
+However, as most of them never wrote a project before, it's easy to get lost in tens of source code files.
+</p>
+<p>
+During this semester, I designed and implemented a framework for the library management system, as well as 
+an unit testing tool, <a href="http://code.google.com/p/mycpptest/">mycpptest</a>, 
+to facilitate automatic testing of student programs.
+</p>
+
+<h4>Fall 2011 <a href="http://acm.sjtu.edu.cn/courses/cs110/fa11">(website)</a></h4>
+<p>
+After one year's experience of teaching, I finally found that junior students need guidance on 
+<ol>
+<li>best practice in real-world programming,</li>
+<li>intuitive but in-depth understanding of programming language constructs, and </li>
+<li>general software design and development.</li>
+</p>
+<p>
+Based on these findings, I gave three tutorials during this semester: (click to view my slides)
+<ol>
+<li><a href="http://xiao-jia.com/downloads/cs110-refactoring.html">Refactoring</a> (bad smells, composing methods, organizing data, simplifying expressions)</li>
+<li><a href="http://xiao-jia.com/downloads/cs110-pointer.html">Pointers in C</a> (multiple indirection, function pointers, dynamic memory, when to use pointers)</li>
+<li><a href="http://xiao-jia.com/downloads/cs110-software.html">Software development</a> (problem vs. solution domain, indirection, manpower, design principles)</li>
+</ol>
+</p>
+<p>
+In addition to the tutorials and the course project, 
+I also developed the <a href="http://acm.sjtu.edu.cn/OnlineJudge/">SJTU Online Judge</a>, 
+which is an online system to test student programs automatically.
+The system can compile and execute codes written in C, C++, or Java, and test them with pre-constructed data. 
+We use this system for all the homework and onsite exams.
+</p>
+
+<h3 id="ds">Data Structures</h3>
+<p>
+This is the second course in computer science for students in ACM Class, with an emphasis on 
+classical data structures such as lists, balanced search trees, graphs, and so on.
+Teaching assistants are in charge of programming exams and the course project
+(since Spring 2011, details below).
+</p>
+
+<h4>Spring 2011</h4>
+<p>
+I proposed the <em>Beginners' Educational Emulation of STL</em>, 
+a.k.a. <strong>BEES</strong>, as the course project topic, 
+which consists of common data structure interfaces such as hash tables, resizable arrays, 
+balanced trees, and linked lists. The design is primarily based on Java collections in order to 
+reduce the emphasis on templates in C++ STL, which is not that easy for beginners.
+Here is <a href="http://xiao-jia.com/downloads/bees.html">my slides</a>.
+</p>
+
+<h3 id="ppca">Principle and Practice of Computer Algorithms (PPCA)</h3>
+<p>
+PPCA is a special course in the summer with a length of exactly one month. 
+The purpose of this course is to enhance the coding ability and 
+the in-depth understanding of programming and advanced algorithms.
+Teaching assistants are <strong>fully</strong> in charge of this course.
+</p>
+
+<h4>Summer 2011 <a href="http://202.120.61.3:8103/wiki/PPCA_2011">(website)</a></h4>
+<p>
+In summer 2011, I led a group of teaching assistants to conduct three sessions of this course.
+<ol>
+<li>Algorithm training based on <a href="http://ace.delos.com/usacogate">USACO Training Program</a></li>
+<li>Advanced algorithms related to dynamic programming</li>
+<li>Structure and interpretation of computer programs (SICP)</li>
+</ol>
+I primarily motivated the discussions on SICP and programming language design.
+</p>
+
+<h4>Summer 2012 <a href="http://acm.sjtu.edu.cn/ppca/">(website)</a></h4>
+<p>
+In summer 2012, I led the TA group again, introduced and lectured on new materials about programming languages.
+My lectures are primarily based on two previous works:
+<ol>
+<li>A structural approach to operational semantics [1981] by Gordon D. Plotkin</li>
+<li>The evolution of programming languages [1999, revised 2002] by Peter Grogono</li>
+</ol>
+I also organized the students to give presentations on various programming languages.
+</p>
+
+<h3 id="compiler">Project Workshop of Compiler Principles</h3>
+<p>
+This course is in the fourth semester, where students are required to write a compiler individually from scratch.
+Originally, it was a compiler for the Tiger programming language proposed in 
+<a href="http://www.cs.princeton.edu/~appel/modern/">Modern Compiler Implementation</a> by Andrew W. Appel. 
+Since Spring 2012, we switched to a new language (details below)
+while the underlying techniques remain the same.
+</p>
+<p>
+For both languages, student compilers are required to tokenize and parse the source code, 
+to build the abstract syntax tree (AST) and do type checking, to translate AST into intermediate representation
+and then into MIPS assembly, and finally to allocate registers for temporary variables.
+</p>
+<p>
+Teaching assistants are <strong>fully</strong> in charge of this course, 
+including lectures, code reviews, and final testing and grading.
+I have been leading the TA group for this course since Spring 2012.
+</p>
+
+<h4>Spring 2012 <a href="http://acm.sjtu.edu.cn/compiler/">(website)</a></h4>
+<p>
+From this semester, we started to compile 
+<a href="http://acm.sjtu.edu.cn/compiler/language_definition">a new language</a> 
+based on the syntax and semantics of C and Java. 
+My contributions include
+<ol>
+<li>designing the new language and leading the discussion of its refinement,</li>
+<li>defining the grammar and implementing a parser in ANTLR as a proof of concept, and</li>
+<li>giving lectures on
+	<a href="http://acm.sjtu.edu.cn/compiler/_media/cs216-introduction.pdf">course overview</a>,
+	<a href="http://acm.sjtu.edu.cn/compiler/_media/syntactic-analysis.pdf">syntactic analysis</a>, and
+	<a href="http://acm.sjtu.edu.cn/compiler/_media/register_allocation.pdf">register allocation</a></li>
+</ol>
+</p>
+
+<h4>Spring 2013 <a href="http://acm.sjtu.edu.cn/wiki/Compiler_2013">(website)</a></h4>
+<em>This semester hasn't started yet.</em>
+
+</section>
+<footer>
+<p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+</footer>
+</div>
+<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7475348-7");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

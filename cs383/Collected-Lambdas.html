@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+ To do:
+  - Change INDEX to work with undersized lists?
+  - Perfect the styles
+  - Standardize all uses of .lambda versus .L (or just merge them together)
+  - Fix the relative alignments of the text in cell tables
+  - Express Θ in SKI calculus
+  - Possibly describe basic lambda calculus and interpretation of expressions
+    (including partial application)
+
+ Functions to write:
+  - LIST-HEAD l x - return the first `x' items of list `l'
+  - LIST-TAIL l x - return everything after the first `x' items of list `l'
+  - SUBLIST (SLICE?) x s l - return the sublist of `x' starting at `s'
+    (zero-based) and `l' items in length
+  - INSERT m n i - insert the list `n' into list `m' after index `i'
+  - SPLICE x s l y - like the Perl function of the same name
+  - vector functions? (fixed-sized lists constructed with something like
+    (λxyz...f. f x y z ...))
+
+ Functions to consider adding:
+  - Return a list of the results of a function `f' applied to each number in the
+    range from `s' through `e':
+     SEQ := λfse. MAP f (RANGE s e)
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Collected Lambdas</title>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+<style type="text/css">
+<!--
+/*
+ .lambda {font-family: monospace; font-size: 80%; }
+ .L {font-family: monospace; font-size: 80%; } /` inline lambdas `/
+ .math {font-family: monospace; font-size: 80%; }
+*/
+
+.lambda {font-family: serif; }
+.L {font-family: serif; } /* inline lambdas */
+.math {font-family: serif; }
+
+div.lambda {margin-left: 0.25in; }
+table.lambda {margin-left: 0.25in; }
+//-->
+</style>
+</head>
+<body>
+<div class="main">
+
+<h2>Collected Lambda Calculus Functions</h2>
+
+<p class="text">The following is a small collection of functions in the <a
+href="http://en.wikipedia.org/wiki/Lambda_calculus">untyped lambda calculus</a>
+which I feel are noteworthy for one reason or another, either by relevance to
+the foundations of lambda calculus (such as the combinators and natural
+numbers) or by utility to people who wish to actively make use of this <a
+href="http://en.wikipedia.org/wiki/Turing_tarpit">Turing tarpit</a>.  Some of
+them are taken from Wikipedia (which tends to be very reliable on mathematical
+issues), while others (primarily the list functions) I derived myself.</p>
+
+<p class="text">Unless explicitly noted otherwise, natural numbers, booleans,
+pairs &amp; lists, and all functions for dealing with them use the Church
+encodings of their values.  Operations on other types (e.g., negative or
+non-integral numbers) are not defined, and if the reader desires them, he must
+construct such types and the operations on them himself (possibly with the use
+of pairs acting as typed unions).  Additionally, functions for operating on
+numbers, lists, etc. are only meant for use on those types; if a value of the
+wrong type is supplied (e.g., if a list is passed to <span
+class="L">SUCC</span>) or a non-Church encoded value is used, the results are
+undefined.</p>
+
+<h4>Common Combinators</h4>
+<ul>
+ <li><span class="lambda">K := λxy. x ≡ X (X (X X)) ≡ X&#x2032; X&#x2032; X&#x2032;</span></li>
+ <li><span class="lambda">S := λxyz. (x z) (y z) ≡ X (X (X (X X))) ≡ X K ≡ X&#x2032; (X&#x2032; X&#x2032;) ≡ B (B (B W) C) (B B)</span></li>
+ <li><span class="lambda">I := λx. x ≡ S K S ≡ S K K ≡ X X</span></li>
+ <li><span class="lambda">X := λx. x S K</span> &#x2014; also called <span class="L">ι</span> (iota)</li>
+ <li><span class="lambda">X&#x2032; := λx. x K S K</span></li>
+ <li><span class="lambda">B := λxyz. x (y z) ≡ S (K S) K</span> &#x2014; function composition</li>
+ <li><span class="lambda">C := λxyz. x z y ≡ S (S (K (S (K S) K)) S) (K K)</span></li>
+ <li><span class="lambda">W := λxy. x y y ≡ S S (K (S K K))</span></li>
+ <li><span class="lambda">Y := λg. (λx. g (x x)) (λx. g (x x)) ≡ S (K (S I I)) (S (S (K S) K) (K (S I I)))</span></li>
+ <li><span class="lambda">Y&#x2032; := (λxy. x y x) (λyx. y (x y x)) ≡ S S K (S (K (S S (S (S S K)))) K)</span></li>
+ <li><span class="lambda">Θ := (λxy. y (x x y)) (λxy. y (x x y))</span> &#x2014; called the "Turing fixed-point combinator"</li>
+ <li><span class="lambda">ω := λx. x x ≡ S I I</span></li>
+ <li><span class="lambda">Ω := ω ω</span></li>
+ <li><span class="lambda">Ω<sub>2</sub> := (λx. x x x) (λx. x x x)</span></li>
+
+ <li>A fixed point combinator is any function <span class="L">F</span> for
+ which <span class="L">F g ≡ g (F g)</span> for all <span class="L">g</span>;
+ examples include <span class="L">Y</span>, <span class="L">Y&#x2032;</span>,
+ and <span class="L">Θ</span>.  Since lambda calculus functions cannot refer to
+ themselves by name, fixed point combinators are needed to implement recursion.
+ For example, the factorial function can be implemented using <span class="L">f
+ := λgx. ISZERO x 1 (MULT x (g (PRED x)))</span>, which takes a function <span
+ class="L">g</span> and a number <span class="L">x</span>; if <span
+ class="L">x</span> is not zero, it is multiplied by the result of <span
+ class="L">g (PRED x)</span>.  Defining <span class="L">FACTORIAL :=
+ Y&#xA0;f</span> (or <span class="L">Y&#x2032;&#xA0;f</span> or <span
+ class="L">Θ&#xA0;f</span>) means that <span class="L">FACTORIAL x ≡ Y f x ≡ f
+ (Y f) x</span>, and so <span class="L">f</span> is able to recurse on itself
+ indefinitely.</li>
+
+</ul>
+
+<h4>Natural Numbers</h4>
+<ul>
+ <li><span class="lambda">0 := λfx. x</span></li>
+ <li><span class="lambda">1 := λfx. f x</span></li>
+ <li><span class="lambda">2 := λfx. f (f x)</span></li>
+ <li><span class="lambda">3 := λfx. f (f (f x))</span></li>
+ <li><span class="lambda">4 := λfx. f (f (f (f x)))</span></li>
+ <li><span class="lambda">5 := λfx. f (f (f (f (f x))))</span></li>
+ <li><i>et cetera</i></li>
+</ul>
+
+<h4>Mathematical Operators</h4>
+<ul>
+ <li>The successor operator (given a natural number <span class="math">n</span>, calculate <span class="math">n+1</span>): <div class="lambda">SUCC := λnfx. f (n f x)</div></li>
+ <li>The predecessor operator (for all <span class="math">n &gt; 0</span>, calculate <span class="math">n-1</span>; for zero, return zero):
+  <table border="0" class="lambda">
+   <tr><td>PRED</td><td>:=</td><td>λnfx. n (λgh. h (g f)) (λu. x) (λu. u)</td></tr>
+   <tr><td></td><td>≡</td><td>λn. n (λgk. ISZERO (g 1) k (PLUS (g k) 1)) (λv. 0) 0</td></tr>
+   <tr><td></td><td>≡</td><td>λn. CAR (n (λx. PAIR (CDR x) (SUCC (CDR x))) (PAIR 0 0))</td></tr>
+  </table>
+ </li>
+ <li>Addition:
+  <table border="0" class="lambda">
+   <tr><td>PLUS</td><td>:=</td><td>λmnfx. n f (m f x)</td></tr>
+   <tr><td></td><td>≡</td><td>λmn. n SUCC m</td></tr>
+  </table>
+ </li>
+ <li>Subtraction &#x2014; <span class="L">SUB m n</span> evaluates to <span class="math">m - n</span> if <span class="math">m &gt; n</span> and to zero otherwise: <div class="lambda">SUB := λmn. n PRED m</div></li>
+ <li>Multiplication:
+  <table border="0" class="lambda">
+   <tr><td>MULT</td><td>:=</td><td>λmnf. m (n f)</td></tr>
+   <tr><td></td><td>≡</td><td>λmn. m (PLUS n) 0</td></tr>
+   <tr><td></td><td>≡</td><td>B</td></tr>
+  </table>
+ </li>
+ <li>Division &#x2014; <span class="L">DIV a b</span> evaluates to a pair of two numbers, <span class="math">a idiv b</span> and <span class="math">a mod b</span>: <div class="lambda">DIV := Y (λgqab. LT a b (PAIR q a) (g (SUCC q) (SUB a b) b)) 0</div></li>
+ <li>Integer division: <div class="lambda">IDIV := λab. CAR (DIV a b)</div></li>
+ <li>Modulus: <div class="lambda">MOD := λab. CDR (DIV a b)</div></li>
+ <li>Exponentiation (<span class="L">EXP a b ≡ a<sup>b</sup></span>): <div class="lambda">EXP := λab. b a ≡ C I</div></li>
+ <li>Factorial:
+  <table border="0" class="lambda">
+   <tr><td>FACTORIAL</td><td>:=</td><td>Y (λgx. ISZERO x 1 (MULT x (g (PRED x))))</td></tr>
+   <tr><td></td><td>≡</td><td>λn. Y (λgax. GT x n a (g (MUL a x) (SUCC x))) 1 1</td></tr>
+   <tr><td></td><td>≡</td><td>λn. n (λfax. f (MUL a x) (SUCC x)) K 1 1</td></tr>
+  </table>
+ </li>
+ <li>Fibonacci numbers &#x2014; <span class="L">FIBONACCI n</span> evaluates to the <span class="L">n</span>-th Fibonacci number: <div class="lambda">FIBONACCI := λn. n (λfab. f b (PLUS a b)) K 0 1</div></li>
+ <li>Greatest common denominator/highest common factor: <div class="lambda">GCD := (λgmn. LE m n (g n m) (g m n)) (Y (λgxy. ISZERO y x (g y (MOD x y))))</div></li>
+</ul>
+
+<h4>Booleans</h4>
+
+<p class="text">Given a boolean value <span class="L">b</span>, the expression
+<span class="L">b t f</span> will evaluate to <span class="L">t</span> if <span
+class="L">b</span> is true and to <span class="L">f</span> if <span
+class="L">b</span> is false.  This allows conditional expressions to be written
+simply as a condition applied directly to the two possible results without the
+need for an <span class="L">IF</span> function.</p>
+
+<ul>
+ <li><span class="lambda">TRUE := λxy. x ≡ K</span></li>
+ <li><span class="lambda">FALSE := λxy. y ≡ 0 ≡ λx. I ≡ K I ≡ S K ≡ X (X X)</span></li>
+ <li><span class="lambda">AND := λpq. p q p</span></li>
+ <li><span class="lambda">OR := λpq. p p q</span></li>
+ <li><span class="lambda">XOR := λpq; p (NOT q) q</span></li>
+ <li><span class="lambda">NOT := λpab. p b a ≡ λp. p FALSE TRUE</span></li>
+</ul>
+
+<h4>Numeric Comparison Operators</h4>
+<ul>
+ <li>Test whether a number is zero: <div class="lambda">ISZERO := λn. n (λx. FALSE) TRUE</div></li>
+ <li>Less than: <div class="lambda">LT := λab. NOT (LEQ b a)</div></li>
+ <li>Less than or equal to: <div class="lambda">LEQ := λmn. ISZERO (SUB m n)</div></li>
+ <li>Equal to: <div class="lambda">EQ := λmn. AND (LEQ m n) (LEQ n m)</div></li>
+ <li>Not equal to: <div class="lambda">NEQ := λab. OR (NOT (LEQ a b)) (NOT (LEQ b a))</div></li>
+ <li>Greater than or equal to: <div class="lambda">GEQ := λab. LEQ b a</div></li>
+ <li>Greater than: <div class="lambda">GT := λab. NOT (LEQ a b)</div></li>
+</ul>
+
+<h4>Pairs and Lists</h4>
+
+<p class="text">Pairs and lists are structured the same way that they are in
+Lisp and its relatives: a pair is made up of two components, called the
+<i>car</i> and the <i>cdr</i>, and a list is either <span class="L">NIL</span>
+(the empty list) or a pair whose cdr is another list (and whose car is an
+element of the enclosing list).</p>
+
+<ul>
+
+ <li><span class="L">PAIR x y</span> &#x2014; create a pair with a car of <span
+ class="L">x</span> and a cdr of <span class="L">y</span>; also called <span
+ class="L">CONS</span>: <div class="lambda">PAIR := λxyf. f x
+ y</div></li>
+
+ <li><span class="L">CAR p</span> &#x2014; get the car of pair <span
+ class="L">p</span>; also called <span class="L">FIRST</span> or <span
+ class="L">HEAD</span>: <div class="lambda">CAR := λp. p TRUE</div></li>
+
+ <li><span class="L">CDR p</span> &#x2014; get the cdr of pair <span
+ class="L">p</span>; also called <span class="L">SECOND</span>, <span
+ class="L">TAIL</span>, or <span class="L">REST</span>: <div class="lambda">CDR
+ := λp. p FALSE</div></li>
+
+ <li>The empty list: <div class="lambda">NIL := λx. TRUE</div></li>
+
+ <li><span class="L">NULL p</span> &#x2014; evaluates to <span
+ class="L">TRUE</span> if <span class="L">p</span> is <span
+ class="L">NIL</span> or to <span class="L">FALSE</span> if <span
+ class="L">p</span> is a normal pair (all other types are undefined): <div
+ class="lambda">NULL := λp. p (λxy. FALSE)</div></li>
+
+</ul>
+
+<h4>List Functions</h4>
+<ul>
+
+ <li>Concatenate two lists: <div class="lambda">APPEND := Y (λgab. NULL a
+ b (PAIR (CAR a) (g (CDR a) b)))</div></li>
+
+ <li>Calculate the length of a list: <div class="lambda">LENGTH := Y
+ (λgcx. NULL x c (g (SUCC c) (CDR x))) 0</div></li>
+
+ <li><span class="L">INDEX x i</span> &#x2014; evaluates to the <span
+ class="L">i</span>-th (zero-based) element of list <span class="L">x</span>,
+ assuming that <span class="L">x</span> has at least <span class="math">i +
+ 1</span> elements: <div class="lambda">INDEX := λxi. CAR (i CDR
+ x)</div></li>
+
+ <li>Get the last element in a list: <div class="lambda">LAST := Y (λgx.
+ NULL x NIL (NULL (CDR x) (CAR x) (g (CDR x))))</div></li>
+
+ <li>Get a list without its last element: <div class="lambda">TRUNCATE := Y
+ (λgx. NULL x NIL (NULL (CDR x) NIL (PAIR (CAR x) (g (CDR
+ x)))))</div></li>
+
+ <li>Reverse a list: <div class="lambda">REVERSE := Y (λgal. NULL l a (g
+ (PAIR (CAR l) a) (CDR l))) NIL</div></li>
+
+ <li><span class="L">RANGE s e</span> &#x2014; evaluates to a list of all
+ natural numbers from <span class="L">s</span> up through <span
+ class="L">e</span>, or to <span class="L">NIL</span> when <span
+ class="math">s&#xA0;&gt;&#xA0;e</span>.
+  <div class="lambda">RANGE := λse. Y (λgc. LEQ c e (PAIR c (g
+  (SUCC c) e)) NIL) s</div>
+ </li>
+
+ <li><span class="L">LIST n a<sub>0</sub> a<sub>1</sub> ...
+ a<sub>n-1</sub></span> &#x2014; evaluates to <span class="L">a<sub>0</sub> ...
+ a<sub>n-1</sub></span> as a list
+  <div class="lambda">LIST := λn. n (λfax. f (PAIR x a)) REVERSE
+  NIL</div>
+ </li>
+
+ <li><span class="L">APPLY f x</span> &#x2014; passes the elements of the list
+ <span class="L">x</span> to <span class="L">f</span>: <div
+ class="lambda">APPLY := Y (λgfx. NULL x f (g (f (CAR x)) (CDR
+ x)))</div></li>
+
+ <li><span class="L">MAP f x</span> &#x2014; maps each element of the list <span
+ class="L">x</span> through <span class="L">f</span>: <div class="lambda">MAP
+ := Y (λgfx. NULL x NIL (PAIR (f (CAR x)) (g f (CDR x))))</div></li>
+
+ <li><span class="L">FILTER f x</span> &#x2014; evaluates to a list of all <span
+ class="L">e</span> in the list <span class="L">x</span> for which <span
+ class="L">f e</span> is <span class="L">TRUE</span> (assuming that <span
+ class="L">f</span> returns only <span class="L">TRUE</span> or <span
+ class="L">FALSE</span> for all elements of <span class="L">x</span>): <div
+ class="lambda">FILTER := Y (λgfx. NULL x NIL (f (CAR x) (PAIR (CAR x)) I
+ (g f (CDR x))))</div></li>
+
+ <li><span class="L">CROSS f l m</span> &#x2014; evaluates to a list of all
+ values of <span class="L">f a b</span> where <span class="L">a</span> is in
+ the list <span class="L">l</span> and <span class="L">b</span> is in the list
+ <span class="L">m</span>.  To obtain the Cartesian cross product of <span
+ class="L">l</span> and <span class="L">m</span>, supply <span
+ class="L">PAIR</span> (or a similar function) for <span class="L">f</span>.
+  <div class="lambda">CROSS := λflm. FOLD-LEFT APPEND NIL (MAP (λx.
+  MAP (f x) m) l)</div>
+ </li>
+
+ <li><span class="L">FOLD-LEFT f e x</span> &#x2014; Apply <span class="L">f
+ a</span> to each element of the list <span class="L">x</span>, where <span
+ class="L">a</span> is the result of the previous application (or <span
+ class="L">e</span> for the first application) and return the result of the
+ last application:
+  <div class="lambda">FOLD-LEFT := Y (λgfex. NULL x e (g f (f e (CAR x))
+  (CDR x)))</div>
+ </li>
+
+ <li><span class="L">FOLD-RIGHT f e x</span> &#x2014; Apply <span
+ class="L">λy. f y a</span> to each element of the list <span
+ class="L">x</span> in reverse order, where <span class="L">a</span> is the
+ result of the previous application (or <span class="L">e</span> for the first
+ application) and return the result of the last application:
+  <div class="lambda">FOLD-RIGHT := λfex. Y (λgy. NULL y e (f (CAR
+  y) (g (CDR y)))) x</div>
+ </li>
+
+</ul>
+
+<h4>Other</h4>
+<ul>
+
+ <li><span class="L">GET n i a<sub>0</sub> a<sub>1</sub> ... a<sub>n-1</sub>
+ =<sup>β</sup> a<sub>i</sub></span>: <div class="lambda">GET := λni. i K (SUB n
+ (SUCC i) K)</div></li>
+
+</ul>
+
+<h4>Sources</h4>
+<ul>
+ <li><a href="http://en.wikipedia.org/wiki/Lambda_calculus">Wikipedia: Lambda calculus</a></li>
+ <li><a href="http://en.wikipedia.org/wiki/Combinatory_logic">Wikipedia: Combinatory logic</a></li>
+ <li><a href="http://en.wikipedia.org/wiki/SKI_combinator_calculus">Wikipedia: SKI combinator calculus</a></li>
+ <li><a href="http://en.wikipedia.org/wiki/Fixed_point_combinator">Wikipedia: Fixed point combinator</a></li>
+ <li><a href="http://en.wikipedia.org/wiki/B,C,K,W_system">Wikipedia: B,C,K,W system</a></li>
+</ul>
+
+<p class="link"><a href="index.html">Main Page</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+Testing the program of student 5110309059 ... Tue Oct 22 16:01:26 CST 2013
+O TestNode@RefCountHeap (16ms)
+O TestNode@MarkSweepHeap (10ms)
+O TestNode@CopyCollectHeap (27ms)
+O TestChain@RefCountHeap (794ms)
+O TestChain@MarkSweepHeap (1306ms)
+O TestChain@CopyCollectHeap (254ms)
+O TestCycle@MarkSweepHeap (229ms)
+O TestCycle@CopyCollectHeap (364ms)
+O TestLoop@MarkSweepHeap (1099ms)
+O TestLoop@CopyCollectHeap (201ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309059	13.0
+Testing the program of student 5110309152 ... Tue Oct 22 16:01:30 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (6ms)
+X TestNode@CopyCollectHeap
+O TestChain@RefCountHeap (624ms)
+O TestChain@MarkSweepHeap (1516ms)
+X TestChain@CopyCollectHeap
+O TestCycle@MarkSweepHeap (233ms)
+X TestCycle@CopyCollectHeap
+O TestLoop@MarkSweepHeap (1370ms)
+X TestLoop@CopyCollectHeap
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+X TestFragmentation@CopyCollectHeap
+5110309152	8.0
+Testing the program of student 5110309190 ... Tue Oct 22 16:01:34 CST 2013
+O TestNode@RefCountHeap (4ms)
+O TestNode@MarkSweepHeap (1ms)
+O TestNode@CopyCollectHeap (16ms)
+O TestChain@RefCountHeap (442ms)
+O TestChain@MarkSweepHeap (1252ms)
+O TestChain@CopyCollectHeap (270ms)
+O TestCycle@MarkSweepHeap (235ms)
+O TestCycle@CopyCollectHeap (578ms)
+O TestLoop@MarkSweepHeap (1077ms)
+O TestLoop@CopyCollectHeap (283ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309190	13.0
+Testing the program of student 5110309201 ... Tue Oct 22 16:01:39 CST 2013
+O TestNode@RefCountHeap (15ms)
+O TestNode@MarkSweepHeap (6ms)
+O TestNode@CopyCollectHeap (17ms)
+O TestChain@RefCountHeap (724ms)
+O TestChain@MarkSweepHeap (1243ms)
+O TestChain@CopyCollectHeap (272ms)
+O TestCycle@MarkSweepHeap (227ms)
+O TestCycle@CopyCollectHeap (550ms)
+O TestLoop@MarkSweepHeap (1078ms)
+O TestLoop@CopyCollectHeap (226ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309201	13.0
+Testing the program of student 5110309250 ... Tue Oct 22 16:01:43 CST 2013
+O TestNode@RefCountHeap (9ms)
+O TestNode@MarkSweepHeap (10ms)
+O TestNode@CopyCollectHeap (17ms)
+O TestChain@RefCountHeap (1576ms)
+O TestChain@MarkSweepHeap (1306ms)
+O TestChain@CopyCollectHeap (280ms)
+O TestCycle@MarkSweepHeap (237ms)
+O TestCycle@CopyCollectHeap (381ms)
+O TestLoop@MarkSweepHeap (1116ms)
+O TestLoop@CopyCollectHeap (200ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309250	13.0
+Testing the program of student 5110309299 ... Tue Oct 22 16:01:48 CST 2013
+O TestNode@RefCountHeap (9ms)
+O TestNode@MarkSweepHeap (6ms)
+O TestNode@CopyCollectHeap (15ms)
+O TestChain@RefCountHeap (544ms)
+O TestChain@MarkSweepHeap (1242ms)
+O TestChain@CopyCollectHeap (252ms)
+O TestCycle@MarkSweepHeap (223ms)
+O TestCycle@CopyCollectHeap (381ms)
+O TestLoop@MarkSweepHeap (1080ms)
+O TestLoop@CopyCollectHeap (256ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (1ms)
+5110309299	13.0
+Testing the program of student 5110309340 ... Tue Oct 22 16:01:53 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (7ms)
+O TestNode@CopyCollectHeap (12ms)
+O TestChain@RefCountHeap (623ms)
+O TestChain@MarkSweepHeap (1506ms)
+O TestChain@CopyCollectHeap (278ms)
+O TestCycle@MarkSweepHeap (236ms)
+O TestCycle@CopyCollectHeap (567ms)
+O TestLoop@MarkSweepHeap (1395ms)
+O TestLoop@CopyCollectHeap (241ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309340	13.0
+Testing the program of student 5110309357 ... Tue Oct 22 16:01:58 CST 2013
+O TestNode@RefCountHeap (11ms)
+O TestNode@MarkSweepHeap (7ms)
+O TestNode@CopyCollectHeap (16ms)
+O TestChain@RefCountHeap (638ms)
+O TestChain@MarkSweepHeap (1909ms)
+O TestChain@CopyCollectHeap (300ms)
+O TestCycle@MarkSweepHeap (226ms)
+O TestCycle@CopyCollectHeap (373ms)
+O TestLoop@MarkSweepHeap (1103ms)
+O TestLoop@CopyCollectHeap (240ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309357	13.0
+Testing the program of student 5110309364 ... Tue Oct 22 16:02:03 CST 2013
+O TestNode@RefCountHeap (4ms)
+O TestNode@MarkSweepHeap (12ms)
+M TestNode@CopyCollectHeap
+O TestChain@RefCountHeap (646ms)
+X TestChain@MarkSweepHeap
+X TestChain@CopyCollectHeap
+O TestCycle@MarkSweepHeap (2122ms)
+X TestCycle@CopyCollectHeap
+X TestLoop@MarkSweepHeap
+X TestLoop@CopyCollectHeap
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+M TestFragmentation@CopyCollectHeap
+5110309364	6.2
+Testing the program of student 5110309366 ... Tue Oct 22 16:02:06 CST 2013
+O TestNode@RefCountHeap (15ms)
+O TestNode@MarkSweepHeap (11ms)
+O TestNode@CopyCollectHeap (16ms)
+O TestChain@RefCountHeap (795ms)
+O TestChain@MarkSweepHeap (1275ms)
+O TestChain@CopyCollectHeap (256ms)
+O TestCycle@MarkSweepHeap (232ms)
+O TestCycle@CopyCollectHeap (367ms)
+O TestLoop@MarkSweepHeap (1095ms)
+O TestLoop@CopyCollectHeap (205ms)
+O TestFragmentation@RefCountHeap (1ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309366	13.0
+Testing the program of student 5110309472 ... Tue Oct 22 16:02:10 CST 2013
+O TestNode@RefCountHeap (4ms)
+O TestNode@MarkSweepHeap (1ms)
+M TestNode@CopyCollectHeap
+O TestChain@RefCountHeap (433ms)
+X TestChain@MarkSweepHeap
+X TestChain@CopyCollectHeap
+X TestCycle@MarkSweepHeap
+X TestCycle@CopyCollectHeap
+X TestLoop@MarkSweepHeap
+X TestLoop@CopyCollectHeap
+X TestFragmentation@RefCountHeap
+O TestFragmentation@MarkSweepHeap (0ms)
+X TestFragmentation@CopyCollectHeap
+5110309472	4.1
+Testing the program of student 5110309527 ... Tue Oct 22 16:02:11 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (6ms)
+O TestNode@CopyCollectHeap (11ms)
+O TestChain@RefCountHeap (636ms)
+O TestChain@MarkSweepHeap (1251ms)
+O TestChain@CopyCollectHeap (250ms)
+O TestCycle@MarkSweepHeap (226ms)
+O TestCycle@CopyCollectHeap (375ms)
+O TestLoop@MarkSweepHeap (1074ms)
+O TestLoop@CopyCollectHeap (263ms)
+O TestFragmentation@RefCountHeap (1ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309527	13.0
+Testing the program of student 5110309531 ... Tue Oct 22 16:02:15 CST 2013
+O TestNode@RefCountHeap (27ms)
+O TestNode@MarkSweepHeap (9ms)
+O TestNode@CopyCollectHeap (13ms)
+O TestChain@RefCountHeap (600ms)
+O TestChain@MarkSweepHeap (1288ms)
+O TestChain@CopyCollectHeap (248ms)
+O TestCycle@MarkSweepHeap (607ms)
+O TestCycle@CopyCollectHeap (406ms)
+O TestLoop@MarkSweepHeap (1126ms)
+O TestLoop@CopyCollectHeap (204ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309531	13.0
+Testing the program of student 5110309581 ... Tue Oct 22 16:02:20 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (11ms)
+O TestNode@CopyCollectHeap (12ms)
+O TestChain@RefCountHeap (619ms)
+O TestChain@MarkSweepHeap (432ms)
+O TestChain@CopyCollectHeap (251ms)
+O TestCycle@MarkSweepHeap (1444ms)
+O TestCycle@CopyCollectHeap (368ms)
+O TestLoop@MarkSweepHeap (396ms)
+O TestLoop@CopyCollectHeap (253ms)
+O TestFragmentation@RefCountHeap (1ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309581	13.0
+Testing the program of student 5110309588 ... Tue Oct 22 16:02:24 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (9ms)
+O TestNode@CopyCollectHeap (12ms)
+O TestChain@RefCountHeap (609ms)
+O TestChain@MarkSweepHeap (412ms)
+O TestChain@CopyCollectHeap (254ms)
+O TestCycle@MarkSweepHeap (1164ms)
+O TestCycle@CopyCollectHeap (368ms)
+O TestLoop@MarkSweepHeap (367ms)
+O TestLoop@CopyCollectHeap (251ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309588	13.0
+Testing the program of student 5110309628 ... Tue Oct 22 16:02:27 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (1ms)
+X TestNode@CopyCollectHeap
+O TestChain@RefCountHeap (631ms)
+O TestChain@MarkSweepHeap (1308ms)
+X TestChain@CopyCollectHeap
+O TestCycle@MarkSweepHeap (235ms)
+X TestCycle@CopyCollectHeap
+O TestLoop@MarkSweepHeap (1092ms)
+X TestLoop@CopyCollectHeap
+O TestFragmentation@RefCountHeap (0ms)
+M TestFragmentation@MarkSweepHeap
+X TestFragmentation@CopyCollectHeap
+5110309628	7.1
+Testing the program of student 5110309638 ... Tue Oct 22 16:02:31 CST 2013
+O TestNode@RefCountHeap (4ms)
+O TestNode@MarkSweepHeap (2ms)
+O TestNode@CopyCollectHeap (0ms)
+O TestChain@RefCountHeap (437ms)
+O TestChain@MarkSweepHeap (1914ms)
+O TestChain@CopyCollectHeap (255ms)
+O TestCycle@MarkSweepHeap (225ms)
+O TestCycle@CopyCollectHeap (372ms)
+O TestLoop@MarkSweepHeap (1098ms)
+O TestLoop@CopyCollectHeap (198ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309638	13.0
+Testing the program of student 5110309684 ... Tue Oct 22 16:02:36 CST 2013
+O TestNode@RefCountHeap (12ms)
+O TestNode@MarkSweepHeap (6ms)
+O TestNode@CopyCollectHeap (10ms)
+O TestChain@RefCountHeap (635ms)
+O TestChain@MarkSweepHeap (1462ms)
+O TestChain@CopyCollectHeap (262ms)
+O TestCycle@MarkSweepHeap (251ms)
+O TestCycle@CopyCollectHeap (373ms)
+O TestLoop@MarkSweepHeap (1305ms)
+O TestLoop@CopyCollectHeap (199ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309684	13.0
+Testing the program of student 5110309700 ... Tue Oct 22 16:02:41 CST 2013
+O TestNode@RefCountHeap (17ms)
+O TestNode@MarkSweepHeap (12ms)
+O TestNode@CopyCollectHeap (15ms)
+O TestChain@RefCountHeap (799ms)
+O TestChain@MarkSweepHeap (1242ms)
+O TestChain@CopyCollectHeap (226ms)
+O TestCycle@MarkSweepHeap (242ms)
+O TestCycle@CopyCollectHeap (2ms)
+O TestLoop@MarkSweepHeap (1176ms)
+O TestLoop@CopyCollectHeap (230ms)
+O TestFragmentation@RefCountHeap (0ms)
+O TestFragmentation@MarkSweepHeap (0ms)
+O TestFragmentation@CopyCollectHeap (0ms)
+5110309700	13.0
+Testing the program of student 5112409044 ... Tue Oct 22 16:02:45 CST 2013
+O TestNode@RefCountHeap (10ms)
+O TestNode@MarkSweepHeap (8ms)
+M TestNode@CopyCollectHeap
+M TestChain@RefCountHeap
+O TestChain@MarkSweepHeap (2100ms)
+M TestChain@CopyCollectHeap
+O TestCycle@MarkSweepHeap (1526ms)
+M TestCycle@CopyCollectHeap
+O TestLoop@MarkSweepHeap (1174ms)
+M TestLoop@CopyCollectHeap
+M TestFragmentation@RefCountHeap
+O TestFragmentation@MarkSweepHeap (0ms)
+M TestFragmentation@CopyCollectHeap
+5112409044	6.7
