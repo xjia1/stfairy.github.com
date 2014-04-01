@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>✈</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="title">
+<li class="first">dǎ</li>
+<li>fēi</li>
+<li>jī</li>
+</ul>
+<ul class="health">
+<li class="health0 alive first">✈</li>
+<li class="health0 dead first">✈</li>
+<li class="health1 alive">✈</li>
+<li class="health1 dead">✈</li>
+<li class="health2 alive">✈</li>
+<li class="health2 dead">✈</li>
+</ul>
+<table id="grid"></table>
+<p id="slider">Cell radius: <input type="range" id="radius" min="0" max="25" step="1" value="10"></p>
+<span id="revealed-count"></span>
+<span id="tick">0:00</span>
+<p id="hint">
+  Find and hit the planes<br>
+  1 click marks a cell<br>
+  2 clicks open a cell<br>
+  Right click toggles mark
+</p>
+<p id="authors">
+  <img src="https://secure.gravatar.com/avatar/a9a1acd402ef13a85a72ee2912848807">
+  <a href="http://www.lishijian.com/">Further Lee</a>
+  <img src="https://secure.gravatar.com/avatar/95aead0cf54e2016863b32c7f34405c1">
+  <a href="http://xiao-jia.com/">Xiao Jia</a>
+</p>
+<div id="histories"></div>
+<script src="json2.js"></script>
+<script src="jquery.js"></script>
+<script src="md5-min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
