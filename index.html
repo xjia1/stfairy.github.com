@@ -75,7 +75,6 @@ h2 {
 <h2>Links</h2>
 
 <p><a href="http://www.akkadia.org/drepper/no_static_linking.html">Static Linking Considered Harmful</a></p>
-<p><a href="http://www.utf8everywhere.org/">UTF-8 Everywhere</a></p>
 <p><a href="http://bartoszmilewski.com/2009/10/21/what-does-haskell-have-to-do-with-c/">
   What Does Haskell Have to Do with C++?
 </a></p>
@@ -134,6 +133,7 @@ h2 {
 <li><a href="http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/">How to keep TCP connections alive</a></li>
 <li><a href="http://exceldna.codeplex.com/">How to call C# functions in Excel</a></li>
 <li><a href="http://www.catch22.net/tuts/custom-controls">How to create a custom Win32 control</a></li>
+<li><a href="http://www.utf8everywhere.org/">How to handle strings of multi-byte characters (short answer: use UTF-8 everywhere)</a></li>
 <li><a href="http://guides.rubygems.org/make-your-own-gem/">How to make your own Ruby gem</a></li>
 <li><a href="http://www.yesodweb.com/book/web-application-interface">How to get started with Warp and WAI</a></li>
 <li><a href="http://bisqwit.iki.fi/story/howto/openmp/">How to use OpenMP in C++</a></li>
@@ -157,10 +157,6 @@ h2 {
 <li><a href="http://www.upubuntu.com/2011/09/how-to-disable-cpu-core-on-ubuntudebian.html">How to disable a CPU core on Ubuntu/Debian</a></li>
 <li><a href="http://j-query.blogspot.sg/2011/03/adding-colors-to-git-diff-by-default.html">How to add colors to git</a></li>
 <li><a href="http://viget.com/extend/effectively-using-git-with-subversion">How to effectively use git with Subversion</a></li>
-<li><a href="http://askubuntu.com/a/72764/85426">How to enable Skype notifications in Gnome classic</a></li>
-<li><a href="http://todsul.com/lamp-mac-os-x-lion">How to setup LAMP on Mac OS X Lion</a></li>
-<li><a href="http://are4.us/raysblog/?p=983">How to enable VNC access to Ubuntu from Mac</a></li>
-<li><a href="http://mikegrouchy.com/blog/2012/07/force-sites-to-use-ssl-in-chrome.html">How to force websites to use SSL in Google Chrome</a></li>
 </ul>
 
 <h3>Miscellaneous</h3>
@@ -194,19 +190,6 @@ dpkg-deb -x google-chrome*.deb /tmp/chrome/
 sudo cp /tmp/chrome/opt/google/chrome/libpdf.so /usr/lib/chromium-browser/
 </pre></div></div>
 <div class="codeblock">
-<div class="blocktitle">Sublime Text 2 configuration</div>
-<div class="blockcontent"><pre>
-{
-  "color_scheme": "Packages/Tomorrow-Night.tmTheme",
-  "drag_text": false,
-  "highlight_line": true,
-  "shift_tab_unindent": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "ignored_packages": []
-}
-</pre></div></div>
-<div class="codeblock">
 <div class="blocktitle">Fcitx installation</div>
 <div class="blockcontent"><pre>
 sudo apt-get install fcitx \
@@ -225,17 +208,7 @@ UXTerm*faceSize: 10
 $ xrdb -merge ~/.Xresources
 </pre></div></div>
 <div class="codeblock">
-<div class="blocktitle">Install and tweak classic Gnome in Ubuntu 12.04</div>
-<div class="blockcontent"><pre>
-sudo apt-get install gnome-session-fallback
-sudo apt-get purge liboverlay-scrollbar-0.2-0 \
-                   liboverlay-scrollbar3-0.2-0 \
-                   overlay-scrollbar
-gconftool-2 --set "/apps/metacity/general/button_layout" \
-            --type string ":minimize,maximize,close"
-</pre></div></div>
-<div class="codeblock">
-<div class="blocktitle">LaTeX and Chinese support in Ubuntu 12.04</div>
+<div class="blocktitle">LaTeX and Chinese support</div>
 <div class="blockcontent"><pre>
 sudo apt-get install texlive-full latex-cjk-all
 \usepackage{CJKutf8}
